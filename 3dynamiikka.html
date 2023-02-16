@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="dynamiikka, FY4, fysiikka, physics, exam, pääsykoe, materiaali, materials, valintakoe">
+    <meta name="description" content="Dynamiikasta tärkeimpiä asioita ovat Newtonin ensimmäinen- ja toinen laki ja siihen liittyvä voimien tasapaino, liikemäärä, impulssi ja momentti.">
+    <meta name="author" content="Exaphys">
+    <title>3. Dynamiikka | Exaphys -fysiikan opiskelumateriaalit</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="newcss.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/javascript" src="js.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({
+    tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+    }
+    });</script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML-full"></script>
+</head>
+<body>
+    <div class="home">
+        <nav class="navbar">
+            <div class="container">
+                <h1 class="logo">Exaphys</h1> 
+                <ul class="menu-text">
+                    <li><a href="index.html">Koti</a></li>
+                    <li><a href="materials_fi.html">Materiaali</a></li>
+                    <li><a href="about.html">Meistä</a></li>
+                    <li><a href="index.html"></a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="chapter-text">
+            <h2>3. Dynamiikka</h2>
+            <h3>Dynamiikasta tärkeimpiä asioita ovat Newtonin ensimmäinen- ja toinen laki ja siihen liittyvä voimien tasapaino, liikemäärä, impulssi ja momentti. Tehtävissä saa käyttää valitsemaasi kaavakokoelmaa (esim. MAOL) ja  trigonometrista taulukkoa.</h3>
+        </div>
+        <div class="exercises">
+            <button class="collapsible"><h2>Tehtävä 3.1</h2></button>
+            <div class="exercise">
+                <p>Laatikko, jolla on massa \(m\) asetetaan \(\ell\) pituiselle rampille ja sysätään liikkeelle alkunopeudella \(v_0\). Laatikko kulkee ylöspäin mentäessä ajan \(t_1\). Pysähdyttyään laatikko liukuu takaisin, jolloin aikaa on kuluu \(t_2\) verran kunnes se palaa alkuasemaansa. Lisäksi taso on asetettu sellaiseen kulmaan, että sen pystysuora korkeus \(h=0{,}6\ell\). Laske aikasuhde \(\frac{t_2}{t_1}\), kun tason ja laatikon välinen liikekitkakerroin \(\mu_k = 0{,}5\).
+                </p>
+                <br><br>
+                <img src="images_exercises/teht3.1.jpg" alt=""/><p>
+                <br>
+                Tehtävässä saattaa auttaa trigonometriset identiteetit:
+                <br>
+                \(\cos \left(\sin^{-1} \left(x\right)\right)=\sqrt{1-x^2}\) 
+                <br>
+                \(\sin{(\sin^{-1}{(x)})} = x\)
+                <br>
+                Tehtävä on ratkaistavissa ilman trigonometrista taulukkoa, mutta halutessaan sitä voi hyödyntää.<br>
+                <br>
+                <a onclick="document.getElementById('s1').style.display='block'" class="s-button">Ratkaisu 3.1</a><br></p>
+                <div id="s1" class="modal">
+                    <div class="s-modal-content">
+                        <div class="s-container">
+                            <span onclick="document.getElementById('s1').style.display='none'" class="s-button2">&times;</span><p>Ratkaistaan ensin tason kaltevuus \(\theta\) annetuilla tiedoilla:
+                            \begin{equation*}
+                                \sin{\theta} = \frac{0,6\ell}{\ell} \Rightarrow \theta = \sin^{-1}(0{,}6)
+                            \end{equation*}
+
+                            Valitaan \(x\)-akseli tason suuntaiseksi ja \(y\)-akseli tasoa kohtisuoraksi kuvan mukaisesti:
+
+                            </p><br>
+                            <br><img src="images_exercises/teht3.1_ratk.jpg" alt=""/><br><p><br>
+                            Ratkaistaan ensin laatikon kiihtyvyys (eli hidastuvuus), kun se menee tasoa ylös. Newtonin II laki laatikolle ylöspäin mentäessä \(x\)-suunnassa tällöin:
+
+                            \begin{equation*}
+                                \begin{split}
+                                    \sum \overline{F_x} &= m\overline{a}_1 \\
+                                    \overline{F}_\mu +\overline{G}_x &= m\overline{a}_1 \\
+                                    \mu N +G\sin{\theta} &= ma_1 \\
+                                    \mu N +mg\sin{\theta} &= ma_1 \\
+                                \end{split}
+                            \end{equation*}
+
+                            Newtonin II laki laatikolle ylöspäin mentäessä \(y\)-suunnassa tällöin:
+
+                            \begin{equation*}
+                                \begin{split}
+                                    \sum \overline{F_y} &= \overline{0} \\
+                                    \overline{G}_y+\overline{N} &= 0 \\
+                                    -G\cos{\theta} +N &= 0 \\
+                                    N &= mg\cos{\theta}
+                                \end{split}
+                            \end{equation*}
+
+                            Sijoitetaan aiempaan yhtälöön:
+
+                            \begin{equation*}
+                                \begin{split}
+                                    \mu mg\cos{\theta} +mg\sin{\theta} &= ma_1 \\
+                                    g(\mu \cos{\theta} +\sin{\theta}) &= a_1 \\
+                                \end{split}
+                            \end{equation*}
+
+                            Ratkaistaan nyt tason kiihtyvyys kun se tulee takaisin alas. Huomataan, että tilanne on identtinen \(y\)-suunnassa. Toisaalta \(x\)-suunnassa nyt kitkavoima ja painovoiman vaakakomponentit osoittavat eri suuntiin, toisin kuin ylöspäin mentäessä. Newton II \(x\)- suunnassa:
+
+                            \begin{equation*}
+                                \begin{split}
+                                     \sum \overline{F_x} &= m\overline{a}_2 \\
+                                     \overline{F}_\mu +\overline{G}_x &= m\overline{a}_2 \\
+                                     F_\mu+G_x &= ma_2 \\
+                                      -\mu N +mg\sin{\theta} &= ma_2 \\
+                                      -\mu  mg\cos{\theta}+mg\sin{\theta} &= ma_2 \\
+                                      g(-\mu  \cos{\theta} \sin{\theta}) &= a_2 \\
+                                \end{split}
+                            \end{equation*}
+
+                            Mikäli kappale liikkuu vakiokiihtyvyydellä ja sen alku-tai loppunopeus on nolla , niin kinematiikan kaavojen mukaan:
+
+                            \begin{equation*}
+                                \ell = \frac{1}{2}at^2 \Rightarrow t = \sqrt{\frac{2\ell}{a}}
+                            \end{equation*}
+
+                            Eli aikasuhde:
+
+                            \begin{equation*}
+                                \begin{split}
+                                    \frac{t_2}{t_1} &= \frac{\sqrt{\frac{2\ell}{a_2}}}{\sqrt{\frac{2\ell}{a_1}}} \\
+                                    \frac{t_2}{t_1} &= \sqrt{\frac{\frac{2\ell}{a_2}}{{\frac{2\ell}{a_1}}}} \\
+                                    \frac{t_2}{t_1} &= \sqrt{\frac{a_1}{a_2}} \\
+                                    \frac{t_2}{t_1} &= \sqrt{\frac{g(\mu \cos{\theta} +\sin{\theta})}{g(-\mu  \cos{\theta} +\sin{\theta})}} \\
+                                    \frac{t_2}{t_1} &= \sqrt{\frac{g(\mu \cos{\theta} +\sin{\theta})}{g(-\mu  \cos{\theta} +\sin{\theta})}} \\
+                                    \frac{t_2}{t_1} &= \sqrt{\frac{\mu \cos{\theta} +\sin{\theta}}{-\mu  \cos{\theta} +\sin{\theta}}} \\
+                                   \frac{t_2}{t_1} &= \sqrt{\frac{0{,}5\cdot \cos{(\arcsin{0{,}6})} +\sin{(\arcsin{0{,}6}})}{-0{,}5\cdot  \cos{(\arcsin{0{,}6})} +\sin{(\arcsin{0{,}6}})}} \\
+                                   \frac{t_2}{t_1} &= \sqrt{\frac{0{,}5\cdot \cos{(\arcsin{0{,}6})} +0{,}6}{-0{,}5\cdot  \cos{(\arcsin{0{,}6})} +0{,}6}} \\
+                                \end{split}
+                            \end{equation*}
+
+                            Kosinien avaamiseksi tarvitsee käyttää annettua trigonometrista kaavaa:
+
+                            \begin{equation*}
+                                \cos \left(\arcsin \left(0,6\right)\right)=\sqrt{1-(0{,}6)^2}=\sqrt{1-\left(\frac{3}{5}\right)^2} = \frac{4}{5}
+                            \end{equation*}
+
+                            \begin{equation*}
+                                \begin{split}
+                                    \frac{t_2}{t_1} &= \sqrt{\frac{\frac{1}{2}\cdot \frac{4}{5} +\frac{3}{5}}{-\frac{1}{2}\cdot  \frac{4}{5} +\frac{3}{5}}} \\
+                                    \frac{t_2}{t_1} &= \sqrt{5}
+                                \end{split}
+                            \end{equation*}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="collapsible"><h2>Tehtävä 3.2&#x1F63F;</h2></button>
+            <div class="exercise">
+                <p>Rekan jarrut pettävät kesken ajon. Kuusi tonnia painavan rekan pysäyttämiseksi tielle lastataan \(60\,\mathrm{kg}\) painavia hiekkasäkkejä, joihin rekka voi törmätä. Kuinka monta hiekkasäkkiä tarvitaan, jotta saadaan hidastettua rekkaa \(75\%\) sen alkunopeudesta \(v_0 = 50\,\mathrm{\frac{km}{h}}\)? Voidaan olettaa, että törmäykset ovat täysin kimmoisia. Oletetaan myös, että törmätessä rekkaan hiekkasäkit liukuvat kitkatta maata pitkin.<br>
+                <br>
+                <a onclick="document.getElementById('s2').style.display='block'" class="s-button">Ratkaisu 3.2</a><br></p>
+                <div id="s2" class="modal">
+                  <div class="s-modal-content">
+                    <div class="s-container">
+                      <span onclick="document.getElementById('s2').style.display='none'" class="s-button2 s-display-topright">&times;</span>
+                      <p>Olkoon rekan nopeus \(n\) törmäyksen jälkeen \(v_n\), eli ensimmäisen törmäyksen jälkeen liikemäärän säilymiselle voitaisin kirjoittaa:
+
+                        \begin{equation*}
+                            Mv_0 = (M+m)v_1
+                        \end{equation*}
+
+                        jossa \(M\) on rekan massa and \(v_1\) on törmäyksen jälkeinen nopeus. Toisen törmäyksen jälkeen:
+
+                        \begin{equation*}
+                            Mv_0 = (M+m)v_1 = (M+2m)v_2
+                        \end{equation*}
+
+                        Idea voidaan yleistää \(n\) törmäykselle:
+
+                        \begin{equation*}
+                            Mv_0 = (M+m)v_1 = (M+2m)v_2 = \cdots = (M+nm)v_n
+                        \end{equation*}
+
+                        Josta saadaan ratkaistua nopeussuhde \(\frac{v_n}{v_0} = p\), joka on \(75\%\):
+
+    \begin{equation*}
+    \begin{split}
+       \Rightarrow \frac{v_n}{v_0} &= \frac{M}{M+nm} \\
+       p &= \frac{M}{M+nm} \\
+       Mp +nmp &= M \\
+       nmp &= M-Mp \\
+       n &= \frac{M-Mp}{mp} \\
+        n &= \frac{M(1-p)}{mp} \\
+        n &= \frac{6000\,\mathrm{kg}\cdot(1-0{,}75)}{60\,\mathrm{kg}\cdot0{,}75} \\
+            n &= 33{,}3333 \\
+            n &\approx 34 \\
+        \end{split}
+    \end{equation*}
+                        Tarvitaan siis vähintään 34 hiekkasäkkiä.</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <button class="collapsible"><h2>Tehtävä 3.3</h2></button>
+            <div class="exercise">
+                <p>Kuinka monta pingviiniä voi seistä ohuen sylinterin muotoisen jäälautan päällä, ennen kuin lautta uppoaa täysin meriveteen? Sylinterin pohjan halkaisija on \(D=15\, \mathrm{m}\) ja korkeus \(h = 1\,\mathrm{m}\). Yksi pingviini painaa \(m=30\,\mathrm{kg}\) verran.
+                <br>
+                Jään tiheys on noin \(917\, \mathrm{\frac{kg}{m^3}}\) ja meriveden \(1030\, \mathrm{\frac{kg}{m^3}}\).<br>
+                <br>
+            <a onclick="document.getElementById('s3').style.display='block'" class="s-button">Ratkaisu 3.3</a><br></p>
+            <div id="s3" class="modal">
+              <div class="s-modal-content">
+                <div class="s-container">
+                  <span onclick="document.getElementById('s3').style.display='none'" class="s-button2 s-display-topright">&times;</span>
+                      <p>Olkoon pingviinejä \(n\) jäälautan päällä ennen kuin se uppoaa täysin veden alle. Lauttaan kohdistuva noste tulee olla yhtäsuuri kuin pingviinien- ja lautan yhteispaino.
+                        Newtonin II laista saadaan:
+                        \begin{equation*}
+                            \begin{split}
+                                \sum \overline{F} &= \overline{0} \\
+                                 \overline{F_n}+\overline{G}_{pingviinit}+\overline{G}_{lautta} &= \overline{0} \\
+                            \end{split}
+                        \end{equation*}
+
+                        Valitaan positiivinen suunta ylöspäin, jolloin:
+
+                        \begin{equation*}
+                            \begin{split}
+                                {F_n}-{G}_{pingviinit}-{G}_{lautta} &= 0\\
+                            F_n &= m_{pingviinit}g+m_{lautta}g \\
+                             F_n &= n\cdot m_{1.pingviini}g+m_{lautta}g \\
+                             F_n &= g(nm_{1.pingviini}+m_{lautta}) \\
+                            \end{split}
+                        \end{equation*}
+
+                        Lautta on tehty jäästä ja on sylinterin muotoinen, jolloin sen paino voidaan kirjoittaa muodossa:
+
+                        \begin{equation*}
+                            m_{lautta} = \rho_{jaa} V = \rho_{jaa} \pi r^2h =\rho_{jaa} \pi \left(\frac{D}{2}\right)^2h
+                        \end{equation*}
+
+                        Lasketaan nosteen suuruus rajatapauksessa, kun lautta on juuri ja juuri vedenpinnan yllä:
+
+                        \begin{equation*}
+                            F_n = \rho_{vesi}gV = \rho_{vesi}g\pi \left(\frac{D}{2}\right)^2h
+                        \end{equation*}
+
+                        Sijoittamalla nämä tiedot aikaisempaan yhtälöön saadaan:
+
+                        \begin{equation*}
+                            \begin{split}
+                               \rho_{vesi}g\pi \left(\frac{D}{2}\right)^2h &= g(nm_{1.pingviini}+\rho_{jaa} \pi \left(\frac{D}{2}\right)^2h) \\
+                               \rho_{vesi}\pi \frac{D^2}{4}h &= nm_{1.pingviini}+\rho_{jaa} \pi \frac{D^2}{4}h \\
+                               \frac{D^2}{4}\pi h \left(\rho_{vesi}-\rho_{jaa} \right) &= nm_{1.pingviini} \\
+                               n &=  \frac{D^2}{4m_{1.pingviini}}\pi h \left(\rho_{vesi}-\rho_{jaa} \right) \\
+                               n &=  \frac{(15\,\mathrm{m})^2}{4\cdot 30\,\mathrm{kg}}\cdot 3{,}14159 \cdot 1\,\mathrm{m} \left(1030-917 \right)\mathrm{\frac{kg}{m^3}} \\
+                               n &= 665{,}62438 \\
+                               n &\approx 665
+                            \end{split}
+                        \end{equation*}
+                        Lautalle mahtuu yhteensä 665 pingviiniä.</p>
+                </div>
+            </div>
+            </div>
+            </div>
+            <button class="collapsible"><h2>Tehtävä 3.4</h2></button>
+            <div class="exercise">
+                <p>Kun käsivarsi on ojennettu vaakasuoraksi sen painoa kannattelee hartialihas kuvan mukaisesti:
+                    </p><br><br><img src="images_exercises/teht3.4.jpg" alt=""/><br><p><br>
+
+                Jossa \(a = 15\,\mathrm{cm}\) ja etäisyys käsivarren massakeskipisteeseen \(b = 33\,\mathrm{cm}\). Käsivarren massa on noin \(18\,\mathrm{kg}\).
+                <br>
+                <br>
+                a) Ratkaise kannattelevien voimien \(T\) ja \(F\) suuruudet, kun kuvan kulma \(\theta = 17^\circ\). Voimat ovat erisuuressa kulmassa. Anna ratkaisu kolmen merkitsevän numeron tarkkuudella.
+                <br>
+                b) Kuinka suuressa kulmassa vaakasuorasta ylöspäin mitattuna voima \(F\) kohdistuu?
+
+                \begin{equation*}
+                \begin{array}{|r|r|}
+                \hline
+                \sqrt{1{,}23} & 1{,}10 \\ \hline
+                \sqrt{1{,}56} & 1{,}24 \\ \hline
+                \sqrt{1{,}66} & 1{,}28 \\ \hline
+                \sqrt{1{,}85} & 1{,}36 \\ \hline
+                \sqrt{1{,}92} & 1{,}38 \\ \hline
+                \sqrt{2{,}00} & 1{,}41 \\ \hline
+                \sqrt{2{,}45} & 1{,}56 \\ \hline
+                \sqrt{2{,}74} & 1{,}65 \\ \hline
+                \end{array}
+                \end{equation*}<br>
+                <br>
+            <a onclick="document.getElementById('s4').style.display='block'" class="s-button">Ratkaisu 3.4</a><br></p>
+            <div id="s4" class="modal">
+              <div class="s-modal-content">
+                <div class="s-container">
+                  <span onclick="document.getElementById('s4').style.display='none'" class="s-button2 s-display-topright">&times;</span>
+                  <p>Tarkastellaan tilannetta Newtonin II lain avulla. Valitaan positiiset suunnat ylöspäin ja oikealle. Newton II \(x\)-suunnassa:
+
+                    \begin{equation*}
+                        \begin{split}
+                            \sum \overline{F}_x &= \overline{0} \\
+                            \overline{F}_x+\overline{T}_x &= \overline{0} \\
+                            F_x-T_x &= 0 \\
+                            F_x &= T\cos{\theta} \\
+                        \end{split}
+                    \end{equation*}
+
+                    ja \(y\)-suunnassa:
+
+                    \begin{equation*}
+                        \begin{split}
+                            \sum \overline{F}_y &= \overline{0} \\
+                            \overline{F}_y+\overline{T}_y+\overline{G} &= \overline{0} \\
+                            -F_y+T_y -G &= 0 \\
+                            F_y &= T\sin{\theta}-mg \\
+                        \end{split}
+                    \end{equation*}
+
+                    Tarkastellaan nyt pyörimisen tasapainoa. Valitaan tarkastelupisteeksi olkapää. Valitaan positiivinen kiertosuunta vastapäivään. Tällöin tarkastelupisteessä voiman \(F\) momentti nolla.
+
+                    \begin{equation*}
+                        \begin{split}
+                            \sum M &= 0 \\
+                            aT_y - bG &= 0\\
+                            aT\sin{}\theta &= bmg \\
+                            T &= \frac{bmg}{a\sin{\theta}} \\
+                            T &= \frac{33\cdot10^{-2}\,\mathrm{m}\cdot 18\,\mathrm{kg}\cdot 9{,}81\,\mathrm{\frac{m}{s^2}}}{15\cdot10^{-2}\,\mathrm{m}\cdot\sin{17^\circ}} \\
+                            T &\approx \frac{33\cdot10^{-2}\,\mathrm{m}\cdot 18\,\mathrm{kg}\cdot 9{,}81\,\mathrm{\frac{m}{s^2}}}{15\cdot10^{-2}\,\mathrm{m}\cdot0{,}292} \\
+                            T &= 1330{,}397\,\mathrm{N} \\
+                            T &\approx 1330\,\mathrm{N} \\
+                        \end{split}
+                    \end{equation*}
+
+                    Aiemmista yhtälöistä saadaan ratkaistua voiman \(F\) komponentit:
+
+                    \begin{equation*}
+                        \begin{split}
+                            F_x &= T\cos{\theta} \\
+                            F_x &=  1330{,}397\,\mathrm{N}\cdot\cos{17^\circ} \\
+                           F_x &\approx 1330{,}397\,\mathrm{N}\cdot 0{,}956 \\
+                           F_x &= 1271{,}850\,\mathrm{N}\\
+                        \end{split}
+                    \end{equation*}
+
+                    ja:
+
+                    \begin{equation*}
+                        \begin{split}
+                            F_y &= T\sin{\theta}+mg \\
+                            F_y &= 1330{,}397\,\mathrm{N}\cdot\sin{17^\circ}+18\,\mathrm{kg}\cdot9{,}81\,\mathrm{\frac{m}{s^2}} \\
+                            F_y &\approx 1330{,}397\,\mathrm{N}\cdot0{,}292-18\,\mathrm{kg}\cdot9{,}81\,\mathrm{\frac{m}{s^2}} \\
+                            F_y &= 212{,}390\,\mathrm{N} \\
+                        \end{split}
+                    \end{equation*}
+
+                    Jolloin kokonaisvoima \(F\) saadaan Pythagoraan lauseen avulla:
+
+                    \begin{equation*}
+                        \begin{split}
+                            F^2 &= F_x^2+F_y^2 \\
+                            F &= \sqrt{F_x^2+F_y^2} \\
+                            F &= \sqrt{(1271{,}850\,\mathrm{N})^2 +(212{,}390\,\mathrm{N} )^2} \\
+                            F &= \sqrt{1{,}66271\cdot10^{6}\,\mathrm{N^2}} \\
+                            F &= \sqrt{1{,}66271}\cdot10^{3}\,\mathrm{N} \\
+                            F &\approx 1{,}28\cdot10^{3}\,\mathrm{N} \\
+                            F &= 1280\,\mathrm{N} \\
+                        \end{split}
+                    \end{equation*}
+
+                    b) Kulman suuruus saadaan tangentin avulla:
+
+                    \begin{equation*}
+                        \tan\varphi = \frac{F_y}{F_x} = \frac{212{,}390\,\mathrm{N} }{1271{,}850\,\mathrm{N}} = 0{,}166 \Rightarrow \varphi \approx  9{,}4^\circ
+                    \end{equation*}</p>
+                </div>
+              </div>
+            </div>
+        </div>
+        <script>
+        var modal1 = document.getElementById('s1');
+        var modal2 = document.getElementById('s2');
+        var modal3 = document.getElementById('s3');
+        var modal4 = document.getElementById('s4');
+
+        window.onclick = function(event) {
+            if (event.target == modal1) {
+                modal1.style.display = "none";
+            }
+            if (event.target == modal2) {
+                modal2.style.display = "none";
+            }
+            if (event.target == modal3) {
+                modal3.style.display = "none";
+            }
+            if (event.target == modal4) {
+                modal4.style.display = "none";
+            }
+        }
+        </script>
+    </div>
+    <script type="text/javascript" src="js.js"></script>
+</div>
+
+    <div class="background-sq3">
+        <ul class="square3">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+<footer>
+<p>Copyright&copy; 2021 Exaphys All Rights Reserved.</p>
+</footer>
+</body>
+</html>

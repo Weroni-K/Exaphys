@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="kinematiikka, FY1, FY4, fysiikka, physics, exam, pääsykoe, materiaali, materials, valintakoe">
+    <meta name="description" content="Tärkeimpiä asioita ovat hajoamisyhtälöt, hajoamislaki, säteilyn mittayksiköt, gammasäteilyn heikkenemislaki.">
+    <meta name="author" content="Exaphys">
+    <title>9. Aine ja säteily | Exaphys -fysiikan opiskelumateriaalit</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="newcss.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/javascript" src="js.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({
+    tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+    }
+    });</script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML-full"></script>
+</head>
+<body>
+    <div class="home">
+        <nav class="navbar">
+            <div class="container">
+                <h1 class="logo">Exaphys</h1> 
+                <ul class="menu-text">
+                    <li><a href="index.html">Koti</a></li>
+                    <li><a href="materials_fi.html">Materiaali</a></li>
+                    <li><a href="about.html">Meistä</a></li>
+                    <li><a href="index.html"></a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="chapter-text">
+            <h2>9. Aine ja säteily</h2>
+            <h3>Tärkeimpiä asioita ovat hajoamisyhtälöt, hajoamislaki, säteilyn mittayksiköt, gammasäteilyn heikkenemislaki. Tehtävissä saa käyttää valitsemaasi kaavakokoelmaa (esim. MAOL) ja trigonometrista taulukkoa.</h3>
+        </div>
+        <div class="exercises">
+            <button class="collapsible"><h2>Tehtävä 9.1</h2></button>
+            <div class="exercise">
+                <p>Ratkaise oheisissa ydinreaktoissa muodostuva tuntematon nuklidi \(\mathrm{X}\):
+<br><br>
+a)
+
+\begin{equation*}
+    \mathrm{^{28}_{14} Si+\gamma \longrightarrow ^{24}_{12}Mg+X}
+\end{equation*}
+<br>
+b)
+
+\begin{equation*}
+    \mathrm{^{2}_{1} H+^9_4Be \longrightarrow X+^4_2He}
+\end{equation*}
+<br>
+c)
+
+\begin{equation*}
+    \mathrm{^4_2He+^7_3Li \longrightarrow X+^1_0 n}
+\end{equation*}<br>
+                <br>
+                <a onclick="document.getElementById('s1').style.display='block'" class="s-button">Ratkaisu 9.1</a><br></p>
+                <div id="s1" class="modal">
+                    <div class="s-modal-content">
+                        <div class="s-container">
+                            <span onclick="document.getElementById('s1').style.display='none'" class="s-button2">&times;</span><p>Lasketaan kussakin kohdassa nuklidin massa- ja järjestysluku:
+<br><br>
+a)
+
+\begin{equation*}
+    \begin{split}
+        A+24&=28 \Rightarrow A =4\\
+        Z+12&= 14 \Rightarrow Z = 2 \\
+    \end{split}
+\end{equation*}
+
+Eli \(X\) on alfa-hiukkanen.
+<br><br>
+b)
+
+\begin{equation*}
+    \begin{split}
+        A+4&=2+9 \Rightarrow A =7\\
+        Z+2&= 1+4 \Rightarrow Z = 3 \\
+    \end{split}
+\end{equation*}
+
+Jaksollista järjestelmää hyödyntäen huomataan, että \(\mathrm{^7_3 X = ^7_3 Li}\), eli litium.
+<br><br>
+c)
+
+\begin{equation*}
+    \begin{split}
+        A+1 &= 4+7 \Rightarrow A = 10 \\
+        Z+0 &= 2+3 \Rightarrow Z = 5 \\
+    \end{split}
+\end{equation*}
+
+Jaksollista järjestelmää hyödyntäen huomataan, että \(\mathrm{^{10}_5 X = ^{10}_5 B}\), eli boori.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="collapsible"><h2>Tehtävä 9.2&#x1F63F;</h2></button>
+            <div class="exercise">
+                <p>Fluorin radioaktiivista isotooppia \(\mathrm{^{18} F}\):a käytetään usein lääketieteellisessä PET-kuvantamisessa merkkiaineena. Kyseinen isotooppi hajoaa \(97\%\) ajasta positroniemissiolla ja \(3\%\) ajasta elektronisieppauksella. Isotooppi  \(\mathrm{^{18} F}\) on erityisen hyödyllinen lääketieteessä, koska sen puoliintumisaika on hyvin lyhyt \(110\,\mathrm{min}\), jolloin se ei aiheuta kuvattavalle potilaalle suurta säteilyannosta.
+
+<br><br>
+a) Esitä reaktioyhtälö, kun \(\mathrm{^{18} F}\) hajoaa positroniemissiolla.
+<br>
+b) Esitä reaktioyhtälö, kun \(\mathrm{^{18} F}\) hajoaa elektronisieppauksella.
+<br>
+c) Potilaalle injektoidaan \(\mathrm{^{18} F}\) annos, jonka aktiivisuudeksi mitataan \(320\,\mathrm{MBq}\) sen antamishetkellä. Kuinka monta \(\mathrm{^{18} F}\) atomia potilaaseen injektoitiin?
+<br>
+d) Fluorin isotooppi \(\mathrm{^{18} F}\) katsotaan olevan turvallinen potilaalle ja ympäröiville ihmisille, kun sen aktiivisuus laskee alle \(185\,\mathrm{MBq}\):n rajan. Kuinka monta tuntia kestää, että potilas voidaan kotiuttaa sairaalasta turvallisesti?
+
+
+\begin{equation*}
+    \begin{array}{|r|r|}
+    \hline
+         \ln{(2)} & 0{,}693 \\ \hline
+    \ln{(0{,}35)}& -1{,}04 \\ \hline
+    \ln{(0{,}42)} & -0{,}867 \\ \hline
+    \ln{(0{,}58)}& -0{,}544 \\ \hline
+    \ln{(0{,}63)}& -0{,}462 \\ \hline
+    \ln{(0{,}72)}& -0{,}328 \\ \hline
+    \end{array}
+\end{equation*}<br>
+                <br>
+                <a onclick="document.getElementById('s2').style.display='block'" class="s-button">Ratkaisu 9.2</a><br></p>
+                <div id="s2" class="modal">
+                  <div class="s-modal-content">
+                    <div class="s-container">
+                      <span onclick="document.getElementById('s2').style.display='none'" class="s-button2 s-display-topright">&times;</span>
+                      <p>a) Positroniemissiossa järjestysluku pienenee yhdellä ja samalla emittoituu positroni ("positiivinen elektroni"):
+
+\begin{equation*}
+    \begin{split}
+        \mathrm{^{18}_9F} &\longrightarrow ^{18}_{9-1}\mathrm{X}+e^+ \\
+        \mathrm{^{18}_9F} &\longrightarrow ^{18}_{8}\mathrm{X}+e^+ \\
+    \end{split}
+\end{equation*}
+
+Jaksollisesta järjestelmästä voidaan lukea että nuklidi on happi:
+
+\begin{equation*}
+    \mathrm{^{18}_9F} \longrightarrow ^{18}_{8}\mathrm{O}+e^+ 
+\end{equation*}
+<br><br>
+b) Elektronisieppauksessa ydin sieppaa elektronin muuntamalla protonin neutroniksi:
+
+\begin{equation*}
+    \begin{split}
+        \mathrm{^{18}_9F} &\longrightarrow ^{18}_{9-1}\mathrm{X}+e^{-} \\
+        \mathrm{^{18}_9F} &\longrightarrow ^{18}_{8}\mathrm{X}+e^{-} \\
+        \mathrm{^{18}_9F} &\longrightarrow ^{18}_{8}\mathrm{O}+e^{-} \\
+    \end{split}
+\end{equation*}
+<br><br>
+c) Lasketaan hajoamisvakio:
+
+\begin{equation*}
+    \lambda = \frac{\ln(2)}{t_{1/2}} \approx \frac{0{,}693}{110\cdot60\,\mathrm{s}}=1{,}05\cdot10^{-4}\,\mathrm{\frac{1}{s}}
+\end{equation*}
+
+Aktiivisuuden arvolle:
+
+\begin{equation*}
+   \begin{split}
+        A &= \lambda N \\
+         N &= \frac{A}{\lambda} \\
+          N &= \frac{320\cdot10^{9}\,\mathrm{Bq}}{1{,}05\cdot10^{-4}\,\mathrm{\frac{1}{s}}} \\
+          N &=  3{,}0476\cdot10^{12}  \\
+          N &\approx 3{,}04\cdot10^{12}\,\mathrm{kpl}  \\
+   \end{split}
+\end{equation*}
+<br><br>
+d) Lasketaan kuinka pitkä aika \(t\) kuluu kun aktiivisuus pienenee arvosta \(A_0 = 320\,\mathrm{MBq}\) arvoon \(A = 185\,\mathrm{MBq}\):
+
+\begin{equation*}
+    \begin{split}
+        A &= A_0e^{-\lambda t} \\
+        \ln\left(\frac{A}{A_0}\right) &= -\lambda t \\
+        t &= -\frac{\ln\left(\frac{A}{A_0}\right) }{\lambda} \\
+        t &= -\frac{\ln\left(\frac{185\,\mathrm{MBq}}{320\,\mathrm{MBq}}\right) }{1{,}05\cdot10^{-4}\,\mathrm{\frac{1}{s}}} \\
+        t &= -\frac{\ln\left(0{,}5781\right) }{1{,}05\cdot10^{-4}\,\mathrm{\frac{1}{s}}} \\
+        t &\approx -\frac{-0{,}544 }{1{,}05\cdot10^{-4}\,\mathrm{\frac{1}{s}}} \\
+        t &= 5180{,}952 \,\mathrm{s} \\
+        t &\approx 1{,}43\,\mathrm{h}
+    \end{split}
+\end{equation*}</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <button class="collapsible"><h2>Tehtävä 9.3</h2></button>
+            <div class="exercise">
+                <p>Tsernobylin ydinonnettumuuden aiheuttaman vahingon minimoimiseksi sen ympärille rakennettiin teräksestä ja betonista kupoli. Betoni on kupolin sisäpuolella. Kupolin avulla vain \(1\%\) alkuperäisestä säteilystä pääsee läpi. Teräskerroksen paksuus on noin \(5{,}5\,\mathrm{m}\). Betonin matkavaimennuskerroin \(\mu_b = 6{,}1\,\frac{1}{m}\) ja teräksen matkavaimennuskerroin \(\mu_t = 15{,}2\,\frac{1}{m}\). Kuinka paksu on kupolin betonikerros?
+<br><br>
+
+\(\ln{(2)} \approx 0{,}609\,, \ln{(0{,}01)} \approx -4{,}605\)<br>
+            <br>
+            <a onclick="document.getElementById('s3').style.display='block'" class="s-button">Ratkaisu 9.3</a><br></p>
+            <div id="s3" class="modal">
+              <div class="s-modal-content">
+                <div class="s-container">
+                  <span onclick="document.getElementById('s3').style.display='none'" class="s-button2 s-display-topright">&times;</span>
+                      <p>Kupolin sisältä emittoituu säteilyä \(I_0\) alkuintensiteetillä. Intensiteetti kulkee ensin betonikerroksen läpi:
+
+\begin{equation*}
+    I_b = I_0e^{-\mu_b d_b}
+\end{equation*}
+
+Betonikerroksesta läpi tullut intensiteetti saapuu teräskerrokseen:
+
+\begin{equation*}
+    \begin{split}
+        I_t &= I_be^{-\mu_t d_t}
+    \end{split}
+\end{equation*}
+
+Toisaalta teräskerroksen läpi tuleva intensiteetti tulee olla 1\% alkuperäisestä:
+
+\begin{equation*}
+    \begin{split}
+        \Rightarrow 0{,}01I_0 &= I_be^{-\mu_t d_t} \\
+        0{,}01I_0 &=  I_0e^{-\mu_b d_b}e^{-\mu_t d_t} \\
+         0{,}01 &= e^{-\mu_b d_b}e^{-\mu_t d_t} \\
+          0{,}01 &= e^{-\mu_b d_b-\mu_t d_t}\\
+          \ln(0{,}01) &= -\mu_b d_b-\mu_t d_t \\
+          d_t &= \frac{-(\ln(0{,}01)+\mu_bd_b)}{\mu_t} \\
+          d_t &\approx \frac{-(-4{,}605+6{,}1\,\mathrm{\frac{1}{m}}\cdot 5{,}5\,\mathrm{m})}{15{,}2\,\mathrm{\frac{1}{m}}} \\
+          d &= 1{,}9042\,\mathrm{m} \\
+          d&\approx 1{,}9\,\mathrm{m}
+     \end{split}
+\end{equation*}</p>
+                </div>
+            </div>
+            </div>
+            </div>
+            
+        <script>
+        var modal1 = document.getElementById('s1');
+        var modal2 = document.getElementById('s2');
+        var modal3 = document.getElementById('s3');
+
+        window.onclick = function(event) {
+            if (event.target == modal1) {
+                modal1.style.display = "none";
+            }
+            if (event.target == modal2) {
+                modal2.style.display = "none";
+            }
+            if (event.target == modal3) {
+                modal3.style.display = "none";
+            }
+        }
+        </script>
+    </div>
+    <script type="text/javascript" src="js.js"></script>
+</div>
+
+    <div class="background-sq3">
+        <ul class="square3">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+<footer>
+<p>Copyright&copy; 2021 Exaphys All Rights Reserved.</p>
+</footer>
+</body>
+</html>

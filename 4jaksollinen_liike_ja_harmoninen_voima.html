@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="FY5, fysiikka, physics, exam, pääsykoe, materiaali, materials, valintakoe">
+    <meta name="description" content="Tärkeimpiä asioita ovat tasainen ympyräliike, tangentti- ja normaalikiihtyvyys, jousen voima ja energia.">
+    <meta name="author" content="Exaphys">
+    <title>4. Jaksollinen liike ja harmoninen voima | Exaphys -fysiikan opiskelumateriaalit</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="newcss.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/javascript" src="js.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({
+    tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+    }
+    });</script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML-full"></script>
+</head>
+<body>
+    <div class="home">
+        <nav class="navbar">
+            <div class="container">
+                <h1 class="logo">Exaphys</h1> 
+                <ul class="menu-text">
+                    <li><a href="index.html">Koti</a></li>
+                    <li><a href="materials_fi.html">Materiaali</a></li>
+                    <li><a href="about.html">Meistä</a></li>
+                    <li><a href="index.html"></a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="chapter-text">
+            <h2>4. Jaksollinen liike ja harmoninen voima</h2>
+            <h3>Tärkeimpiä asioita ovat tasainen ympyräliike, tangentti- ja normaalikiihtyvyys, jousen voima ja energia. Tehtävissä saa käyttää valitsemaasi kaavakokoelmaa (esim. MAOL) ja trigonometrista taulukkoa.</h3>
+        </div>
+        <div class="exercises">
+            <button class="collapsible"><h2>Tehtävä 4.1</h2></button>
+            <div class="exercise">
+                <p>Kartioheiluri koostuu pallosta \(m\), joka on kiinnitetty \(\ell = 10\,\mathrm{m}\) pituisella langalla kattoon. Lanka on kulmassa  \(\theta\)  pystysuoran suhteen. Pallo kiertää kolme kokonaista kierrosta 12 sekunnissa. Kuinka suuri on kulma  \(\theta\)?
+                <br>
+                <a onclick="document.getElementById('s1').style.display='block'" class="s-button">Ratkaisu 4.1</a><br></p>
+                <div id="s1" class="modal">
+                    <div class="s-modal-content">
+                        <div class="s-container">
+                            <span onclick="document.getElementById('s1').style.display='none'" class="s-button2">&times;</span><p>Piirretään mallikuva tilanteesta:
+                            </p>
+                            <br><img src="images_exercises/teht4.11.jpg" alt=""/><br><p>
+                            <br>
+
+                            Pallo kiertää kolme kokonaista kierrosta 12 sekunnissa. Pallolla on siis kulmanopeus:
+
+                            \begin{equation*}
+                                \omega = \frac{\Delta \theta}{\Delta t}= \frac{3\cdot2\pi}{12\,\mathrm{s}} = \frac{\pi}{3}\,\mathrm{\frac{1}{s}}
+                            \end{equation*}
+
+                            Muodostetaan Newtonin II lain mukainen liikeyhtälö \(x\)-suunnassa:
+
+                            \begin{equation*}
+                                \begin{split}
+                                    \sum \overline{F}_x &= m\overline{a}_n \\
+                                    \overline{F}_x &= m\overline{a}_n \\
+                                    F\sin{\theta} &= m\frac{v^2}{R} \quad (1)
+                                \end{split}
+                            \end{equation*}
+
+                            vastaavasti $y$-suunnassa: (sovitaan positiivinen suunta ylöspäin)
+
+                            \begin{equation*}
+                                \begin{split}
+                                    \sum \overline{F}_y &= \overline{0} \\
+                                    \overline{G}+\overline{F}_y &= \overline{0} \\
+                                    -G+F\cos{\theta} &= 0 \\
+                                     F\cos{\theta} &= mg \quad (2) \\ 
+                                \end{split}
+                            \end{equation*}
+
+                            Jaetaan yhtälö (1) puolittain yhtälöllä (2):
+
+                            \begin{equation*}
+                                \begin{split}
+                                    \frac{F\sin{\theta}}{F\cos{\theta}} &= \frac{m\frac{v^2}{R}}{mg} \\
+                                    \tan\theta &= \frac{v^2}{gR}
+                                \end{split}
+                            \end{equation*}
+
+                            Rata- ja kulmanopeden välillä on yhteys:
+
+                            \begin{equation*}
+                                v=\omega R
+                            \end{equation*}
+
+                            Sijoitetaan edelliseen yhtälöön:
+
+                            \begin{equation*}
+                                \begin{split}
+                                    \tan\theta &= \frac{(\omega R)^2}{gR} \\
+                                    \tan\theta &= \frac{\omega^2 R}{g} \\
+                                \end{split}
+                            \end{equation*}
+
+                            Toisaalta tangentille voidaan kirjoittaa:
+
+                            \begin{equation*}
+                                \tan\theta = \frac{R}{h}
+                            \end{equation*}
+
+                            Toisaalta korkeus voidaan esittää pituuden avulla:
+
+                            \begin{equation*}
+                                \cos{\theta} = \frac{h}{\ell}\Rightarrow h =\ell \cos{\theta}
+                            \end{equation*}
+
+                            Yhtälö voidaan kirjoittaa nyt muotoon:
+
+                            \begin{equation*}
+                                \begin{split}
+                                    \frac{R}{h} &= \frac{\omega^2 R}{g} \\
+                                    \frac{R}{\ell \cos{\theta}} &= \frac{\omega^2 R}{g} \\
+                                    \frac{1}{\ell \cos{\theta}} &= \frac{\omega^2 }{g} \\
+                                    \cos{\theta} &= \frac{g}{\ell\omega^2} \\
+                                    \cos{\theta} &= \frac{9{,}81\,\mathrm{\frac{m}{s^2}}}{10\,\mathrm{m}\cdot(\frac{3{,}14159}{3}\,\mathrm{\frac{1}{s}})^2}\\
+                                    \cos{\theta} &= 0{,}8945 \\
+                                    \theta &\approx 26{,}54\,^\circ \\
+                                    \theta &\approx 27\,^\circ\\
+                                \end{split}
+                            \end{equation*}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="collapsible"><h2>Tehtävä 4.2</h2></button>
+            <div class="exercise">
+                <p>Laatikko, joka painaa \(3 \,\mathrm{kg}\) liikkuu vaakasuoralla tasolla kohti massatonta jousta, jonka jousivakio on \(8\,\mathrm{\frac{N}{m}}\). Laatikon ja tason välinen liikekitkakerroin on \(0{,}5\). Juuri ennen kuin laatikko törmää jouseen se liikkuu nopeudella \(2\,\mathrm{\frac{m}{s}}\). Kuinka paljon jousi puristuu?
+                <br>
+                \begin{equation*}
+                \begin{array}{|r|r|}
+                    \hline
+                \sqrt{0{,}42} & 0{,}64 \\ \hline
+                \sqrt{0{,}44} & 0{,}66 \\ \hline
+                \sqrt{0{,}47} & 0{,}68 \\ \hline
+                \sqrt{0{,}5} & 0{,}70 \\ \hline
+                \sqrt{0{,}62} & 0{,}78 \\ \hline
+                \sqrt{0{,}64} & 0{,}80 \\ \hline
+                \sqrt{2} & 1{,}41 \\ \hline
+                \sqrt{3} & 1{,}73 \\ \hline
+                \end{array}
+                \end{equation*}<br>
+                <br>
+                <a onclick="document.getElementById('s2').style.display='block'" class="s-button">Ratkaisu 4.2</a><br></p>
+                <div id="s2" class="modal">
+                  <div class="s-modal-content">
+                    <div class="s-container">
+                      <span onclick="document.getElementById('s2').style.display='none'" class="s-button2 s-display-topright">&times;</span>
+                      <p>Laatikon törmätessä jouseen, sen kineettinen energia alkaa pienentyä. Kineettinen energia muuttuu törmäyksen aikana kitkan tekemäksi työksi, mutta myös jousen potentiaalienergiaksi. Tehtävässä On huomattava, kun laatikko törmää jouseen se liikkuu matkan \(x\) eteenpäin, jolloin jousi puristuu matkan \(x\), mutta kitka tekee samalla työtä saman matkan ajan.
+
+                        Soveltamalla energian säilymistä:
+
+                        \begin{equation*}
+                            \begin{split}
+                                E_{kin} &= E_{pot,jousi}+W_{\mu} \\
+                                \frac{1}{2}mv^2 &= \frac{1}{2}kx^2+F_\mu x \\
+                                \frac{1}{2}mv^2 &= \frac{1}{2}kx^2+\mu N x \\
+                            \end{split}
+                        \end{equation*}
+
+                        Ratkaistaan tukivoiman lauseke. Newtonin II lain mukaan \(y\)-suunnassa:
+
+                        \begin{equation*}
+                            \sum \overline{F}_y = \overline{0} \Rightarrow N=G\Rightarrow N=mg
+                        \end{equation*}
+
+                        Yhtälö saadaan muotoon:
+
+                        \begin{equation*}
+                            \begin{split}
+                                \frac{1}{2}mv^2 &= \frac{1}{2}kx^2+\mu mg x \\
+                                mv^2 &= kx^2+2\mu mg x \\
+                                 kx^2+2\mu mg x-mv^2 &=0 \\
+                            \end{split}
+                        \end{equation*}
+
+                        Sijoitetaan lukuarvot ja ratkaistaan toisen asteen yhtälön ratkaisukaavalla:
+
+                        \begin{equation*}
+                            \begin{split}
+                                80x^2+2\cdot0{,}5 \cdot 3\cdot 9{,}81 x-3\cdot (2)^2 &=0 \\
+                                80x^2+29{,}43x-12 &= 0 \\
+                                \Rightarrow x&= \frac{-29{,}43\pm\sqrt{(29{,}43)^2-4\cdot80\cdot(-12)}}{2\cdot 80} \\
+                                x&=\frac{-29{,}43\pm\sqrt{4706{,}12}}{160} \\
+                                x&=\frac{-29{,}43\pm\sqrt{0{,}470612\cdot10^{4}}}{160} \\
+                                x&=\frac{-29{,}43\pm10^{2}\cdot\sqrt{0{,}470612}}{160} \\
+                            \end{split}
+                        \end{equation*}
+
+                        Tehtävänannon taulukosta saadaan luettua neliöjuuren likiarvoksi:
+
+                        \begin{equation*}
+                            x\approx \frac{-29{,}43\pm10^{-2}\cdot0{,}68}{160} \\
+                        \end{equation*}
+
+                        Josta saadaan kaksi ratkaisua: \(x = 0{,}2410 \,\mathrm{m}\) ja \(x =- 0{,}6089 \,\mathrm{m}\). Hylätään negatiivinen ratkaisu. Jousi puristuu siis matkan \(x\approx 0{,}24 \,\mathrm{m}\).</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <button class="collapsible"><h2>Tehtävä 4.3</h2></button>
+            <div class="exercise">
+                <p>Tarkastellaan kuvan mukaista ritsaa, joka koostuu kahdesta ideaalisesta jousesta. Jousilla on identtinen jousivakio \(k\) sekä lepopituus \(\ell\). Ritsalla ammutaan pieni pistemäinen kivi poikkeuttamalla sitä voimalla \(F\) matka \(\Delta x\) vasemalle. Kuinka suuri on kiven nopeus, kun se on kulkenut matkan \(\Delta x\)?<p><img src="images_exercises/teht4.3.jpg" alt=""/>
+                <br>
+                <br><br>
+                <br>
+            <a onclick="document.getElementById('s3').style.display='block'" class="s-button">Ratkaisu 4.3</a><br></p>
+            <div id="s3" class="modal">
+              <div class="s-modal-content">
+                <div class="s-container">
+                  <span onclick="document.getElementById('s3').style.display='none'" class="s-button2 s-display-topright">&times;</span>
+                      <p>Ratkaistaan jousen venymä kun sitä poikkeutetaan matka \(\Delta x\) vasemmalle. Tilanteessa muodostuu suorakulmainen kolmio:
+                        \begin{equation*}
+                            \begin{split}
+                                c^2 &= (\Delta x)^2 + \ell^2 \\
+                            \end{split}
+                        \end{equation*}
+                        Tilanteeseen voi soveltaa energian säilymistä. Kappaleella on alussa vain potentiaalista energiaa kahden jousen verran, koska se lähtee levosta. Toisaalta kun se on kulkenut matkan \(\Delta x\), jouset ovat levossa. Eli lopussa kappaleella on vain kineettistä energiaa.
+                        \begin{equation*}
+                            \begin{split}
+                                2E_{pot} &= E_{kin} \\
+                                2\cdot\frac{1}{2}kc^2 &= \frac{1}{2}mv^2 \\
+                                2k\left((\Delta x)^2 + \ell^2\right)&= \frac{1}{2}mv^2 \\
+                               2k\left((\Delta x)^2 + \ell^2\right) &= mv^2 \\
+                               v &= \sqrt{\frac{2k\left((\Delta x)^2 + \ell^2\right)}{m}}
+                            \end{split}
+                        \end{equation*}</p>
+                </div>
+            </div>
+            </div>
+            </div>
+            
+        <script>
+        var modal1 = document.getElementById('s1');
+        var modal2 = document.getElementById('s2');
+        var modal3 = document.getElementById('s3');
+        var modal4 = document.getElementById('s4');
+
+        window.onclick = function(event) {
+            if (event.target == modal1) {
+                modal1.style.display = "none";
+            }
+            if (event.target == modal2) {
+                modal2.style.display = "none";
+            }
+            if (event.target == modal3) {
+                modal3.style.display = "none";
+            }
+            if (event.target == modal4) {
+                modal4.style.display = "none";
+            }
+        }
+        </script>
+    </div>
+    <script type="text/javascript" src="js.js"></script>
+</div>
+
+    <div class="background-sq3">
+        <ul class="square3">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+<footer>
+<p>Copyright&copy; 2021 Exaphys All Rights Reserved.</p>
+</footer>
+</body>
+</html>

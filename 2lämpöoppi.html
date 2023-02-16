@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="lämpöoppi, FY2, fysiikka, physics, exam, pääsykoe, materiaali, materials, valintakoe">
+    <meta name="description" content="Tärkeitä asioita lämpöopista ovat paine, lämpölaajeneminen, ideaalinen kaasulaki, sekä termodynamiikan ensimmäinen- ja toinen pääsääntö.">
+    <meta name="author" content="Exaphys">
+    <title>2. Lämpöoppi | Exaphys -fysiikan opiskelumateriaalit</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="newcss.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/javascript" src="js.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({
+    tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+    }
+    });</script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML-full"></script>
+</head>
+<body>
+    <div class="home">
+        <nav class="navbar">
+            <div class="container">
+                <h1 class="logo">Exaphys</h1> 
+                <ul class="menu-text">
+                    <li><a href="index.html">Koti</a></li>
+                    <li><a href="materials_fi.html">Materiaali</a></li>
+                    <li><a href="about.html">Meistä</a></li>
+                    <li><a href="index.html"></a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="chapter-text">
+            <h2>2. Lämpöoppi</h2>
+            <h3>Tärkeitä asioita lämpöopista ovat paine, lämpölaajeneminen, ideaalinen kaasulaki, sekä termodynamiikan ensimmäinen- ja toinen pääsääntö. Tehtävissä saa käyttää valitsemaasi kaavakokelmaa (esim. MAOL) sekä trigonometrista taulukkoa.</h3>
+        </div>
+        <div class="exercises">
+            <button class="collapsible"><h2>Tehtävä 2.1</h2></button>
+            <div class="exercise">
+                <p><br>
+            <br>
+            <img src="images_exercises/teht2.1.jpg" alt=""/></p>
+            <p>Tarkastellaan kuvan mukaista öljytäytteistä hydraulista nostinta, jolla pyritään nostamaan \(m\) painoista laatikkoa. Nostimen mäntä on ympyränmuotoinen, jolla on läpimitta \(D\). Kuinka suuri on kuvan osoittama korkeus \(h\), kun laatikko juuri ja juuri alkaa nousemaan ylöspäin?<br>
+                <br>
+                <a onclick="document.getElementById('s1').style.display='block'" class="s-button">Ratkaisu 2.1</a><br></p>
+                <div id="s1" class="modal">
+                    <div class="s-modal-content">
+                        <div class="s-container">
+                            <span onclick="document.getElementById('s1').style.display='none'" class="s-button2">&times;</span><p>Valintaan tilanteen referenssitasoksi <em>eng. Datum line</em> männän korkeustaso. Tasapainossa paine täytyy olla yhtäsuuri kummassakin kohdassa referenssitasolla:
+                            </p><br><img src="images_exercises/teht2.1_ratk.jpg" alt=""/><br><p><br>
+                            Lasketaan paine, joka kohdistuu mäntään. Mäntään aiheuttaa painetta laatikko, mutta myös ulkoinen ilmanpaine. Ratkaistaan ensin laatikon aiheuttama paine:
+                            \begin{equation*}
+                                p_{laatikko}=\frac{F}{A} = \frac{mg}{A}
+                            \end{equation*}
+                            jolloin mäntään kohdistuva kokonaispaine:
+                            \begin{equation*}
+                               \begin{split}
+                                    p_{m} &= p_{laatikko} + p_0 \\
+                                    p_{m} &= \frac{mg}{A}+ p_0 \\
+                               \end{split}
+                            \end{equation*}
+                            Huomataan, että putken toinen pää on avoin. Toisella puolella referenssitasolla vaikuttaa siis ilmanpaine, mutta myös nesteen aiheuttama hydrostaattinen paine. Näiden summan tulee olla yhtäsuuri kuin männälle kohdistuva paine:
+                            \begin{equation*}
+                                \begin{split}
+                                    p_{m} &= p_0+\rho gh \\
+                                    \frac{mg}{A}+ p_0 &= p_0+\rho gh \\
+                                    \frac{mg}{A} &= \rho gh \\
+                                    h &= \frac{mg}{\rho gA} \\
+                                    h &= \frac{mg}{\rho g\pi r^2} \\
+                                    h &= \frac{mg}{\rho g\pi \left(\frac{D}{2}\right)^2} \\
+                                    h &= \frac{mg}{\rho g\pi \frac{D^2}{4}} \\
+                                    h &= \frac{4mg}{\rho g\pi D^2} \\
+                                \end{split}
+                            \end{equation*}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="collapsible"><h2>Tehtävä 2.2</h2></button>
+            <div class="exercise">
+                <p>Sukelluskello on laite, jonka sisälle jää ilmatasku kun se lasketaan veteen. Tarkastellaan sukelluskelloa, joka on \(2{,}70\,\mathrm{m}\) korkean sylinterin muotoinen, jonka pohja on avoin ja päällisosa on suljettu. Kellon sisällä oleva on ilma on alussa \(25\,\mathrm{^\circ C}\) lämpötilassa. Merivedessä lämpötila laskee noin \(0{,}233\,\mathrm{^\circ  C}\) astetta jokaista metriä kohden alaspäin mentäessa.
+                <br>
+                <br>
+                a) Kelloa aletaan laskemaan meriveteen, kunnes se on \(90\,\mathrm{m}\)  syvyydessä. Kuinka korkealle merivesi nousee sukelluskellossa, kun tiheys pysyy pysyvän vakiona \(\rho\approx 1{,}033\,\mathrm{\frac{g}{cm^3}}\)?
+                <br>
+                b) Sukeltajaa alkaa ärsyttämään vesimäärän suuruus kellon sisällä. Kuinka suureen paineeseen kello tulee paineistaa, jotta kaikki sisääntullut merivesi poistuisi kellosta?<br>
+                <br>
+                <a onclick="document.getElementById('s2').style.display='block'" class="s-button">Ratkaisu 2.2</a><br></p>
+                <div id="s2" class="modal">
+                  <div class="s-modal-content">
+                    <div class="s-container">
+                      <span onclick="document.getElementById('s2').style.display='none'" class="s-button2 s-display-topright">&times;</span>
+                      <p>a) Oletetaan, että ilmaa ei liukene sukelluskellosta meriveteen laskun aikana.
+                        Käsitellään ilmaa ideaalikaasuna, tällöin ideaalikaasulaista alkutilanteessa:
+
+                        \begin{equation*}
+                            \begin{split}
+                                p_0 V_{0} &= nRT_1 \\
+                                p_0Ah &= nRT_1 \\
+                                n &= \frac{p_0Ah}{RT_1}
+                            \end{split}
+                        \end{equation*}
+
+
+                        Sylinteri nyt lasketaan mereen, jolloin vesi nousee korkeudelle \(x\) kellon sisällä. Ideaalikaasulaista ilmalle laskun jälkeiselle tilanteelle:
+
+                        \begin{equation*}
+                            \begin{split}
+                                 p_{kello}A(h-x) &= nRT_2 \\
+                                 n &= \frac{p_{kello}A(h-x)}{RT_2} \\
+                            \end{split}
+                        \end{equation*}
+
+                        Toisaalta lämpötila laskee \(0{,}233\,\mathrm{^\circ C}\) metriä kohden meressä, eli lämpötila \(h_v=90\) metrin syvyydessä:
+
+                        \begin{equation*}
+                            T_2 = 25^\circ C - 0{,}233\,\mathrm{\frac{^\circ C}{m}}\cdot90 \,\mathrm{m} = 4{,}03\,^\circ \mathrm{C}
+                        \end{equation*}
+
+                        Paine kellon sisällä:
+
+                        \begin{equation*}
+                            p_{kello} = p_0+\rho gh_v
+                        \end{equation*}
+
+                        Asettamalla ainemäärät yhtäsuuriksi saadaan ratkaistua \(x\): (tärkeää muistaa, että ideaalikaasulakia käyttäessä lämpötilat sijoitetaan Kelvin asteina!)
+
+                        \begin{equation*}
+                            \begin{split}
+                            \frac{p_0Ah}{RT_1} &=  \frac{p_{kello}A(h-x)}{RT_2} \\
+                                \frac{p_0h}{T_1} &= \frac{(p_0+\rho gh_v)(h-x)}{T_2}  \\
+                               p_0h\frac{T_2}{T_1} &= (p_0+\rho gh_v)(h-x) \\
+                               \frac{p_0h}{p_0+\rho gh_v} \frac{T_2}{T_1} &= h-x \\
+                               x &= h-\frac{p_0h}{p_0+\rho gh_v} \frac{T_2}{T_1} \\
+                               x &= 2{,}70\,\mathrm{m}-\frac{101325\,\mathrm{Pa}\cdot 2{,}70\,\mathrm{m}}{101325\,\mathrm{Pa}+1{,}033\,\mathrm{\frac{kg}{m^3}} \cdot 9{,}81\,\mathrm{\frac{m}{s^2}}\cdot 90 \,\mathrm{m}} \cdot \frac{(4{,}03+273{,}15 \,\mathrm{K})}{(25+273{,}15 \,\mathrm{K})} \\
+                               x &= 2{,}44901\,\mathrm{m} \approx 2{,}45\,\mathrm{m} \\
+                            \end{split}
+                        \end{equation*}
+
+                        b) Jotta kaikki vesi poistuisi sukelluskellosta, sen sisällä olevan ilman paine tulee olla vähintään yhtä suuri kuin sen alaosassa olevan veden paine 90 metrin syvyydessä, eli paineen tulee olla:
+
+                        \begin{equation*}
+                            \begin{split}
+                                p = p_0+\rho gh &= 101325\,\mathrm{Pa} +1{,}033\,\mathrm{\frac{kg}{m^3}}\cdot9{,}81\,\mathrm{\frac{m}{s^2}}\cdot 90\,\mathrm{m} \\
+                                &= 111548{,}73 \,\mathrm{Pa} \\
+                                &\approx 112 \,\mathrm{kPa}
+                            \end{split}
+                        \end{equation*}</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <button class="collapsible"><h2>Tehtävä 2.3&#x1F63F;</h2></button>
+            <div class="exercise">
+                <p>Kaksoismetalliliuskia käytetään usein mm. Termostaateissa ja lämpömittareissa. Niiden idea perustuu lämpötila muutoksen aiheuttamaan mekaaniseen siirtymään. Rakenteeltaan liouska koostuu kahdesta eri metallista, jotka ovat kiinnitetty yhteen. Metalleilla on eri lämpölaajenemiskertoimet. Tällöin kun lämpötila muuttuu \(\Delta T\) verran liuskat laajenevat erilailla. Tällöin olennaisesti liuskien pituukset muuttuu erisuuriksi, jolloin ne yhdessä taipuu kaareksi.
+
+                Tarkastellaan messinki- ja teräsliuskaa, jotka molemmat ovat leikattu \(\ell\) pituisiksi. Tämän jälkeen ne ovat kiinnitetty yhteen siten, että niiden keskiosat ovat \(d\) mittaisella etäisyydellä toisistaan, jonka jälkeen liuskien päädyt ovat hitsattu yhteen. Lämpötilaa nostetaan \(\Delta T\) verran, jolloin kaksoismetalliliuska taittuu kaarelle, jonka kulma on \(\theta\).
+                </p>
+                <br><br><img src="images_exercises/teht2.3.jpg" alt=""/><br><p>
+                    <br>
+                a) Jos messingin lämpölaajenemiskerroin \(\alpha_m = 18{,}70\cdot10^{-6} \,\mathrm{\frac{1}{^\circ C}}\) ja teräksen \(\alpha_t = 11{,}70\cdot10^{-6} \,\mathrm{\frac{1}{^\circ C}}\), kummasta materiaalista ulompi levy pitää olla tehty?
+                <br>
+                b) Johda lauseke taipumiskulmalle \(\theta\).
+                <br>
+                c) Olkoon liuskien alkupituus \(\ell = 10\,\mathrm{cm}\) ja keskiöiden etäisyys \(d = 1\cdot10^{-3}\,\mathrm{cm}\). Kuinka paljon kaksoismetalliliuskan lämpötilaa tulee nostaa, jotta siitä muodostuisi ympyrä? Laske ympyrän säde \(R\).<br>
+                <br>
+            <a onclick="document.getElementById('s3').style.display='block'" class="s-button">Ratkaisu 2.3</a><br></p>
+            <div id="s3" class="modal">
+              <div class="s-modal-content">
+                <div class="s-container">
+                  <span onclick="document.getElementById('s3').style.display='none'" class="s-button2 s-display-topright">&times;</span>
+                      <p>a) Huomataan, että messingin lämpölaajenemiskerroin on suurempi kuin teräksen. Tällöin messingin täytyy olla ulompi metalli, koska se on taipunut alkuperäisestä muodostaan enemmän. 
+                    b) Kaaren pituus saadaan laskettua kaavalla \(b=R\theta\), eli nyt sisemmälle kaarelle (teräs):
+
+                    \begin{equation*}
+                        \ell_t = R\theta
+                    \end{equation*}
+
+                    ja ulommalle (messinki):
+
+                    \begin{equation*}
+                        \begin{split}
+                            \ell_m &= (R+d)\theta \\
+                            \ell_m &= R\theta+d\theta \\
+                            R &=\frac{\ell_m-d\theta}{\theta} \\
+                        \end{split}
+                    \end{equation*}
+
+                    sijoittamalla aikaisempaan yhtälöön:
+
+                    \begin{equation*}
+                         \begin{split}
+                             \ell_t &= \frac{\ell_m-d\theta}{\theta}\cdot\theta \\
+                             \ell_t &= \ell_m-d\theta \\
+                             \theta &= \frac{\ell_m -\ell_t}{d}
+                         \end{split}
+                    \end{equation*}
+
+                    Kummankin metallin alkuperäinen pituus on \(\ell\), jolloin pituuden lämpölaajenemisen avulla voidaan kirjoittaa teräkselle:
+
+                    \begin{equation*}
+                        \begin{split}
+                            \ell_t &= \ell(1+\alpha_t\Delta T) \\
+                        \end{split}
+                    \end{equation*}
+
+                    ja messingille:
+
+                    \begin{equation*}
+                        \begin{split}
+                            \ell_m &= \ell(1+\alpha_m\Delta T)\\
+                        \end{split}
+                    \end{equation*}
+
+                    Jolloin kulman lauseke saadaan muotoon:
+
+                    \begin{equation*}
+                        \begin{split}
+                            \theta &= \frac{\ell(1+\alpha_m\Delta T)-\ell(1+\alpha_t\Delta T)}{d}\\
+                            \theta &= \frac{\ell((1+\alpha_m\Delta T)-(1+\alpha_t\Delta T))}{d}\\
+                            \theta &= \frac{\ell(\alpha_m\Delta T-\alpha_t\Delta T)}{d}\\
+                            \theta &= \frac{\ell\Delta T(\alpha_m-\alpha_t)}{d}\\
+                        \end{split}
+                    \end{equation*}
+
+                    c) Kokonaiselle ympyrälle \(\theta = 2\pi\). Ratkaistaan yhtälöstä \(\Delta T\):
+
+                    \begin{equation*}
+                        \begin{split}
+                            \theta &= \frac{\ell\Delta T(\alpha_m-\alpha_t)}{d}\\
+                            \theta d &= \ell\Delta T(\alpha_m-\alpha_t) \\
+                            \Delta T &= \frac{2\pi d}{\ell(\alpha_m-\alpha_t)} \\
+                            \Delta T &= \frac{2\cdot3,14159\cdot 10\cdot10^{-3}\cdot10^{-2}\,\mathrm{m}}{10\cdot 10^{-2}\,\mathrm{m}( 18{,}70\cdot10^{-6} -11,70\cdot10^{-6})\,1/^\circ\mathrm{C}} \\
+                            \Delta T &= 89{,}7597\,\mathrm{\frac{1}{^\circ C}} \approx 89{,}76\,\mathrm{\frac{1}{^\circ C}}  \\
+                        \end{split}
+                    \end{equation*}
+
+                    Lasketaan teräsliuskan pituus:
+
+                    \begin{equation*}
+                         \ell_t = \ell(1+\alpha_t\Delta T) =10\,\mathrm{cm}(1+11{,}70\cdot10^{-6}\,\mathrm{\frac{1}{^\circ C}}\cdot 89{,}7597\,\mathrm{\frac{1}{^\circ C}}) = 10{,}01050\,\mathrm{cm}
+                    \end{equation*}
+
+                    jolloin ympyrän säde saadaan kaaren pituudesta:
+
+                    \begin{equation*}
+                        \begin{split}
+                            \ell_m &= R\theta \\
+                            R &= \frac{\ell_m}{\theta} \\
+                           R &= \frac{ 10{,}01050\,\mathrm{cm}}{2\cdot3{,}14159} \\
+                           R &= 1{,}5932 \,\mathrm{cm} \\
+                           R &\approx 1{,}593 \,\mathrm{cm}
+                        \end{split}
+                    \end{equation*}</p>
+                </div>
+            </div>
+            </div>
+            </div>
+            <button class="collapsible"><h2>Tehtävä 2.4</h2></button>
+            <div class="exercise">
+                <p>Vedenkeittimeen laitetaan \( 250 \) grammaa vettä, joka on lämpötilassa \(20\,\mathrm{^\circ C}\) ja \(350\) grammaa jäätä, joka on lämpötilassa \( 0\,\mathrm{^\circ C}\). Vedenkeitin laitetaan päälle kun vesi-jää seos on saavuttanut tasapainon. Montako minuuttia kestää veden kuumentaminen kiehumispisteeseen, kun vedenkeittimen teho on \(1{,}8\, \mathrm{kW}\) ja hyötysuhde \(80\%\)?
+                <br>
+                \(c(\mathrm{H_2O}) = 4{,}19 \,\mathrm{\frac{kJ}{kg \cdot K}}\), \(s =334\,\mathrm{\frac{kJ}{kg}}\)<br>
+                <br>
+            <a onclick="document.getElementById('s4').style.display='block'" class="s-button">Ratkaisu 2.4</a><br></p>
+            <div id="s4" class="modal">
+              <div class="s-modal-content">
+                <div class="s-container">
+                  <span onclick="document.getElementById('s4').style.display='none'" class="s-button2 s-display-topright">&times;</span>
+                  <p>Jätetään astian (eli keittimen) lämpökapasiteetti huomiotta.
+                    <br>
+
+                    Ennen vedenkeittimen päälle laittamista tulee laskea vesi-jää seoksen lämpötila tasapainossa. Toisaalta voidaan olettaa, että osa jäästä on sulanut vedeksi. Olkoon jäljelle jäävän jään massa \(m_j'\). 
+
+                    Veden lämpötila laskee alkuarvosta \(T_v\) arvoon \(T_1=0\,\mathrm{^\circ C}\) (eli termodynaaminen tasapaino), tätä kuvaa energia:
+
+                    \begin{equation*}
+                        Q=cm\Delta T = cm_v(T_v-T_1)
+                    \end{equation*}
+
+                    Toisaalta jäätä sulaa pois:
+
+                    \begin{equation*}
+                        Q = sm_{j_{pois}}
+                    \end{equation*}
+
+                    Yhdiställä yhtälö saadaan:
+
+                    \begin{equation*}
+                        sm_{j_{pois}} = cm_v(T_v-T_1) \Rightarrow m_{j_{pois}} = \frac{cm_v(T_v-T_1)}{s}
+                    \end{equation*}
+
+                    Jolloin jäljelle jäävän jään määrä:
+
+                    \begin{equation*}
+                        \begin{split}
+                            m_j' &= m_j-m_{j_{pois}} \\
+                            m_j' &= m_j -\frac{cm_v(T_v-T_1)}{s}\\
+                            m_j' &= 350\cdot10^{-3}\,\mathrm{kg} -\frac{4{,}19\,\mathrm{\frac{kJ}{kg\cdot ^\circ C}} \cdot 250\cdot10^{-3}\,\mathrm{kg}\cdot(20-0)\mathrm{^\circ C}}{334\,\mathrm{\frac{kJ}{kg}}} \\
+                            m_j' &= 0{,}28727\,\mathrm{kg} \\
+                        \end{split}
+                    \end{equation*}
+
+                    Eli \(m_j'>0\) oletuksemme oli siis oikea, jäätä on sulanut veden joukkoon! Nyt veden keitin laitetaan päälle. Energia kuluu veden lämmittämiseen loppulliseen lämpötilaan \(T\) ja jään sulattamiseen. Täytyy muistaa huomioida, että myös sulanut jää pitää lämmittää sataan asteeseen:
+
+                    \begin{equation*}
+                        \begin{split}
+                            E &= Q_{kok} \\
+                            \eta Pt &=Q_s+ Q_l\\
+                            \eta Pt &= sm_j + cm_v(T_1-T_v)+c(m_j+m_v)(T-T_1)\\
+                            \eta Pt &= sm_j - cm_v(T_v-T_1)+c(m_j+m_v)(T-T_1)\\
+                            t &= \frac{sm_j - cm_v(T_v-T_1)+c(m_j+m_v)(T-T_1)}{\eta P} \\
+                            t &= \frac{334\,\mathrm{\frac{kJ}{kg}}\cdot 350\cdot10^{-3}\,\mathrm{kg} - 4{,}19\,\mathrm{\frac{kJ}{kg\cdot^\circ C}}\cdot 250\cdot(20-0)\mathrm{^\circ C}+(350+250)\cdot10^{-3}\,\mathrm{kg}\cdot(100-0)\mathrm{^\circ C}}{0{,}8\cdot 1{,}8\,\mathrm{kW}} \\
+                            t &= 241{,}215 \,\mathrm{s} \approx 4{,}02 \,\mathrm{min} \\
+                        \end{split}
+                    \end{equation*}</p>
+                </div>
+              </div>
+            </div>
+        </div>
+        <button class="collapsible"><h2>Tehtävä 2.5</h2></button>
+            <div class="exercise">
+                <p>Tutkitaan kuvan mukaista Carnot'n lämpökone ja lämpöpumppu yhdistelmää:
+
+                </p><br><br><img src="images_exercises/teht2.5.jpg" alt=""/><br><p><br>
+
+                Kummatkin laitteet operoivat samoista lämpö- ja kylmävarastoista. Lämpövaraston lämpötila \(T_H = 800\,\mathrm{K}\) ja kylmävaraston \(T_C = 300\,\mathrm{K}\).
+                <br>
+
+                 Kuinka suuri on lämpöpumpun tehokerroin, kun \(Q_{C2} = 10\,\mathrm{kW}\) ja \(Q_{H1} = 20\,\mathrm{kW}\).<br>
+                <br>
+                <a onclick="document.getElementById('s5').style.display='block'" class="s-button">Ratkaisu 2.5</a><br></p>
+                <div id="s5" class="modal">
+                    <div class="s-modal-content">
+                        <div class="s-container">
+                            <span onclick="document.getElementById('s5').style.display='none'" class="s-button2">&times;</span><p>Tiedetään, että lämpökone noudattaa Carnot'n kiertoa, eli sen Carnot'n hyötysuhde:
+
+                            \begin{equation*}
+                                \eta = \frac{W}{Q_{H1}} = 1-\frac{T_C}{T_H} = 1-\frac{300\,\mathrm{K}}{800\,\mathrm{K}} = 0{,}625
+                            \end{equation*}
+
+                            Josta saadaan ratkaistua työ:
+
+                            \begin{equation*}
+                                \frac{W}{Q_{H1}} = 0{,}625 \Rightarrow W = \eta Q_{H1} = 0{,}625\cdot20\,\mathrm{kW} = 12{,}5\,\mathrm{kW}
+                            \end{equation*}
+
+                            Tehty työ pyörittää lämpöpumppua, jolloin työ kuluu:
+
+                            \begin{equation*}
+                                \begin{split}
+                                    W &= Q_{H2}-Q_{C2} \\
+                                    Q_{H2} &= W+Q_{C2} \\
+                                    Q_{H2} &= 12{,}5\,\mathrm{kW}+10\,\mathrm{kW} \\
+                                    Q_{H2} &= 22{,}5\,\mathrm{kW}
+                                \end{split}
+                            \end{equation*}
+
+                            Jolloin tehokertoimen määritelmästä:
+
+                            \begin{equation*}
+                                e = \frac{Q_{H2}}{Q_{H2}-Q_{C2}} = \frac{22{,}5\,\mathrm{kW}}{22{,}5\,\mathrm{kW}-10\,\mathrm{kW}} = 1{,}8
+                            \end{equation*}
+
+                            </p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        <script>
+        var modal1 = document.getElementById('s1');
+        var modal2 = document.getElementById('s2');
+        var modal3 = document.getElementById('s3');
+        var modal4 = document.getElementById('s4');
+        var modal5 = document.getElementById('s5');
+
+        window.onclick = function(event) {
+            if (event.target == modal1) {
+                modal1.style.display = "none";
+            }
+            if (event.target == modal2) {
+                modal2.style.display = "none";
+            }
+            if (event.target == modal3) {
+                modal3.style.display = "none";
+            }
+            if (event.target == modal4) {
+                modal4.style.display = "none";
+            }
+            if (event.target == modal5) {
+                modal5.style.display = "none";
+            }
+        }
+        </script>
+    </div>
+    <script type="text/javascript" src="js.js"></script>
+</div>
+
+    <div class="background-sq3">
+        <ul class="square3">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+<footer>
+<p>Copyright&copy; 2021 Exaphys All Rights Reserved.</p>
+</footer>
+</body>
+</html>

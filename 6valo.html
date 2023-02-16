@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="valo, FY5, fysiikka, physics, exam, pääsykoe, materiaali, materials, valintakoe">
+    <meta name="description" content="Tärkeimpiä asioita ovat valon taittuminen väliaineissa (Snellin laki), hilat ja valon interferenssi.">
+    <meta name="author" content="Exaphys">
+    <title>6. Valo | Exaphys -fysiikan opiskelumateriaalit</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="newcss.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/javascript" src="js.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({
+    tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+    }
+    });</script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML-full"></script>
+</head>
+<body>
+    <div class="home">
+        <nav class="navbar">
+            <div class="container">
+                <h1 class="logo">Exaphys</h1> 
+                <ul class="menu-text">
+                    <li><a href="index.html">Koti</a></li>
+                    <li><a href="materials_fi.html">Materiaali</a></li>
+                    <li><a href="about.html">Meistä</a></li>
+                    <li><a href="index.html"></a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="chapter-text">
+            <h2>6. Valo</h2>
+            <h3>Tärkeimpiä asioita ovat valon taittuminen väliaineissa (Snellin laki), hilat ja valon interferenssi. Tehtävissä saa käyttää valitsemaasi kaavakokoelmaa (esim. MAOL) ja trigonometrista taulukkoa.</h3>
+        </div>
+        <div class="exercises">
+            <button class="collapsible"><h2>Tehtävä 6.1</h2></button>
+            <div class="exercise">
+                <p>Hilaa jossa on rakoja \(650\) kappaletta jokaista millimetriä kohden. Rakoaa valaistaan kohtisuoraan monokromaattisella laserilla, jonka aallonpituus on \(560 \,\mathrm{nm}\). Raosta läpi tuleva valo sisältää kahta eri aallonpituutta \(\lambda = 532\,\mathrm{nm}\) ja \(\lambda = 700 \,\mathrm{nm}\). Mikä on aallonpituuksien kulmaero syntyneessä diffraktiokuviossa toisen maksimin kohdalla?<br>
+                <br>
+                <a onclick="document.getElementById('s1').style.display='block'" class="s-button">Ratkaisu 6.1</a><br></p>
+                <div id="s1" class="modal">
+                    <div class="s-modal-content">
+                        <div class="s-container">
+                            <span onclick="document.getElementById('s1').style.display='none'" class="s-button2">&times;</span><p>Jos hilassa on \(R\) verran rakoja per millimetri, niin näiden välinen etäisyys hilassa saadaan suhteesta:
+                            \begin{equation*}
+                                d = \frac{1}{R} = \frac{1}{650\,\mathrm{\frac{1}{mm}}} = 0{,}001538\,\mathrm{mm} = 1538\,\mathrm{nm}
+                            \end{equation*}
+
+                            Toinen maksimi \(m=2\) saadaan Braggin laista:
+
+                            \begin{equation*}
+                                \begin{split}
+                                d\sin{(\theta_m)} &= m\lambda \\
+                                    d\sin{(\theta_2)} &= 2\lambda \\
+                                    \theta_2 &= \sin^{-1}\left(\frac{2\lambda}{d}\right)
+                                \end{split}
+                            \end{equation*}
+
+                            Aallonpituudelle 1 \(\lambda_1 = 532 \,\mathrm{nm}\):
+
+                            \begin{equation*}
+                                \theta_{2_1} = \sin^{-1}\left(\frac{2\cdot 532\,\mathrm{nm}}{1538\,\mathrm{nm}}\right) = \sin^{-1}(0{,}6918) \approx 43{,}7^\circ
+                            \end{equation*}
+
+                            Aallonpituudelle 2: \(\lambda_2 = 700 \,\mathrm{nm}\):
+
+                            \begin{equation*}
+                                \theta_{2_2} = \sin^{-1}\left(\frac{2\cdot 700\,\mathrm{nm}}{1538\,\mathrm{nm}}\right) = \sin^{-1}(0{,}9102) \approx 65{,}5^\circ
+                            \end{equation*}
+
+                            Jolloin kulmien välinen ero:
+
+                            \begin{equation*}
+                                \Delta \theta = \theta_{2_2}-\theta_{2_1} = 65{,}5^\circ- 43{,}7^\circ = 21{,}8^\circ
+                            \end{equation*}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="collapsible"><h2>Tehtävä 6.2</h2></button>
+            <div class="exercise">
+                <p>Valo saapuu \(6{,}0 \,\mathrm{cm}\) paksuun suorakulmion, jonka ensimmäinen kerros on valmistettu muovista (\(n=1{,}62\)) ja toinen kerros lasista (\(n=1{,}47\)). Kuinka suuri tulee olla muovikerroksen paksuus, jotta valo kulkisi \(3{,}0\,\mathrm{cm}\) pituisen vaakasuoran matkan suorakulmion sisällä?<br>
+                <br>
+                <a onclick="document.getElementById('s2').style.display='block'" class="s-button">Ratkaisu 6.2</a><br></p>
+                <div id="s2" class="modal">
+                  <div class="s-modal-content">
+                    <div class="s-container">
+                      <span onclick="document.getElementById('s2').style.display='none'" class="s-button2 s-display-topright">&times;</span>
+                      <p>Piirretään hahmoitelma tilanteesta, jossa näkyy valonsäteen kulku:
+                        </p><br><br><img src="images_exercises/teht6.2_ratk.jpg" alt=""/><br><p><br>
+
+                        Snellin laki ilma-muovi rajapinnalle: 
+
+                        \begin{equation*}
+                            \begin{split}
+                                n_{ilma}\sin{(\theta_1)} &= n_{2}\sin{(\theta_2)} \\
+                                \theta_2 &= \sin^{-1}\left(\frac{n_{ilma}\sin{(\theta_1)}}{n_2} \right) \\
+                                \theta_2 &= \sin^{-1}\left(\frac{1\cdot \sin(45^\circ)}{1{,}62} \right) \\
+                                 \theta_2 &\approx \sin^{-1}\left(\frac{1\cdot 0{,}707}{1{,}62} \right) \\
+                                 \theta_2 &= \sin^{-1} (0{,}4364) \quad (\Rightarrow \sin{(\theta_2)} = 0{,}4364) \\
+                                 \theta_2 &\approx 25{,}7^\circ \\
+                            \end{split}
+                        \end{equation*}
+
+                        Tangentin avulla saadaan säteen kulkuma matka muovissa \(l_1\):
+
+                        \begin{equation*}
+                            \begin{split}
+                                \tan(\theta_2) &= \frac{l_1}{a} \\
+                                \Rightarrow l_1 &= a\tan(\theta_2)
+                            \end{split}
+                        \end{equation*}
+
+                        Muodostetaan Snellin laki muovi-lasi rajapinnalle:
+
+                        \begin{equation*}
+                            \begin{split}
+                                n_1\sin(\theta_2) &= n_2\sin(\theta_3) \\
+                                \theta_3 &= \sin^{-1}\left(\frac{n_1\sin(\theta_2)}{n_2} \right) \\
+                                \theta_3 &= \sin^{-1}\left(\frac{1{,}62\cdot0,4364}{1{,}47} \right) \\
+                                \theta_3 &= \sin^{-1}\left(0{,}4809\right) \\
+                                \theta_3 &\approx 28{,}7^\circ \\
+                            \end{split}
+                        \end{equation*}
+
+                        Tangentin avulla saadaan säteen kulkema matka lasissa \(l_2\):
+
+                        \begin{equation*}
+                            \tan(\theta_3) = \frac{l_2}{b} \Rightarrow l_2 =  b\tan(\theta_3)
+                        \end{equation*}
+
+                        Toisaalta, koko muovilevyn paksuus on muovi-ja lasi osuuksien paksuuksien summa:
+
+                        \begin{equation*}
+                            D=a+b \Rightarrow b=D-a
+                        \end{equation*}
+
+                        Kokonaisuudessaan kuljettu vaakasuora matka:
+
+                        \begin{equation*}
+                            \begin{split}
+                            l &= l_1+l_2 \\
+                                l &= a\tan(\theta_2)+b\tan(\theta_3) \\
+                                l &= a\tan(\theta_2)+ (D-a)\tan(\theta_3) \\
+                                l &= a\tan(\theta_2)+D\tan(\theta_3)-a\tan(\theta_3) \\
+                                l &= a\left(\tan(\theta_2)-\tan(\theta_3)\right) +D\tan(\theta_3) \\
+                                a &= \frac{l-D\tan(\theta_3)}{\tan(\theta_2)-\tan(\theta_3)} \\
+                                a&= \frac{3{,}0\,\mathrm{cm}-6\cdot \tan(28{,}7^\circ)}{\tan(25{,}7^\circ)-\tan(28{,}7^\circ)}\\
+                                a&\approx \frac{3{,}0\,\mathrm{cm}-6\cdot 0{,}547}{0{,}481-0{,}547}\\
+                                a&= 4{,}2727\,\mathrm{cm} \\
+                                a &\approx 4{,}27\,\mathrm{cm} \\
+                            \end{split}
+                        \end{equation*}</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <button class="collapsible"><h2>Tehtävä 6.3</h2></button>
+            <div class="exercise">
+                <p>Sukeltaja on synkässä järvessä \(4 \,\mathrm{m}\) syvyydellä ja päättää ottaa valokuvan kamerallaan salamaa hyödyntämällä. Kuinka suuri on salaman aiheuttaman ympyrän halkaisija veden pinnalla, kun järviveden taittokerroin \(n= 1{,}34\)?<br>
+            <br>
+            <a onclick="document.getElementById('s3').style.display='block'" class="s-button">Ratkaisu 6.3</a><br></p>
+            <div id="s3" class="modal">
+              <div class="s-modal-content">
+                <div class="s-container">
+                  <span onclick="document.getElementById('s3').style.display='none'" class="s-button2 s-display-topright">&times;</span>
+                      <p>Kameran salaman tuottamat valonsäteet kulkevat veden ja ilman rajapinnalle, josta ne taittuvat ilmaan. Taittumista tapahtuu niin pitkälle, kunnes tulokulma on on kriittinen. Kriittinen kulma on se kulma, jossa valolle tapahtuu kokonaisheijastuminen. Piirretään mallikuva tilanteesta, jossa näkyy kriittinen kulma \(\theta_c\) kokonaisheijastumiselle:
+                        </p><br><br><img src="images_exercises/teht6.3_ratk.jpg" alt=""/><br><p><br>
+
+                    Kriittinen kulma saadaan laskettua Snellin lain avulla:
+
+                    \begin{equation*}
+                        \begin{split}
+                            n_{vesi}\sin{(\theta_c)} &= n_{ilma}\underbrace{\sin{(90^\circ)}}_{1} \\
+                            \sin{(\theta_c)} &= \frac{n_{ilma}}{n_{vesi}} \\
+                            \theta_c &= \tan^{-1}\left( \frac{n_{ilma}}{n_{vesi}}\right) \\
+                            \theta_c &= \sin^{-1}\left( \frac{1}{1{,}34}\right) \\
+                            \theta_c &=\sin^{-1}\left(0{,}746\right) \\
+                             \theta_c &\approx 48{,}26^\circ \\
+                        \end{split}
+                    \end{equation*}
+
+                    Toisaalta, koska sukeltaja on \(h=4 \,\mathrm{m}\) syvyydessä, jolloin tangentin avulla saadaan syyvyyden ja säteen välille suhde:
+
+                    \begin{equation*}
+                        \begin{split}
+                            \tan(\theta_s) &= \frac{h}{r} \\
+                            \tan(90^\circ-\theta_c) &= \frac{h}{r} \\
+                            r &= \frac{h}{\tan(90^\circ-\theta_c)} \\
+                            r &= \frac{4\,\mathrm{m}}{\tan(90^\circ-48{,}6^\circ)} \\
+                            r &\approx \frac{4\,\mathrm{m}}{0{,}894} \\
+                            r &= 4{,}4642 \,\mathrm{m}\\ 
+                        \end{split}
+                    \end{equation*}
+
+                    Jolloin ympyrän halkaisija:
+
+                    \begin{equation*}
+                        d = 2r=2\cdot4{,}4642\,\mathrm{m} = 8{,}9285\,\mathrm{m} \approx 8{,}93\,\mathrm{m}
+                    \end{equation*}</p>
+                </div>
+            </div>
+            </div>
+            </div>
+            
+        <script>
+        var modal1 = document.getElementById('s1');
+        var modal2 = document.getElementById('s2');
+        var modal3 = document.getElementById('s3');
+        var modal4 = document.getElementById('s4');
+
+        window.onclick = function(event) {
+            if (event.target == modal1) {
+                modal1.style.display = "none";
+            }
+            if (event.target == modal2) {
+                modal2.style.display = "none";
+            }
+            if (event.target == modal3) {
+                modal3.style.display = "none";
+            }
+            if (event.target == modal4) {
+                modal4.style.display = "none";
+            }
+        }
+        </script>
+    </div>
+    <script type="text/javascript" src="js.js"></script>
+</div>
+
+    <div class="background-sq3">
+        <ul class="square3">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+<footer>
+<p>Copyright&copy; 2021 Exaphys All Rights Reserved.</p>
+</footer>
+</body>
+</html>

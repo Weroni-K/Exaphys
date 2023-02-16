@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="sähköoppi, FY3, fysiikka, physics, exam, pääsykoe, materiaali, materials, valintakoe">
+    <meta name="description" content="Tärkeimpiä asioita ovat Kirchoffin lait, Ohmin laki, sähköinen voima, sähkökentät ja kondensaattorit.">
+    <meta name="author" content="Exaphys">
+    <title>7. Sähköoppi | Exaphys -fysiikan opiskelumateriaalit</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="newcss.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/javascript" src="js.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({
+    tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+    }
+    });</script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML-full"></script>
+</head>
+<body>
+    <div class="home">
+        <nav class="navbar">
+            <div class="container">
+                <h1 class="logo">Exaphys</h1> 
+                <ul class="menu-text">
+                    <li><a href="index.html">Koti</a></li>
+                    <li><a href="materials_fi.html">Materiaali</a></li>
+                    <li><a href="about.html">Meistä</a></li>
+                    <li><a href="index.html"></a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="chapter-text">
+            <h2>7. Sähköoppi</h2>
+            <h3>Tärkeimpiä asioita ovat Kirchoffin lait, Ohmin laki, sähköinen voima, sähkökentät ja kondensaattorit. Tehtävissä saa käyttää valitsemaasi kaavakokoelmaa (esim. MAOL) ja trigonometrista taulukkoa.</h3>
+        </div>
+        <div class="exercises">
+            <button class="collapsible"><h2>Tehtävä 7.1</h2></button>
+            <div class="exercise">
+                <p>Laske oheisen kytkennän vasemman vastuksen resistanssin suuruus \(R_v\). Oikean puoleisen vastuksen suuruus \(R_o = 7{,}5\,\mathrm{V}\). Piirin keskellä on jännitemittari \(V\), jolla on sisäinen resistanssi on \(8{,}5\,\mathrm{\Omega}\). Jännitemittarin lukema on \(4{,}0\,\mathrm{V}\). Jännitelähteellä \(U=15\) V ei ole sisäistä resistanssia.</p><br>
+                <br><img src="images_exercises/teht7,1.jpg" alt=""/><br><p>
+                    <br><br>
+                <br>
+                <a onclick="document.getElementById('s1').style.display='block'" class="s-button">Ratkaisu 7.1</a><br></p>
+                <div id="s1" class="modal">
+                    <div class="s-modal-content">
+                        <div class="s-container">
+                            <span onclick="document.getElementById('s1').style.display='none'" class="s-button2">&times;</span><p>Ratkaistaan virtapiirin kokonaisresistanssi. Vasen vastus \(R_v\) ja jännitemittari \(R_m\) ovat rinnankytkettyjä:
+
+                            \begin{equation*}
+                                \begin{split}
+                                    \frac{1}{R_{v,m}} &= \frac{1}{R_v}+\frac{1}{R_{m}} \\
+                                    R_{v, m} &= \left( \frac{1}{R_v}+\frac{1}{R_{m}}\right)^{-1} \\
+                                \end{split}
+                            \end{equation*}
+
+                            Yhdistetty vastus ja oikean puoleinen vastus ovat nyt sarjaankytkettynä:
+
+                            \begin{equation*}
+                                R_{kok} = R_o +R_{v, m} = R_o +\left( \frac{1}{R_v}+\frac{1}{R_{m}}\right)^{-1}
+                            \end{equation*}
+
+                            Sovitaan virran kiertosuunta myötäpäivään. Virta haarautuu piirissä mittarille ja vasemmalle vastukselle Kirchoffin 1 lain mukaisesti:
+
+                            \begin{equation*}
+                                \begin{split}
+                                    I_{kok} &= I_{m} + I_v \\
+                                    \frac{U_{kok}}{R_{kok}} &= \frac{U_{m}}{R_{m}} +\frac{U_v}{R_v}  \\
+                                \end{split}
+                            \end{equation*}
+
+                            Toisaalta mittarin ja vasemman vastuksen potentiaali on sama rinnan kytkennässä. 
+
+                            \begin{equation*}
+                                \begin{split}
+                                    \frac{U_{kok}}{R_{kok}} &= \frac{U_{m}}{R_{m}} +\frac{U_m}{R_v}  \\
+                                    \frac{U}{R_o +\left( \frac{1}{R_v}+\frac{1}{R_{m}}\right)^{-1}} &= \frac{U_{m}}{R_{m}} +\frac{U_m}{R_v}  \\
+                                    U &= \left(\frac{U_{m}}{R_{m}} +\frac{U_m}{R_v} \right)\cdot\left(R_o +\left( \frac{1}{R_v}+\frac{1}{R_{m}}\right)^{-1}\right) \\
+                                  U &= U_m\left(\frac{1}{R_{m}} +\frac{1}{R_v} \right)\cdot\left(R_o +\left( \frac{1}{R_v}+\frac{1}{R_{m}}\right)^{-1}\right) \\
+                                   U &= U_m\left(\frac{1}{R_{m}} +\frac{1}{R_v} \right)R_o+U_m\underbrace{\left(\frac{1}{R_{m}} +\frac{1}{R_v} \right)\left( \frac{1}{R_v}+\frac{1}{R_{m}}\right)^{-1}}_{1} \\
+                                   U &= U_m\left(\frac{1}{R_{m}} +\frac{1}{R_v} \right)R_o+U_m \\
+                                   \frac{U}{U_m} &= \frac{R_o}{R_m}+\frac{R_o}{R_v}+1 \\
+                                   \frac{U}{U_m}-1&= \frac{R_o}{R_m}+\frac{R_o}{R_v} \\
+                                   \frac{15\,\mathrm{V}}{4\,\mathrm{V}}-1&= \frac{R_o}{R_m}+\frac{R_o}{R_v} \\
+                                   2{,}75&= \frac{7{,}5\,\mathrm{\Omega}}{8{,}5\,\mathrm{\Omega}}+\frac{7{,}5\,\mathrm{\Omega}}{R_v} \\
+                                   \frac{1}{R_v} &= \frac{1}{7{,}5\,\mathrm{\Omega}}\left(2{,}75-0{,}8823\right) \\
+                                   R_v &= 4{,}0157\,\mathrm{\Omega} \\
+                                   R_v &\approx 4{,}0\,\mathrm{\Omega} \\
+                                \end{split}
+                            \end{equation*}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="collapsible"><h2>Tehtävä 7.2</h2></button>
+            <div class="exercise">
+                <p>Tutkitaan kahta ilmatäytteista kondensaattoria \(A\) ja \(B\). Kondensaattori \(A\) muodostuu kahdesta \(R\)-säteisestä ympyrän muotoisesta levysta, jotka ovat etäisyydellä \(d\) toisistaan. Kondensaattori \(B\) muodostuu kahdesta neliön muotoisesta levystä, joiden sivunpituus on \(R\). Neliönmuotoiset levyt ovat etäisyydellä \(2d\) toisistaan.
+                    <br><br>
+                a) Jos kondensaattorin \(A\) kapasitanssi on \(C_A\), osoita että kondensaattorin \(B\) kapasitanssi \(C_B = \frac{C_A}{2\pi}\).
+                <br>
+                b) Kondensaattori \(A\) levyjen välinen matka täytetään nyt tuntemattomalla eristeellä. Mikä tulee olla eristeen suhteellinen permittiivistyys, jotta kondensaattorin \(B\) kapasitanssi on yhtä suuri kuin kondensaattori \(A\) kapasitanssi?<br>
+                <br>
+                <a onclick="document.getElementById('s2').style.display='block'" class="s-button">Ratkaisu 7.2</a><br></p>
+                <div id="s2" class="modal">
+                  <div class="s-modal-content">
+                    <div class="s-container">
+                      <span onclick="document.getElementById('s2').style.display='none'" class="s-button2 s-display-topright">&times;</span>
+                      <p>a) Levykondensaattorin \(A\) kapasitanssille voidaan kirjoittaa:
+
+                        \begin{equation*}
+                            C_A = \varepsilon_0\frac{A_{A}}{d} =  \varepsilon_0\frac{\pi R^2}{d}
+                        \end{equation*}
+
+                        Levykondensaattorin \(B\) kapasitanssille voidaan kirjoittaa:
+
+                        \begin{equation*}
+                            C_B = \varepsilon_0\frac{A_{B}}{2d} =  \varepsilon_0\frac{R^2}{2d} 
+                        \end{equation*}
+
+                        Tarkastellaan kapasitanssien suhdetta:
+
+                        \begin{equation*}
+                            \begin{split}
+                                \frac{C_B}{C_A} &= \frac{ \varepsilon_0\frac{R^2}{2d}}{\varepsilon_0\frac{\pi R^2}{d}} \\
+                                 \frac{C_B}{C_A} &= \frac{R^2}{2d}\cdot \frac{d}{\pi R^2} \\
+                                  \frac{C_B}{C_A} &= \frac{1}{2\pi} \\
+                                  C_B &= \frac{C_A}{2\pi}
+                            \end{split}
+                        \end{equation*}
+                        <br>
+                        b) Kondensaattori \(A\) on nyt täytetty nesteellä, jolla on suhteellinen permittiivisyys \(\varepsilon_r\). Kondensaattorin kapasitanssi on nyt:
+
+                        \begin{equation*}
+                            C_A = \varepsilon_0\varepsilon_r \frac{\pi R^2}{d}
+                        \end{equation*}
+
+                        Kondensaattorien kapasitanssit halutaan olevan yhtä suuret:
+
+                        \begin{equation*}
+                            \begin{split}
+                                C_A &= C_B \\
+                                \varepsilon_0\varepsilon_r \frac{\pi R^2}{d} &= \varepsilon_0\frac{R^2}{2d} \\
+                                \varepsilon_r \frac{\pi R^2}{d} &= \frac{R^2}{2d} \\
+                                \varepsilon_r &= \frac{R^2}{2d}\cdot\frac{d}{\pi R^2} \\
+                                 \varepsilon_r &= \frac{1}{2\pi} \\
+                            \end{split}
+                        \end{equation*}</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <button class="collapsible"><h2>Tehtävä 7.3</h2></button>
+            <div class="exercise">
+                <p>Tutkitaan kuvan mukaista systeemiä, joka koostuu pistevarauksista \(q_1\) ja \(q_2\) jotka sijaitsevat etäisyydellä \(4,5\,\mathrm{cm}\) toisistaan. Pistevaraukset ovat kiinnitetty paikalleen, jolloin ne eivät voi liikkua. Systeemiin tuodaan pistevaraus, jonka varauksen suuruus \(Q =-2{,}0\,\mathrm{nC}\) ja massa \(m = 5{,}5\,\mathrm{g}\). Varausten \(q_1\) ja \(q_2\) takia varaus \(Q\) lähtee kiihtyvyydellä \(a = 305\,\mathrm{\frac{m}{s^2}}\) suoraan ylöspäin heti kun se vapautetaan. Ratkaiste varausten \(q_1\) ja \(q_2\) suuruus yksikössä \(\mathrm{nC}\).</p><br><img src="images_exercises/teht7.3.jpg" alt=""/><br><p><br><br><br>
+            <a onclick="document.getElementById('s3').style.display='block'" class="s-button">Ratkaisu 7.3</a><br></p>
+            <div id="s3" class="modal">
+              <div class="s-modal-content">
+                <div class="s-container">
+                  <span onclick="document.getElementById('s3').style.display='none'" class="s-button2 s-display-topright">&times;</span>
+                      <p>Varaus \(Q\) kulkee suoraan ylöspäin, jolloin siihen ei kohdistu \(x\)-suuntaista voimaa. Tämä tarkoittaa, että varausten \(q_1\) ja \(q_2\) tulee olla yhtäsuuret, mutta vastakkaissuuruiset koska niiden aiheuttaman voiman vaakakomponentit kumoavat toisensa. Toisaalta varaus \(Q=-2{,}0\,\mathrm{nC}\) lähtee kulkemaan suoraan ylöspäin, jolloin varauksen \(q_1\) tulee vetää varausta \(Q\) puoleensa ja varauksen \(q_2\) tulee työntää varausta \(Q\) ylöspäin. Eli siis varaukselle \(q_1>0\) ja varaukselle \(q_2<0\).
+
+                        Ratkaistaan kuinka suuren kokonaisvoiman varaus \(Q\) tarvitsee kiihtyvyyttä varten:
+
+                        \begin{equation*}
+                            F_{kok} = ma = 5{,}0\cdot10^{-3}\,\mathrm{kg}\cdot 325\,\mathrm{\frac{m}{s^2}} = 1{,}625\,\mathrm{N}
+                        \end{equation*}
+
+                        Kokonaisvoima \(F_{kok}\) koostuu varausten \(q_1\) ja \(q_2\) aiheuttaman sähköisen veto/työntö voiman pystykomponenteista:
+
+                        \begin{equation*}
+                            \begin{split}
+                                F_{kok} &= F_{Qq_1,y}+F_{Qq_2,y} \\
+                            \end{split}
+                        \end{equation*}
+
+                        </p><br><img src="images_exercises/teht7.3_ratk.jpg" alt=""/><br><p><br>
+
+                        Kuvan tilanne on symmetrinen. Kosinin avulla saadaan ratkaistua kulman \(\theta\) suuruus:
+
+                        \begin{equation*}
+                            \cos{\theta} = \frac{2{,}25\,\mathrm{cm}}{3{,}0\,\mathrm{cm}} = 0{,}75 
+                        \end{equation*}
+
+                        Jolloin voimien pystykomponentit saadaan kirjoitettua muodossa:
+
+                        \begin{equation*}
+                            \begin{split}
+                               \Rightarrow  F_{kok} &= F_{Qq_1}\cos{\theta}+F_{Qq_2}\cos{\theta} \\
+                            \end{split}
+                        \end{equation*}
+
+                        Toisaalta varaukset ovat itseisarvoltaan yhtä suuret \(|q|=|q_1|=|q_2|\):
+
+                        \begin{equation*}
+                            \begin{split}
+                               \Rightarrow  F_{kok} &= 2F_{Qq}\cos{\theta} \\
+                               \frac{F_{kok}}{2\cos{\theta}} &= \frac{1}{4\pi\varepsilon_0}\frac{|Q|q}{r^2} \\
+                               q &= \frac{4\pi\varepsilon_0 r^2F_{kok}}{2|Q|\cos{\theta}} \\
+                              q &= \frac{2\pi\varepsilon_0 r^2F_{kok}}{|Q|\cos{\theta}} \\
+                               q &= \frac{2\cdot3{,}14159\cdot8{,}85\cdot10^{-12}\,\mathrm{\frac{N}{m}}\cdot (3\cdot10^{-2}\,\mathrm{m})^2\cdot1{,}625\,\mathrm{N}}{ |-2{,}0\cdot10^{-6}\,\mathrm{C}|\cdot 0{,}75} \\
+                               q &= 5{,}4215\cdot10^{-8}\,\mathrm{C} \\
+                               q &\approx 54{,}2\,\mathrm{nC}
+                            \end{split}
+                        \end{equation*}
+
+                        Varaus \(q_1\) on positiivinen siis \(q_1=-54{,}2\,\mathrm{nC}\) ja varaus \(q_2\) negatiivinen siis \(q_2 = 54{,}2\,\mathrm{nC}\)</p>
+                </div>
+            </div>
+            </div>
+            </div>
+            <button class="collapsible"><h2>Tehtävä 7.4</h2></button>
+            <div class="exercise">
+                <p>Kondensaattori, jonka kapasitanssi on \(6{,}0\,\mathrm{\mu F}\) on alkutilanteessa varaukseton. Kondensaattori on kytketty rinnan vastuksen \(5{,}0\,\mathrm{\Omega}\) ja ideaalisen jännitelähteen \(50{,}0\,\mathrm{V}\). Kuinka suuri on kondensaattorin varaus, kun vastus kuluttaa tehoa \(250\,\mathrm{W}\) verran?<br>
+            <br>
+            <a onclick="document.getElementById('s4').style.display='block'" class="s-button">Ratkaisu 7.4</a><br></p>
+            <div id="s4" class="modal">
+              <div class="s-modal-content">
+                <div class="s-container">
+                  <span onclick="document.getElementById('s4').style.display='none'" class="s-button2 s-display-topright">&times;</span>
+                  <p>Vastus kuluttaa tehoa \(P\) verran, jolloin Joulen laista saadaan ratkaistua sähkövirran suuruus joka kulkee vastuksen läpi:
+
+                    \begin{equation*}
+                        P = UI = RI^2 \Rightarrow I = \sqrt{\frac{P}{R}} = \sqrt{\frac{250\,\mathrm{W}}{2{,}5\,\mathrm{\Omega}}} = 10\,\mathrm{A}
+                    \end{equation*}
+
+                    Soveltamalla piiriin Kirchoffin toista lakia saadaan:
+
+                    \begin{equation*}
+                        \begin{split}
+                            \sum \Delta V &= 0 \\
+                            U-U_{vastus}-U_{kondensaattori} &= 0 \\
+                            U-RI-\frac{Q}{C} &= 0 \\
+                            Q &= C(U-RI) \\
+                            Q &= 6{,0}\cdot10^{-6}\,\mathrm{F}\cdot (50{,}0\,\mathrm{V}-2{,}5\,\mathrm{\Omega}\cdot 10\,\mathrm{A}) \\
+                            Q &= 1{,}5\cdot 10^{-5}\,\mathrm{C}
+                        \end{split}
+                    \end{equation*}
+
+                    Jolloin kondensaattoriin varastoitunut energia:
+
+                    \begin{equation*}
+                        \begin{split}
+                            E &= \frac{1}{2}CU^2 \\
+                            E &= \frac{Q^2}{2C} \\
+                            E &= \frac{(1{,}5\cdot 10^{-5}\,\mathrm{C})^2}{2\cdot 6{,}0\cdot10^{-6}\,\mathrm{F}} \\
+                            E&= 0{,}001875\,\mathrm{J} \\
+                            E &\approx 1{,9}\,\mathrm{mJ}
+                        \end{split}
+                    \end{equation*}</p>
+                </div>
+              </div>
+            </div>
+        </div>
+            <button class="collapsible"><h2>Tehtävä 7.5&#x1F63F;</h2></button>
+                <div class="exercise">
+                    <p>Auton akun lähdejännite on \(13{,}2\,\mathrm{V}\) suuruinen. Oletetaan, että akulla ei ole sisäistä resistanssia. Akkuun on sarjaan kytkettynä \(R=3{,}5\,\mathrm{\Omega}\) suuruinen vastus sekä termistori\(^1\). Termistorin jännite ei noudata Ohmin lakia, vaan sen jännite noudattaa toisen asteen yhtälöä \(U = aI+bI^2\), jossa vakiot \(a = 4{,}0\,\mathrm{\frac{\Omega}{A}}\) ja  \(b = 1{,}4\,\mathrm{\frac{\Omega}{A}}\). Kuinka suuri virta kulkee vastuksen \(R\) läpi?
+
+                    \begin{equation*}
+                        \begin{array}{|r|r|}
+                        \hline
+                             \sqrt{2} & 1{,}41 \\ \hline
+                        \sqrt{10} & 3{,}16 \\ \hline
+                        \sqrt{11} & 3{,}31 \\ \hline
+                        \sqrt{12} & 3{,}46 \\ \hline
+                        \sqrt{13} & 3{,}60 \\ \hline
+                        \sqrt{14} & 3{,}74 \\ \hline
+                        \end{array}
+                    \end{equation*}
+
+                    <br><small><em>Termistori\(^1\) on vastus, jonka resistanssi riippuu lämpötilasta.</em></small><br><br>
+                <a onclick="document.getElementById('s5').style.display='block'" class="s-button">Ratkaisu 7.5</a><br></p>
+                <div id="s5" class="modal">
+                  <div class="s-modal-content">
+                    <div class="s-container">
+                      <span onclick="document.getElementById('s5').style.display='none'" class="s-button2 s-display-topright">&times;</span>
+                      <p>Muodostetaan Kirchoffin toisen lain mukainen yhtälö:
+
+                        \begin{equation*}
+                            \begin{split}
+                                \sum \Delta V &= 0 \\
+                                U - U_{vastus}-U_{termistori} &= 0 \\
+                                U-RI-(aI+bI^2) &= 0 \\
+                                bI^2+I(R+a)-U &= 0
+                            \end{split}
+                        \end{equation*}
+
+                        Huomataan, että saimme toisen asteen yhtälön. Ratkaisukaavaa käyttämällä: (tehdään sijoitus ilman yksiköitä)
+
+                        \begin{equation*}
+                            \begin{split}
+                                I &= \frac{-(R+a)\pm\sqrt{(R+a)^2-4b\cdot(-U)}}{2b} \\
+                                I &= \frac{-(3{,}5+4{,}0)\pm\sqrt{(-3{,}5+4{,}0)^2-4\cdot 1{,}4\cdot(-13{,}2)}}{2\cdot 1{,}4} \\
+                                I &= \frac{-7{,}5\pm\sqrt{130{,}17}}{2\cdot 1{,}4} \\
+                                I &= \frac{-7{,}5\pm\sqrt{13{,}017\cdot 10}}{2\cdot 1{,}4} \\
+                                I &= \frac{-7{,}5\pm\sqrt{13{,}017}\sqrt{10}}{2\cdot 1{,}4} \\
+                                I &\approx \frac{-7{,}5\pm3{,}60\cdot 3{,}16}{2\cdot 1{,}4} \\
+                                I &= \frac{-7{,}5\pm3{,}60\cdot 3{,}16}{2\cdot 1{,}4} \\
+                                I &= -6{,}741 \text{ tai } I = 1{,}384
+                            \end{split}
+                        \end{equation*}
+
+                        Hyväksytään vain positiivinen ratkaisu \(I\approx 1{,}4\,\mathrm{A}\).</p>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        <script>
+        var modal1 = document.getElementById('s1');
+        var modal2 = document.getElementById('s2');
+        var modal3 = document.getElementById('s3');
+        var modal4 = document.getElementById('s4');
+        var modal5 = document.getElementById('s5');
+
+        window.onclick = function(event) {
+            if (event.target == modal1) {
+                modal1.style.display = "none";
+            }
+            if (event.target == modal2) {
+                modal2.style.display = "none";
+            }
+            if (event.target == modal3) {
+                modal3.style.display = "none";
+            }
+            if (event.target == modal4) {
+                modal4.style.display = "none";
+            }
+            if (event.target == modal5) {
+                modal5.style.display = "none";
+            }
+        }
+        </script>
+    </div>
+    <script type="text/javascript" src="js.js"></script>
+</div>
+
+    <div class="background-sq3">
+        <ul class="square3">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+<footer>
+<p>Copyright&copy; 2021 Exaphys All Rights Reserved.</p>
+</footer>
+</body>
+</html>

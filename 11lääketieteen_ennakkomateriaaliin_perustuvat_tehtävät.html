@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="kinematiikka, FY1, FY4, fysiikka, physics, exam, pääsykoe, materiaali, materials, valintakoe">
+    <meta name="description" content="Tärkeimmiksi aiheiksi on listattu vektoreiden yhteen-ja vähennyslasku, vektoriden välinen kulma, vektorin pituus sekä pistetulo.">
+    <meta name="author" content="Exaphys">
+    <title>11. Lääketieteen ennakkomateriaaliin perustuvat tehtävät | Exaphys -fysiikan opiskelumateriaalit</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="newcss.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/javascript" src="js.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({
+    tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+    }
+    });</script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML-full"></script>
+</head>
+<body>
+    <div class="home">
+        <nav class="navbar">
+            <div class="container">
+                <h1 class="logo">Exaphys</h1> 
+                <ul class="menu-text">
+                    <li><a href="index.html">Koti</a></li>
+                    <li><a href="materials_fi.html">Materiaali</a></li>
+                    <li><a href="about.html">Meistä</a></li>
+                    <li><a href="index.html"></a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="chapter-text">
+            <h2>11. Lääketieteen ennakkomateriaaliin perustuvat tehtävät</h2>
+            <h3>Tänä vuonna lääketieteen pääsykokeen ennakkomateriaali on lukio matematiikan vektorioppi. Tärkeimmiksi aiheiksi on listattu vektoreiden yhteen-ja vähennyslasku, vektoriden välinen kulma, vektorin pituus sekä pistetulo. Tehtävissä saa käyttää valitsemaasi kaavakokoelmaa (esim. MAOL) ja trigonometrista taulukkoa.</h3>
+        </div>
+        <div class="exercises">
+            <button class="collapsible"><h2>Tehtävä 11.1</h2></button>
+            <div class="exercise">
+                <p>Kala uintia järvessä voidaan mallintaa kaksiulotteisella \(xy\)-tasolla. Kala ui nopeudella \(\overline{v}_1 = (4{,}00\overline{i}+1{,}00\overline{j})\,\mathrm{\frac{m}{s}}\), jolloin sen paikkavektori on \(\overline{r} = (10{,}0\overline{i}-4{,}00\overline{j})\,\mathrm{m}\). Kala alkaa nyt uimaan vakiokiihtyvyydellä \(20\,\mathrm{s}\) ajan, jonka jälkeen kalan nopeus on \(\overline{v}_2 = (20{,}0\overline{i}-5{,}00\overline{j})\,\mathrm{\frac{m}{s}}\).
+<br><br>
+
+a) Mikä on kalan kiihtyvyysvektori \(\overline{a}\)?
+<br>
+b) Jos kala jatkaa uintia vakiokiihtyvyydellä, mikä on kalan paikkavektori ajanhetkellä \(t=25{,}0\,\mathrm{s}\)?<br>
+                <br>
+                <a onclick="document.getElementById('s1').style.display='block'" class="s-button">Ratkaisu 11.1</a><br></p>
+                <div id="s1" class="modal">
+                    <div class="s-modal-content">
+                        <div class="s-container">
+                            <span onclick="document.getElementById('s1').style.display='none'" class="s-button2">&times;</span><p>a) Kiihtyvyysvektori saadaan nopeuden muutoksesta:
+
+\begin{equation*}
+    \begin{split}
+        \overline{a} &= \frac{\Delta \overline{v}}{t} \\
+        \overline{a} &= \frac{\overline{v}_2-\overline{v}_1}{t} \\
+        \overline{a} &= \frac{(20{,}0\overline{i}-5{,}00\overline{j})\,\mathrm{\frac{m}{s}}-(4{,}00\overline{i}+1{,}00\overline{j})\,\mathrm{\frac{m}{s}}}{20{,}0\,\mathrm{s}} \\
+        \overline{a} &= \frac{(16{,0}\overline{i}-6{,}00\overline{j})\,\mathrm{\frac{m}{s}}}{20{,}0\,\mathrm{s}} \\
+        \overline{a} &= (0{,}8\overline{i}-0{,}3\overline{j})\,\mathrm{\frac{m}{s^2}}
+    \end{split}
+\end{equation*}
+
+b) Kinematiikan kaavoilla saadaan laskettua kalan sijainti \(x\)-suunnassa:
+
+\begin{equation*}
+    \begin{split}
+        \overline{r}_x &= \overline{r}_{0x}+\overline{v}_{0x}t+\frac{1}{2}\overline{a}_xt^2 \\
+        \overline{r}_x &= 10{,}0\overline{i}\,\mathrm{m}+4{,}00\overline{i}\,\mathrm{\frac{m}{s}}\cdot 25\,\mathrm{s}+\frac{1}{2}\cdot 0{,}8\overline{i}\,\mathrm{\frac{m}{s^2}}\cdot (25\,\mathrm{s})^2 \\
+        \overline{r}_x &= 360\overline{i}\,\mathrm{m}
+    \end{split}
+\end{equation*}
+
+ja \(y\)-suunnassa:
+
+\begin{equation*}
+    \begin{split}
+         \overline{r}_y &= \overline{r}_{0y}+\overline{v}_{0y}t+\frac{1}{2}\overline{a}_yt^2 \\
+         \overline{r}_y &= -4{,}00\overline{j}\,\mathrm{m}+1{,}00\overline{j}\,\mathrm{\frac{m}{s}}\cdot 25\,\mathrm{s}+\frac{1}{2}\cdot (-0{,}3\,\mathrm{\frac{m}{s^2}})\cdot (25\,\mathrm{\frac{m}{s}})^2 \\
+         \overline{r}_y &= -72{,}75\overline{j}\,\mathrm{m}
+    \end{split}
+\end{equation*}
+
+Eli kala on paikkavektorissa:
+
+\begin{equation*}
+    \overline{r}_f =( 360\overline{i}-72{,}75\overline{j})\,\mathrm{m}
+\end{equation*}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="collapsible"><h2>Tehtävä 11.2</h2></button>
+            <div class="exercise">
+                <p>Pistevaraus, joka painaa \(100\,\mathrm{g}\) asetetaan magneettikenttään \(\overline{E} = (50{,}0\overline{i}-20{,}0\overline{j})\,\mathrm{\frac{N}{C}}\). Pistevarauksen suuruus on \(-300\,\mathrm{\mu C}\).
+<br><br>
+a) Kuinka suuri sähköinen voima kohdistuu pistevaraukseen?
+<br>
+b) Mikä on pistevarauksen kiihtyvyysvektori ?
+<br>
+c) Olettaen, että pistevaraus lähtee levosta, mikä on pistevarauksen nopeusvektori kun se on liikkunut \(x\)-suunnassa \(67{,}5\,\mathrm{cm}\)?<br>
+                <br>
+                <a onclick="document.getElementById('s2').style.display='block'" class="s-button">Ratkaisu 11.2</a><br></p>
+                <div id="s2" class="modal">
+                  <div class="s-modal-content">
+                    <div class="s-container">
+                      <span onclick="document.getElementById('s2').style.display='none'" class="s-button2 s-display-topright">&times;</span>
+                      <p>a) Sähköiselle voimalle:
+
+\begin{equation*}
+    \begin{split}
+        \overline{F} &= q\overline{E} \\
+        \overline{F} &= 300\cdot10^{-6}\,\mathrm{C}\cdot (50{,}0\overline{i}-20{,}\overline{j})\,\mathrm{\frac{N}{C}} \\
+        \overline{F} &= (150{,}0\overline{i}-60{,}0\overline{j})\cdot10^{-4}\,\mathrm{N} \\
+    \end{split}
+\end{equation*}
+
+b) Sähköinen voima aiheuttaa kiihtyvyyden Newtonin II lain mukaisesti:
+
+\begin{equation*}
+    \begin{split}
+        \overline{F} &= m\overline{a} \\
+        \overline{a} &= \frac{ \overline{F}}{m} \\
+        \overline{a} &= \frac{ (150{,}0\overline{i}-60{,}0\overline{j})\cdot10^{-4}\,\mathrm{N}}{0{,}1\,\mathrm{kg}} \\
+        \overline{a} &= (150{,}0\overline{i}-60{,}0\overline{j})\cdot10^{-3}\,\mathrm{\frac{m}{s^2}}
+    \end{split}
+\end{equation*}
+
+c) Kappale lähtee levosta ja sillä on kiihtyvyys \(x\)-suunnassa. Ratkaistaan aika, joka sillä kuluu matkan \(s=67{,}5\,\mathrm{cm}\) siirtymiseen. Käytetään nyt kinematiikan yhtälöä skalaarimuodossa, mutta sen voisi tehdä myös vektorimuodossa:
+
+\begin{equation*}
+    \begin{split}
+        s &= \underbrace{s_0}_0+\underbrace{v_{0x}}_{0}{t} +\frac{1}{2}a_xt^2 \\
+        t &= \sqrt{\frac{2s}{a_x}} \\
+        t &= \sqrt{\frac{2\cdot67{,}5\cdot10^{-2}\,\mathrm{m}}{150\cdot10^{-3}\,\mathrm{\frac{m}{s^2}}}} \\
+        t &= \sqrt{9}\,\mathrm{s} \\
+        t &= 3\,\mathrm{s} \\
+    \end{split}
+\end{equation*}
+
+jolloin nopeus:
+
+\begin{equation*}
+    \begin{split}
+        \overline{v} &= \overline{a}t \\
+        \overline{v} &= (150{,}0\overline{i}-60{,}0\overline{j})\cdot10^{-3}\,\mathrm{\frac{m}{s^2}}\cdot 3\,\mathrm{s} \\
+        \overline{v} &= (450\overline{i}-180\overline{j})\cdot10^{-3}\,\mathrm{\frac{m}{s}}\\
+    \end{split}
+\end{equation*}</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <button class="collapsible"><h2>Tehtävä 11.3</h2></button>
+            <div class="exercise">
+                <p>Johda lauseke painovoiman \(\overline{F}_g = -mg\overline{j}\) tekemälle työlle, jos kappaleen siirtymävektori \(\overline{r} = \Delta x\overline{i}+\Delta y\overline{j}\).
+
+Fysiikassa työ voidaan laskea pistetulon avulla \(W = \overline{F}\cdot\overline{r}\) mukaisesti, jossa \(\overline{F}\) on kappaleeseen vaikuttava voimavektori ja \(\overline{r}\) siirtymävektori.<br>
+            <br>
+            <a onclick="document.getElementById('s3').style.display='block'" class="s-button">Ratkaisu 11.3</a><br></p>
+            <div id="s3" class="modal">
+              <div class="s-modal-content">
+                <div class="s-container">
+                  <span onclick="document.getElementById('s3').style.display='none'" class="s-button2 s-display-topright">&times;</span>
+                      <p>Työ on määritelty voiman ja siirtymän pistetulona:
+
+\begin{equation*}
+    \begin{split}
+        W &= \overline{F}_g\cdot \Delta\overline{r} \\
+       W &= (-mg\overline{j})\cdot (\Delta x\overline{i}+\Delta y\overline{j}) \\
+        W &= (0)(\Delta x)+(-mg)(\Delta y) \\
+        W &= -mg\Delta y
+    \end{split}
+\end{equation*}</p>
+                </div>
+            </div>
+            </div>
+            </div>
+            <button class="collapsible"><h2>Tehtävä 11.4</h2></button>
+            <div class="exercise">
+                <p>Kappale siirretään pisteestä \(A = (3,-3)\) pisteeseen \(B=(5,4)\) vakiovoimalla \(\overline{F} = (5\overline{i}+10\overline{j})\,\mathrm{N}\).
+<br><br>
+a) Kuinka suuri on voiman tekemä työ?
+<br>
+b) Kuinka suuri on voima- ja siirtymävektorin välinen kulma? Anna kulma kokonaislukuna.
+
+Fysiikassa työ voidaan laskea pistetulon avulla \(W = \overline{F}\cdot\overline{r}\) mukaisesti, jossa \(\overline{F}\) on kappaleeseen vaikuttava voimavektori ja \(\overline{r}\) siirtymävektori.
+
+\begin{equation*}
+\begin{array}{|r|r|}
+\hline
+\sqrt{525} & 22{,}91 \\ \hline
+\sqrt{625} & 25{,}00 \\ \hline
+\sqrt{1065} & 32{,}63 \\ \hline
+\sqrt{2025} & 45{,}00 \\ \hline
+\sqrt{3065} & 55{,}36 \\ \hline
+\sqrt{4065} & 63{,}75 \\ \hline
+\sqrt{5025} & 70{,}88 \\ \hline
+\sqrt{6065} & 81{,}39 \\ \hline
+\end{array}
+\end{equation*}<br>
+            <br>
+            <a onclick="document.getElementById('s4').style.display='block'" class="s-button">Ratkaisu 11.4</a><br></p>
+            <div id="s4" class="modal">
+              <div class="s-modal-content">
+                <div class="s-container">
+                  <span onclick="document.getElementById('s4').style.display='none'" class="s-button2 s-display-topright">&times;</span>
+                      <p>a) Ratkaistaan kahden pisteen avulla siirtymävektori:
+
+\begin{equation*}
+    \overline{r} = \overline{AB} = (5\,\mathrm{m}-3\,\mathrm{m})\overline{i}+(4\,\mathrm{m}-(-3\,\mathrm{m}))\overline{j} = (2\overline{i}+7\overline{j})\,\mathrm{m}
+\end{equation*}
+
+Jolloin voiman tekemä työ:
+
+\begin{equation*}
+    \begin{split}
+        W &= \overline{F}\cdot\overline{r} \\
+        W &= (5\overline{i}+10\overline{j})\,\mathrm{N}\cdot(2\overline{i}+7\overline{j})\,\mathrm{m} \\
+        W&= (5)(2)\,\mathrm{J}+(10)(7)\,\mathrm{J} \\
+        W &= 80\,\mathrm{J}
+    \end{split}
+\end{equation*}
+
+b) Kahden vektorin välinen kulma on määritelty kaavalla:
+
+\begin{equation*}
+    \begin{split}
+        \overline{F}\cdot \overline{r} &= \|\overline{F}\|\,\|\overline{r}\|\cos{\theta} \\
+        \cos{\theta} &= \frac{\overline{F}\cdot \overline{r}}{\|\overline{F}\|\,\|\overline{r}\|} \\
+        \cos{\theta} &= \frac{80\,\mathrm{J}}{\sqrt{5^2+10^2}\sqrt{2^2+7^2}\,\mathrm{J}} \\
+        \cos{\theta} &= \frac{80}{\sqrt{125}\sqrt{53}} \\
+        \cos{\theta} &= \frac{80}{\sqrt{6625}} \\
+        \cos{\theta} &\approx \frac{80}{81{,}63} \\
+        \theta &\approx 11{,}46^\circ \\
+        \theta &\approx 11^\circ \\
+    \end{split}
+\end{equation*}</p>
+                </div>
+            </div>
+            </div>
+            </div>
+            <button class="collapsible"><h2>Tehtävä 11.5</h2></button>
+            <div class="exercise">
+                <p>Fysiikassa teho ilmaistaan usein muodossa:
+
+\begin{equation*}
+    P = \frac{\Delta W}{\Delta t}
+\end{equation*}
+<br><br>
+a) Johda teholle lauseke:
+
+\begin{equation*}
+    \overline{P} = \overline{F}\cdot \overline{v}
+\end{equation*}
+<br>
+b) Kappaleeseen vaikuttaa vakiovoima \(\overline{F} = (5{,}0\overline{i}-10\overline{j})\,\mathrm{N}\). Jos voima tekee työtä vastusvoimia vastaan teholla on \(12{,}0\,\mathrm{W}\), mikä on kappaleen  \(x\)-suuntainen vakionopeus?<br>
+            <br>
+            <a onclick="document.getElementById('s5').style.display='block'" class="s-button">Ratkaisu 11.5</a><br></p>
+            <div id="s5" class="modal">
+              <div class="s-modal-content">
+                <div class="s-container">
+                  <span onclick="document.getElementById('s5').style.display='none'" class="s-button2 s-display-topright">&times;</span>
+                  <p>a) Lähtien annetusta tehon kaavasta
+
+\begin{equation*}
+    P = \frac{\Delta W}{\Delta t} = \frac{\overline{F}\cdot\overline{s}}{\Delta t}
+\end{equation*}
+
+Nopeuden määritelmästä tiedetään, että:
+
+\begin{equation*}
+    \overline{v} = \frac{\overline{s}}{\Delta t}
+\end{equation*}
+
+Jolloin teholle saadaan muoto:
+
+\begin{equation*}
+    P = \overline{F}\cdot\overline{v}
+\end{equation*}
+
+b) Kappaleen nopeus \(x\)-suunnassa on muotoa:
+
+\begin{equation*}
+    \overline{v}_x = a\overline{i}
+\end{equation*}
+
+jossa \(a\) on vakio. Lasketaan tehon pistetulo:
+
+\begin{equation*}
+    \begin{split}
+        P &= (5{,}0\overline{i}-10\overline{j})\,\mathrm{N} \cdot (a\overline{i})\,\mathrm{\frac{m}{s}} \\
+        12\,\mathrm{W} &= 5{,}0(a)\,\mathrm{W}-10(0)\,\mathrm{W} \\
+        a &= \frac{12\,\mathrm{W}}{5\,\mathrm{W}} \\
+        a &= 2{,}4\\
+    \end{split}
+\end{equation*}
+
+Eli kappaleen nopeus:
+
+\begin{equation*}
+    \overline{v}_x = 2{,}4\overline{i}\,\mathrm{\frac{m}{s}}
+\end{equation*}</p>
+                </div>
+              </div>
+            </div>
+        </div>
+        <script>
+        var modal1 = document.getElementById('s1');
+        var modal2 = document.getElementById('s2');
+        var modal3 = document.getElementById('s3');
+        var modal4 = document.getElementById('s4');
+        var modal5 = document.getElementById('s5');
+
+        window.onclick = function(event) {
+            if (event.target == modal1) {
+                modal1.style.display = "none";
+            }
+            if (event.target == modal2) {
+                modal2.style.display = "none";
+            }
+            if (event.target == modal3) {
+                modal3.style.display = "none";
+            }
+            if (event.target == modal4) {
+                modal4.style.display = "none";
+            }
+            if (event.target == modal5) {
+                modal5.style.display = "none";
+            }
+        }
+        </script>
+    </div>
+    <script type="text/javascript" src="js.js"></script>
+</div>
+
+    <div class="background-sq3">
+        <ul class="square3">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+<footer>
+<p>Copyright&copy; 2021 Exaphys All Rights Reserved.</p>
+</footer>
+</body>
+</html>

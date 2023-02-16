@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="kinematiikka, FY1, FY4, fysiikka, physics, exam, pääsykoe, materiaali, materials, valintakoe">
+    <meta name="description" content="Harjoituskokeet koostuvat 20 monivalinta tehtävästä sekä kolmesta laajemmasta tehtävästä.">
+    <meta name="author" content="Exaphys">
+    <title>12. Monivalintatehtävät | Exaphys -fysiikan opiskelumateriaalit</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="newcss.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/javascript" src="js.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({
+    tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+    }
+    });</script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML-full"></script>
+</head>
+<body>
+    <div class="home">
+        <nav class="navbar">
+            <div class="container">
+                <h1 class="logo">Exaphys</h1> 
+                <ul class="menu-text">
+                    <li><a href="index.html">Koti</a></li>
+                    <li><a href="materials_fi.html">Materiaali</a></li>
+                    <li><a href="about.html">Meistä</a></li>
+                    <li><a href="index.html"></a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="chapter-text">
+            <h2>12. Monivalintatehtävät</h2>
+            <h3>Monivalintatehtävissä on neljä mahdollista ratkaisua, joista yksi on oikea. Voit käyttää tehtävissä valitsemaasi kaavakokelmaa (esim. MAOL) ja trigonometrista taulukkoa.</h3>
+        </div>
+        <div class="exercises">
+            <button class="collapsible"><h2>Tehtävä 1</h2></button>
+            <div class="exercise">
+                <p>Auringon protoni-protoni-ketjun reaktiossa raskasvety yhdistyy protonin kanssa muodostaen kolmannen ytimen. Mikä seuraavasti reaktioista on oikea:
+<br><br>
+a) \(\mathrm{^1H+{^2}H \rightarrow {^3}He+\gamma}\)
+<br>
+b) \(\mathrm{{^1}H+ {^2}H \rightarrow {^3}He+n}\)
+<br>
+c) \(\mathrm{{^1}H+{^2}H \rightarrow {^4}He+\gamma}\)
+<br>
+d) \(\mathrm{{^1}H+{^2}H \rightarrow {^3}Li+\gamma}\)<br>
+                <br>
+                <a onclick="document.getElementById('s1').style.display='block'" class="s-button">Ratkaisu 1</a><br></p>
+                <div id="s1" class="modal">
+                    <div class="s-modal-content">
+                        <div class="s-container">
+                            <span onclick="document.getElementById('s1').style.display='none'" class="s-button2">&times;</span><p>Oikea ratkaisu on reaktio a).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="collapsible"><h2>Tehtävä 2</h2></button>
+            <div class="exercise">
+                <p>Kappale putoaa matkan \(\Delta x\) ajassa \(t\). Jos kappale on pudonnut ajan \(3t\) verran, niin kappale on pudonnut matkan:
+<br><br>
+a) \(\Delta x+3\)
+<br>
+b) \(3\Delta x\)
+<br>
+c) \(\Delta x+9\)
+<br>
+d) \(9\Delta x\)<br>
+                <br>
+                <a onclick="document.getElementById('s2').style.display='block'" class="s-button">Ratkaisu 2</a><br></p>
+                <div id="s2" class="modal">
+                  <div class="s-modal-content">
+                    <div class="s-container">
+                      <span onclick="document.getElementById('s2').style.display='none'" class="s-button2 s-display-topright">&times;</span>
+                      <p>Kappale on putoamisliikkeessä:
+
+\begin{equation*}
+    \begin{split}
+        \Delta x = \underbrace{v_0}_0t+\frac{1}{2}g t^2 \\
+        \Delta x = \frac{1}{2}g t^2 \\
+    \end{split}
+\end{equation*}
+
+Huomataa, että kuljettu matka on suoraan verrannollinen ajan neliöön \(\Delta x \propto t^2\), eli jos aika kasvaa kolminkertaiseksi niin matka on \(3^2 = 9\) kertainen. Oikea vaihtoehto d).</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <button class="collapsible"><h2>Tehtävä 3</h2></button>
+            <div class="exercise">
+                <p>Hopeakoru painaa \(50\,\mathrm{g}\) ja sillä on tilavuus \(4{,}82\,\mathrm{m^3}\). Korun ympäri sidotaan lanka, joka on toisesta päästään kiinnitetty voimamittariin. Koru lasketaan veteen (\(\rho=1000\,\mathrm{\frac{kg}{m^3}}\)), jolloin voimamittarin lukema on:
+<br><br>
+a) \(0{,}44\,\mathrm{N}\)
+<br>
+b) \(0{,}49\,\mathrm{N}\)
+<br>
+c) \(0{,}54\,\mathrm{N}\)
+<br>
+d) Ei riittävästi tietoa tehtävän ratkaisemiseksi.
+<br><br>
+
+            <br>
+            <a onclick="document.getElementById('s3').style.display='block'" class="s-button">Ratkaisu 3</a><br></p>
+            <div id="s3" class="modal">
+              <div class="s-modal-content">
+                <div class="s-container">
+                  <span onclick="document.getElementById('s3').style.display='none'" class="s-button2 s-display-topright">&times;</span>
+                      <p>Kappaleen ollessa vedessä siihen vaikuttaa narun tukivoima, painovoima sekä noste. Voimamittarin lukema on yhtäsuuri kuin narun tukivoima. Newtonin II lain mukaan:
+
+\begin{equation*}
+    \begin{split}
+        \sum \overline{F} &= \overline{0} \\
+        \overline{T}+\overline{G}+\overline{N} &= \overline{0} \\
+        T+N-G &= 0 \\
+        T &= mg-N \\
+        T &= mg-\rho Vg \\
+        T &= g(m-\rho V) \\
+        T &= 9{,}81\,\mathrm{\frac{m}{s^2}}\cdot(50{,}0\cdot10^{-3}\,\mathrm{kg}-1000\,\mathrm{\frac{kg}{m^3}}\cdot 4{,}82\cdot10^{-6}\,\mathrm{m^3}) \\
+        T &= 0{,}44321\,\mathrm{N} \\
+        T &\approx 0{,}44\,\mathrm{N} \\
+    \end{split}
+\end{equation*}
+
+Oikea ratkaisu a).</p>
+                </div>
+            </div>
+            </div>
+            </div>
+            <button class="collapsible"><h2>Tehtävä 4</h2></button>
+            <div class="exercise">
+                <p>Moottori on kiinnitetty tasavirtalähteeseen, jonka napojen välinen jännite on \(20,\mathrm{V}\) ja missä kulkee \(6,\mathrm{A}\) suuruinen virta. Moottorilla pyritään nostamaan \(40,\mathrm{kg}\) painoista lastia suoraan ylöspäin. Moottorin hyötysuhde on \(10%\).<br><br>Jos moottorilla suoritetaan nostoa \(60 \,\mathrm{s}\) ajan, kuinka korkealle lasti nousee?
+<br><br>
+a) \(1{,}8\,\mathrm{m}\)
+<br>
+b) \(5{,}4\,\mathrm{m}\)
+<br>
+c) \(18\,\mathrm{m}\)
+<br>
+d) \(180\,\mathrm{m}\)
+<br><br>
+Kuinka kauan kestäisi tuoda lasti samalle korkeudelle, jos sähkövirta ja jännite olisivat kaksinkertaisia?
+<br><br>
+a) \(15\,\mathrm{s}\)
+<br>
+b) \(30\,\mathrm{s}\)
+<br>
+c) \(60\,\mathrm{s}\)
+<br>
+d) \(120\,\mathrm{s}\)<br>
+            <br>
+            <a onclick="document.getElementById('s4').style.display='block'" class="s-button">Ratkaisu 4</a><br></p>
+            <div id="s4" class="modal">
+              <div class="s-modal-content">
+                <div class="s-container">
+                  <span onclick="document.getElementById('s4').style.display='none'" class="s-button2 s-display-topright">&times;</span>
+                  <p>Joulen lain mukaan teho:
+
+\begin{equation*}
+    P=UI
+\end{equation*}
+
+Tehon ja energian välillä on yhteys:
+
+\begin{equation*}
+    P = \eta\frac{E}{t} \Rightarrow E = \eta UIt
+\end{equation*}
+
+Energia kuluu lastin nostamiseen, jolloin moottorin energia muuttuu potentiaalienergiaksi:
+
+\begin{equation*}
+    \begin{split}
+        \eta Pt &= E_{pot} \\
+        \eta UIt &= mg\Delta h \\
+        \Delta h &= \frac{\eta UIt}{mg} \\
+        \Delta h &= \frac{0{,}1\cdot 20\,\mathrm{V}\cdot 6\,\mathrm{A} \cdot 60\,\mathrm{s}}{40\,\mathrm{kg}\cdot 9{,}81\,\mathrm{\frac{m}{s^2}}} \\
+        \Delta h &= 1{,}83486\,\mathrm{m} \\
+        \Delta h &\approx  1{,}8\,\mathrm{m} \\
+    \end{split}
+\end{equation*}
+
+Oikea ratkaisu a).
+<br><br>
+Jos sähkövirran suuruus ja jännite kaksinkertaistuvat niin teho on nyt:
+
+\begin{equation*}
+    P=2U\cdot 2I = 4UI
+\end{equation*}
+
+toisaalta potentiaalienergian ja tehon välillä on edellisessä kohdassa johdettu yhteys:
+
+\begin{equation*}
+    \eta Pt = mg\Delta h \Rightarrow t = \frac{mg\Delta h}{\eta P}
+\end{equation*}
+
+Huomataan että \(t\propto \frac{1}{P}\), eli tehon nelinkertaistuessa ajan tulee pienentyä \(60\,\mathrm{s}/4 = 15\,\mathrm{s}\). Oikea ratkaisu a).</p>
+                </div>
+              </div>
+            </div>
+        </div>
+        <button class="collapsible"><h2>Tehtävä 5</h2></button>
+            <div class="exercise">
+                <p>Säätövastuksen langan pituus on \(4\,\mathrm{m}\) ja resistanssi \(8\,\mathrm{\Omega}\). Säätövastus on kytketty tasajännite lähteeseen, jonka vahvuus on \(2\,\mathrm{V}\). Säätövastuksen potentiaalieroksi halutaan \(1\,\mathrm{\frac{mV}{cm}}\) piiriin tulee sarjaan kytkeä vastus, jonka resistanssi:
+<br><br>
+a) \(40\,\mathrm{\Omega}\).
+<br>
+b) \(44\,\mathrm{\Omega}\).
+<br>
+c) \(48\,\mathrm{\Omega}\).
+<br>
+d) \(32\,\mathrm{\Omega}\).<br>
+                <br>
+                <a onclick="document.getElementById('s5').style.display='block'" class="s-button">Ratkaisu 5</a><br></p>
+                <div id="s5" class="modal">
+                    <div class="s-modal-content">
+                        <div class="s-container">
+                            <span onclick="document.getElementById('s5').style.display='none'" class="s-button2">&times;</span><p>Säätövastus on \(4\,\mathrm{m}\) pitkä, jolloin potentiaaliero sen päätyjen välillä:
+
+\begin{equation*}
+    \Delta V = 1\,\mathrm{\frac{mV}{cm}}\cdot 4\,\mathrm{m} = \frac{1\cdot10^{-3}\,\mathrm{V}}{10^{-2}\,\mathrm{m}}\cdot 4\,\mathrm{m} = 0{,}4\,\mathrm{V}
+\end{equation*}
+
+Jolloin potentiaaliero \(8\,\mathrm{\Omega}\) vastuksen yli Ohmin lain mukaisesti:
+
+\begin{equation*}
+    \Delta V = I\cdot8\,\mathrm{\Omega} \\
+\end{equation*}
+
+Jos piiriin sarjaan kytkettään vastus \(R\) niin kokonaisresistanssi:
+
+\begin{equation*}
+    R_{kok} = 8\,\mathrm{\Omega} + R
+\end{equation*}
+
+Kirchoffin II lain mukaan:
+
+\begin{equation*}
+    \Delta V = 0 \Rightarrow U-R_{kok} I = 0\Rightarrow I = \frac{U}{8\,\mathrm{\Omega} + R}
+\end{equation*}
+
+Sijoitetaan tiedot aiempaan yhtälöön:
+
+\begin{equation*}
+     \begin{split}
+         0{,}4\,\mathrm{V} &= \frac{2\,\mathrm{V}}{8\,\mathrm{\Omega} + R}\cdot8\,\mathrm{\Omega} \\
+        \frac{4}{10} \,\mathrm{V}&= \frac{2\,\mathrm{V}}{8\,\mathrm{\Omega} + R}\cdot8\,\mathrm{\Omega} \\
+        \Rightarrow R &= 32\,\mathrm{\Omega} \\
+     \end{split}
+\end{equation*}
+
+Oikea ratkaisu d).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="collapsible"><h2>Tehtävä 6</h2></button>
+            <div class="exercise">
+                <p>Kappaleeseen A kohdistuu kokonaisvoima \(F_A\) jolloin kappaleella A on kiihtyvyys. Jos kappalleen B massa on kolmekertaa suurempi kuin A:n ja siihen kohdistuva voima on kolmekertaa suurempi kuin \(F_A\), niin tällöin kappaleen B kiihtyvyys on:
+<br><br>
+a) Yhdeksän kertaa suurempi kuin A:n kiihtyvyys.
+<br>
+b) Kolme kertaa suurempi kuin A:n kiihtyvyys.
+<br>
+c) Yhtäsuuri kuin A:n kiihtyvyys.
+<br>
+d) Kolmasosa A:n kiihtyvyydestä.<br>
+                <br>
+                <a onclick="document.getElementById('s6').style.display='block'" class="s-button">Ratkaisu 6</a><br></p>
+                <div id="s6" class="modal">
+                  <div class="s-modal-content">
+                    <div class="s-container">
+                      <span onclick="document.getElementById('s6').style.display='none'" class="s-button2 s-display-topright">&times;</span>
+                      <p>Kappaleen A kiihtyvyys:
+
+\begin{equation*}
+    a_A = \frac{F_A}{m_A}
+\end{equation*}
+
+Kappaleen B kiihtyvyys:
+
+\begin{equation*}
+    \begin{split}
+        a_B &= \frac{F_B}{m_B} \\
+        a_B &= \frac{3F_A}{3m_A} \\
+        a_B &= \frac{F_A}{m_A} = a_A \\
+    \end{split}
+\end{equation*}
+
+Oikea ratkaisu c).</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <button class="collapsible"><h2>Tehtävä 7</h2></button>
+            <div class="exercise">
+                <p>Tarkastellaan Carnot'n lämpökonetta, jonka hyötysuhde on \(\frac{1}{10}\). Lämpökonetta käytetään kylmäkoneena. Jos systeemin tekemä työ on \(10\,\mathrm{J}\), niin kylmävarastosta otettu energia:
+<br><br>
+a) \(99\,\mathrm{J}\).
+<br>
+b) \(90\,\mathrm{J}\).
+<br>
+c) \(1\,\mathrm{J}\).
+<br>
+d) \(100\,\mathrm{J}\).<br>
+            <br>
+            <a onclick="document.getElementById('s7').style.display='block'" class="s-button">Ratkaisu 7</a><br></p>
+            <div id="s7" class="modal">
+              <div class="s-modal-content">
+                <div class="s-container">
+                  <span onclick="document.getElementById('s7').style.display='none'" class="s-button2 s-display-topright">&times;</span>
+                      <p>Carnot'n hyötysuhde:
+
+\begin{equation*}
+    \begin{split}
+        \eta &= 1-\frac{T_1}{T_2} \\
+        \frac{1}{10} &= 1-\frac{T_1}{T_2} \\
+        \frac{T_1}{T_2} &= 1-\frac{1}{10} = \frac{9}{10}
+    \end{split}
+\end{equation*}
+
+Kylmäkoneelle:
+
+\begin{equation*}
+    \begin{split}
+        \frac{Q_1+W}{Q_1} &= \frac{T_2}{T_1} \\
+        \frac{Q_1+10\,\mathrm{J}}{Q_1} &= \frac{10}{9} \\
+         1+\frac{10\,\mathrm{J}}{Q_1} &= \frac{10}{9} \\
+        Q_1 &= 90\,\mathrm{J} \\
+    \end{split}
+\end{equation*}
+
+Oikea ratkaisu b).</p>
+                </div>
+            </div>
+            </div>
+            </div>
+            <button class="collapsible"><h2>Tehtävä 8</h2></button>
+            <div class="exercise">
+                <p>Kaksi palloa, joilla on säteet \(R\) ja \(2R\) ovat alussa levossa. \(R\) säteisen pallon massa on \(M\) ja \(2R\) säteisen pallon massa on \(5M\). Pallojen välinen massakeskipisteiden etäisyys on alkutilanteessa \(12R\). Mikäli palloihin vaikuttaa vain niiden keskenäinen gravitaatiovoima, niin \(R\) säteinen pallo kulkee ennen pallojen törmäystä matkan:
+<br><br>
+a) \(4{,}5R\).
+<br>
+b) \(7{,}5R\).
+<br>
+c) \(1{,}5R\).
+<br>
+d) \(2{,}5R\).<br>
+            <br>
+            <a onclick="document.getElementById('s8').style.display='block'" class="s-button">Ratkaisu 8</a><br></p>
+            <div id="s8" class="modal">
+              <div class="s-modal-content">
+                <div class="s-container">
+                  <span onclick="document.getElementById('s8').style.display='none'" class="s-button2 s-display-topright">&times;</span>
+                  <p>Alkutilanteessa pallot ovat etäisyydellä \(12R\) toisistaan. Törmäyksen tapahtuessa pallot ovat siis etäisyydellä \(R+2R=3R\) toisistaan. Eli pallot kulkevat yhteensä matkan:
+
+\begin{equation*}
+    12R-R = 9R
+\end{equation*}
+
+Kappaleet kohdistavat toisiinsa yhtäsuuren voiman, jolloin systeemin massakeskipiste pysyy paikoillaan:
+
+\begin{equation*}
+    \begin{split}
+        m_1x_1 &= m_2x_2 \\
+        Mx &= 5M(9R-x) \\
+        x &= 45R-5x \\
+        x &= 7{,}5R \\
+    \end{split}
+\end{equation*}
+
+Oikea ratkaisu b).</p>
+                </div>
+              </div>
+            </div>
+        </div>
+        <button class="collapsible"><h2>Tehtävä 9</h2></button>
+            <div class="exercise">
+                <p>Kahdessa eri tankissa on kahta eri ideaalikaasua \(A\) ja \(B\). Kaasut ovat samassa lämpötilassa, mutta kaasun \(A\) paine on kaksi kertaa suurempi kuin kaasun  \(B\). Jos Kaasun \(A\) tiheys on  \(1{,}5\) kertaa suurempi kuin  \(B\):n, niin moolimassojen suhde:
+<br><br>
+a) \(\frac{1}{2}\)
+<br>
+b) \(\frac{2}{3}\)
+<br>
+c) \(\frac{3}{4}\)
+<br>
+d) 2<br>
+                <br>
+                <a onclick="document.getElementById('s9').style.display='block'" class="s-button">Ratkaisu 9</a><br></p>
+                <div id="s9" class="modal">
+                    <div class="s-modal-content">
+                        <div class="s-container">
+                            <span onclick="document.getElementById('s9').style.display='none'" class="s-button2">&times;</span><p>Ideaalikaasu lain mukaan:
+
+\begin{equation*}
+    \begin{split}
+        pV &= nRT \\
+        pV &= \frac{m}{M}RT \\
+        pV &= \frac{\rho V}{M}RT \\
+        M &= \frac{\rho RT}{p}
+    \end{split}
+\end{equation*}
+
+eli kaasujen \(A\) ja \(B\) moolimassat:
+
+\begin{equation*}
+    \begin{split}
+        M_A &= \frac{\rho_A RT}{p_A} =  \frac{1{,}5\rho_B RT}{2p_B}\\
+        M_B &= \frac{\rho_B RT}{p_B} \\
+    \end{split}
+\end{equation*}
+
+Eli suhde:
+
+\begin{equation*}
+    \begin{split}
+        \frac{M_A}{M_B} &= \frac{\frac{1{,}5\rho_B RT}{2p_B}}{ \frac{\rho_B RT}{p_B}} \\
+        \frac{M_A}{M_B} &= \frac{\frac{1{,}5\rho_B RT}{2p_B}}{ \frac{\rho_B RT}{p_B}} \\
+        \frac{M_A}{M_B} &= \frac{1{,}5\rho_B RT}{2p_B} \cdot \frac{p_B}{\rho_B RT} \\
+        \frac{M_A}{M_B} &= \frac{1{,}5}{2} \\
+         \frac{M_A}{M_B} &= \frac{\frac{3}{2}}{2} \\
+         \frac{M_A}{M_B} &= \frac{3}{4} \\
+    \end{split}
+\end{equation*}
+
+Oikea ratkaisu c).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="collapsible"><h2>Tehtävä 10</h2></button>
+            <div class="exercise">
+                <p>Hiukkanen joka painaa \(10\,\mathrm{g}\) kulkee ympyräradalla, jonka säde on \(6{,}4\,\mathrm{cm}\). Ympyräradalla kappaleella on tasainen ratakiihtyvyys. Kuinka suuri on kappaleen kiihtyvyys jos kappaleella on \(8\cdot10^{-4}\) suuruinen kineettinen energia kahden täyden kierroksen jälkeen:
+<br><br>
+a) \(0{,}15\,\mathrm{\frac{m}{s^2}}\).
+<br>
+b) \(0{,}18\,\mathrm{\frac{m}{s^2}}\).
+<br>
+c) \(0{,}2\,\mathrm{\frac{m}{s^2}}\).
+<br>
+d) \(0{,}1\,\mathrm{\frac{m}{s^2}}\).<br>
+                <br>
+                <a onclick="document.getElementById('s10').style.display='block'" class="s-button">Ratkaisu 10</a><br></p>
+                <div id="s10" class="modal">
+                  <div class="s-modal-content">
+                    <div class="s-container">
+                      <span onclick="document.getElementById('s10').style.display='none'" class="s-button2 s-display-topright">&times;</span>
+                      <p>Energia periaatteen mukaan:
+
+\begin{equation*}
+    \begin{split}
+        \text{Voimien tekemä työ} &= \text{Kineettisen energian muutos} \\
+        W_{tangentti}+W_{keskeis} &= \Delta E_{kin} \\
+        F_ts+0 &= E_f \\
+    \end{split}
+\end{equation*}
+
+Ympyräliikkeessä Newtonin II lain mukaan:
+
+\begin{equation*}
+    F_t = ma_n
+\end{equation*}
+
+Ympyrän kehän pituus, jota kappale kulkee on \(2\pi R\). Hiukkanen kulkee tämän kahdesti, siis kuljettu matka
+\begin{equation*}
+    s = 2\cdot2\pi R = 4\pi R
+\end{equation*}
+
+Sijoitetaan aiempaan yhtälöön:
+
+\begin{equation*}
+    \begin{split}
+        ma_n\cdot4\pi R &= E_f \\
+        a_n &= \frac{E_f}{4m\pi R} \\
+        a_n &= \frac{8\cdot10^{-4}\,\mathrm{J}}{4\cdot 10\cdot10^{-3}\,\mathrm{g} \cdot3{,}14159 \cdot6{,}4\cdot10^{-2}\,\mathrm{m}} \\
+        a_n &= 0{,}099471\,\mathrm{\frac{m}{s^2}} \\
+        a_n &\approx 0{,}1\,\mathrm{\frac{m}{s^2}} \\
+    \end{split}
+\end{equation*}
+
+Oikea ratkaisu d).</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        <script>
+        var modal1 = document.getElementById('s1');
+        var modal2 = document.getElementById('s2');
+        var modal3 = document.getElementById('s3');
+        var modal4 = document.getElementById('s4');
+        var modal5 = document.getElementById('s5');
+        var modal6 = document.getElementById('s6');
+        var modal7 = document.getElementById('s7');
+        var modal8 = document.getElementById('s8');
+        var modal9 = document.getElementById('s9');
+        var modal10 = document.getElementById('s10');
+
+        window.onclick = function(event) {
+            if (event.target == modal1) {
+                modal1.style.display = "none";
+            }
+            if (event.target == modal2) {
+                modal2.style.display = "none";
+            }
+            if (event.target == modal3) {
+                modal3.style.display = "none";
+            }
+            if (event.target == modal4) {
+                modal4.style.display = "none";
+            }
+            if (event.target == modal5) {
+                modal5.style.display = "none";
+            }
+            if (event.target == modal6) {
+                modal6.style.display = "none";
+            }
+            if (event.target == modal7) {
+                modal7.style.display = "none";
+            }
+            if (event.target == modal8) {
+                modal8.style.display = "none";
+            }
+            if (event.target == modal9) {
+                modal9.style.display = "none";
+            }
+            if (event.target == modal10) {
+                modal10.style.display = "none";
+            }
+        }
+        </script>
+    </div>
+    <script type="text/javascript" src="js.js"></script>
+</div>
+
+    <div class="background-sq3">
+        <ul class="square3">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+<footer>
+<p>Copyright&copy; 2021 Exaphys All Rights Reserved.</p>
+</footer>
+</body>
+</html>

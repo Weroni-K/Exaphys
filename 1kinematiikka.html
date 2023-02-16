@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="kinematiikka, FY1, FY4, fysiikka, physics, exam, pääsykoe, materiaali, materials, valintakoe">
+    <meta name="description" content="Tärkeimmät kinematiikan asiat ovat kappaleiden tasainen liike sekä kiihtyvä liike yhdessä- ja kahdessa ulottuvuudessa.">
+    <meta name="author" content="Exaphys">
+    <title>1. Kinematiikka | Exaphys -fysiikan opiskelumateriaalit</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="newcss.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/javascript" src="js.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({
+    tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+    }
+    });</script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML-full"></script>
+</head>
+<body>
+    <div class="home">
+        <nav class="navbar">
+            <div class="container">
+                <h1 class="logo">Exaphys</h1> 
+                <ul class="menu-text">
+                    <li><a href="index.html">Koti</a></li>
+                    <li><a href="materials_fi.html">Materiaali</a></li>
+                    <li><a href="about.html">Meistä</a></li>
+                    <li><a href="index.html"></a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="chapter-text">
+            <h2>1. Kinematiikka</h2>
+            <h3>Tärkeimmät kinematiikan asiat, jotka tulee osata ovat kappaleiden tasainen liike sekä kiihtyvä liike yhdessä ja kahdessa ulottuvuudessa. Tehtävissä saa käyttää valitsemaasi kaavakokoelmaa (esim. MAOL) sekä trigonometrista taulukkoa.</h3>
+        </div>
+        <div class="exercises">
+            <button class="collapsible"><h2>Tehtävä 1.1</h2></button>
+            <div class="exercise">
+                <p>Laiskanpuoleinen fyysikko astuu liukuportaille ja pysyy paikoillaan, jolloin liukuportaat vievät fyysikon ostoskeskuksen huipulle kahdessa minuutissa. Liukuportaat pysähtyvät, jolloin alaspäin tulevalla fyysikolla kestää \(2{,}5\) minuuttia saman matkan tekoon. Kauanko matkassa kestää matkassa ylöspäin jos fyysikko alkaa kävelemään puolivälissä portaita niiden ollassa toiminnassa, olettaen että hän kulkee vakionopeudella?<br>
+                <br>
+                <a onclick="document.getElementById('s1').style.display='block'" class="s-button">Ratkaisu 1.1</a><br></p>
+                <div id="s1" class="modal">
+                    <div class="s-modal-content">
+                        <div class="s-container">
+                            <span onclick="document.getElementById('s1').style.display='none'" class="s-button2">&times;</span><p>Olkoon \(v_1\) liukuportaiden nopeus, \(v_2\) fyysikon (kävely) nopeus,
+
+                            \(\ell\) liukuportaiden pituus. Tällöin portaiden toimiessa ja fysiikan paikallaan seisoessa nopeus:
+
+                            \begin{equation*}
+                                \ell = v_1t_1 \Rightarrow v_1 = \frac{\ell}{t_1}
+                            \end{equation*}
+
+                            Seuraavaksi fyysikko tulee alaspäin. Portaat ei liiku, jolloin nopeus:
+
+                            \begin{equation*}
+                                \ell = v_2t_2 \Rightarrow v_2 = \frac{\ell}{t_2}
+                            \end{equation*}
+
+                            Nyt puolet matkasta fyysikko on paikallaan, jolloin matkassa kestää puolet ajasta \(t_1\). Loppupuoliskon aikana fyysikko ja portaat liikkuvat samaan suuntaan, kokonaisnopeus tällöin:
+
+                            \begin{equation*}
+                                v=v_1+v_2
+                            \end{equation*}
+
+                            jolloin matkassa kestää:
+
+                            \begin{equation*}
+                                \begin{split}
+                                     t &= \frac{t_1}{2}+\frac{\ell/2}{v} \\
+                                    t&= \frac{t_1}{2}+\frac{\ell/2}{v_1+v_2} \\
+                                    t&= \frac{t_1}{2}+\frac{1}{2}\frac{\ell}{\frac{\ell}{t_1}+\frac{\ell}{t_2}} \\
+                                    t &= \frac{t_1(t_1+2t_2)}{2(t_1+t_2)} \\
+                                    t &= \frac{2\,\mathrm{min}\cdot (2+2\cdot2{,}5)\,\mathrm{min}}{2(2+2{,}5)\,\mathrm{min}} \\
+                                    t &= 1{,}6\,\mathrm{min}\\
+                                \end{split}
+                            \end{equation*}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="collapsible"><h2>Tehtävä 1.2</h2></button>
+            <div class="exercise">
+                <p>Hissin tulee kulkea maanpinnan tasolta kerrostalon huipulle \(60\) metrin korkeuteen mahdollisimman nopeasti. Hissin kiihdytysvaiheessa sen kiihtyvyys ei saa ylittää \(4\,\mathrm{\frac{m}{s^2}}\) turvarajaa. Vastaavasti jarrutusvaiheessa hidastuvuuden itseisarvo ei saa ylittää \(6 \,\mathrm{\frac{m}{s^2}}\) turvarajaa. Mikä on minimiaika, joka hissillä kestää päästä huipulle? 
+                Oheisesta taulukosta saattaa olla hyötyä:
+                \begin{equation*}
+                \begin{array}{|r|r|}
+                \hline
+                \sqrt{3} & 1{,}73 \\ \hline
+                \sqrt{7} & 2{,}64 \\ \hline
+                \sqrt{8} & 2{,}82 \\ \hline
+                \sqrt{10} & 3{,}16 \\ \hline
+                \sqrt{12} & 3{,}46 \\ \hline
+                \sqrt{17} & 4{,}12 \\ \hline
+                \sqrt{18} & 4{,}24 \\ \hline
+                \sqrt{20} & 4{,}47 \\ \hline
+                \end{array}
+                \end{equation*}<br>
+                <br>
+                <a onclick="document.getElementById('s2').style.display='block'" class="s-button">Ratkaisu 1.2</a><br></p>
+                <div id="s2" class="modal">
+                  <div class="s-modal-content">
+                    <div class="s-container">
+                      <span onclick="document.getElementById('s2').style.display='none'" class="s-button2 s-display-topright">&times;</span>
+                      <p>Olennaisesti, jotta hissi pääsisi huipulle mahdollisimman nopeasti sen kiihdytysvaiheen tulisi kestää mahdollisimman kauan, jonka jälkeen se alkaisi välittömästi jarruttamaan.
+                        <br>
+
+                        Hissi lähtee levosta ja kiihdytysvaiheen jälkeen sillä on nopeus:
+
+                        \begin{equation*}
+                            v=a_1t_1
+                        \end{equation*}
+
+                        Heti tämän jälkeen hissi alkaa jarruttamaan, kunnes nopeus on nolla:
+
+                        \begin{equation*}
+                            v-a_2t_2 = 0\Rightarrow v=a_2t_2
+                        \end{equation*}
+
+                        Huomataan että yhtälöillä on riippuvuus:
+
+                        \begin{equation*}
+                            a_1t_1=a_2t_2 \Rightarrow t_2 = \frac{a_1}{a_2}t_1 \Rightarrow t_1 = \frac{a_2}{a_1}t_2
+                        \end{equation*}
+
+                        Olkoon kiihtyvyys vaiheessa kuljettu matka:
+
+                        \begin{equation*}
+                            h_1 = \frac{1}{2}a_1t_1^2
+                        \end{equation*}
+
+                        Vastaavasti jarrutusvaiheen aikana :
+
+                        \begin{equation*}
+                            h_2 = \frac{1}{2}a_2t_2^2
+                        \end{equation*}
+
+                        Eli kokonaismatka huipulle:
+
+                        \begin{equation*}
+                           \begin{split}
+                        h=h_1+h_2=&\frac{1}{2}a_1t_1^2+\frac{1}{2}a_2t_2^2 \quad\quad(1)\\
+                        h&=\frac{1}{2}a_1t_1^2+\frac{1}{2}a_2\left(\frac{a_1}{a_2}t_1\right)^2 \\
+                        h&=\frac{1}{2}a_1t_1^2+\frac{1}{2}\frac{a_1^2t_1^2}{a_2} \\
+                        h&=\frac{a_1t_1a_2+a_1^2t_1}{2a_2}\\
+                       h &=\frac{a_1(a_1+a_2)}{2a_2}t_1^2
+                       \end{split}
+                        \end{equation*}
+
+                        Josta saadaan ratkaistua kiihdysvaiheen aika:
+
+                        \begin{equation*}
+                            t_1 = \sqrt{\frac{2ha_2}{a_1(a_1+a_2)}}
+                        \end{equation*}
+
+                            sijoittamalla yhtälöön (1) nyt aika \(t_1 = \frac{a_2}{a_1}t_2\) saadaan samalla tyylillä:
+
+                        \begin{equation*}
+                            t_2 = \sqrt{\frac{2ha_1}{a_2(a_1+a_2)}}
+                        \end{equation*}
+
+                        Eli kokonaisaika hissin nousussa:
+
+                        \begin{equation*}
+                            \begin{split}
+                                t &= t_1+t_2 \\
+                                t &= \sqrt{\frac{2ha_2}{a_1(a_1+a_2)}}+\sqrt{\frac{2ha_1}{a_2(a_1+a_2)}}\\
+                                t &= \sqrt{\frac{2\cdot 60\,\mathrm{m}\cdot 6\,\mathrm{\frac{m}{s^2}}}{4\,\mathrm{\frac{m}{s^2}}(4+6)\,\mathrm{\frac{m}{s^2}}}}+\sqrt{\frac{2\cdot 60\,\mathrm{m}\cdot4\,\mathrm{\frac{m}{s^2}}}{6\,\mathrm{\frac{m}{s^2}}(4+6)\,\mathrm{\frac{m}{s^2}}}} \\
+                                t &= \sqrt{18 \,\mathrm{s^2}}+\sqrt{8 \,\mathrm{s^2}}
+                            \end{split}
+                        \end{equation*}
+
+                        Tehtävänannon taulukosta saadaan likiarvot ajoille:
+
+                        \begin{equation*}
+                            t\approx 4,24\,\mathrm{s}+2,82\,\mathrm{s} = 7,06\,\mathrm{s}
+                        \end{equation*}</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <button class="collapsible"><h2>Tehtävä 1.3&#x1F63F;</h2></button>
+            <div class="exercise">
+                <p>Jalkapallo potkaistaan puolipalloisen muotoisen alustan päältä, jonka säde on \(R\). Jalkapallo on aluksi levossa, mutta potkun jälkeen sillä on vaakasuora alkunopeus \(v_{0_x}\).
+                <br>
+                <br>
+                a) Mikä on jalkapallon saama pienin mahdollinen alkunopeus, jotta se ei osuisi alustaan jonka päältä se potkaistiin?
+                <br>
+                b) Kuinka kauas alustan (maanpinnan) keskipisteestä jalkapallo putoaa, olettaen että se ei vieri maassa.<br>
+            <br>
+            <a onclick="document.getElementById('s3').style.display='block'" class="s-button">Ratkaisu 1.3</a><br></p>
+            <div id="s3" class="modal">
+              <div class="s-modal-content">
+                <div class="s-container">
+                  <span onclick="document.getElementById('s3').style.display='none'" class="s-button2 s-display-topright">&times;</span>
+                      <p>Jätetään ilmanvastus huomiotta.
+                    Pallon nopeus vaakasuunnassa on vakio, jolloin sen kulkema matka \(x\)-suunnassa:
+
+                    \begin{equation*}
+                        \begin{split}
+                            x = v_{0_x}t = v_0\cos{(0^\circ)}t &= v_0t \\
+                            \Rightarrow t &= \frac{x}{v_0} \\
+                        \end{split}
+                    \end{equation*}
+
+                    Jalkapallon kulkema matka \(y\)-suunnassa, alkusijainti on alustan päällä:
+
+                    \begin{equation*}
+                        \begin{split}
+                            y_{pallo} &= y_o- \frac{1}{2}gt^2 \\
+                             y_{pallo} &= R-\frac{1}{2}g\left(\frac{x}{v_0}\right)^2 \\
+                             y_{pallo} &= R-\frac{gx^2}{2v_0^2} \\
+                        \end{split}
+                    \end{equation*}
+
+                    Jotta jalkapallo ei osuisi alustaan, lentorata (paraabeli) pitää olla jatkuvasti alustan yläpuolella, toisin sanoen niiden summan täytyy olla suurempi kuin alustan säteen. Muodostetaan epäyhtälö:
+
+                    \begin{equation*}
+                        \begin{split}
+                            y_{pallo}^2+x_{pallo}^2 >& R^2 \quad\quad(1)\\
+                            \left(R-\frac{gx^2}{2v_0^2}\right)^2+x^2 >& R^2 \\
+                            R^2-2R\cdot\frac{gx^2}{2v_0^2}+\frac{g^2x^4}{4v_0^4}+x^2 >& R^2 \\
+                            \frac{g^2x^4}{4v_0^4}+x^2 >& \frac{Rgx^2}{v_0^2} \\
+                            \frac{g^2x^2}{4v_0^4}+1 >& \frac{Rg}{v_0^2} \\
+                        \end{split}
+                    \end{equation*}
+
+                    Toisaalta jos yhtälö toteutuu arvolla pienimmällä arvolla \(x=0\) <em>juuri ja juuri osuu alustaan</em>, niin se toteutuu myös kaikilla muilla arvoilla \(x>0\):
+
+                    \begin{equation*}
+                        \begin{split}
+                            \frac{g^2\cdot 0^2}{4v_0^4}+1 >& \frac{Rg}{v_0^2} \\
+                           1 >& \frac{Rg}{v_0^2} \\
+                           v_0^2 >& gR \\
+                           v_0 >& \sqrt{gR} \\
+                        \end{split}
+                    \end{equation*}
+
+                    b) Pallon \(y\)-koordinaatti maanpinnalla on nolla, tällöin yhtälöstä (1) saadaan:
+
+                    \begin{equation*}
+                        \begin{split}
+                            x^2 >& R \\
+                            \frac{gx^2}{2v_0^2}>& R \\
+                            \frac{gx^2}{2(\sqrt{gR})^2}>& R \\
+                            \frac{gx^2}{2gR}>& R \\
+                            \frac{x^2}{2R}>& R \\
+                            x &= \sqrt{2R^2}\\
+                            x &= R\sqrt{2}\\
+                        \end{split}
+                    \end{equation*}
+
+                    Jolloin etäisyys alustan keskipisteestä:
+
+                    \begin{equation*}
+                        d = x-R = R\sqrt{2}-R = R(\sqrt{2}-1)
+                    \end{equation*}</p>
+                </div>
+            </div>
+            </div>
+            </div>
+            <button class="collapsible"><h2>Tehtävä 1.4</h2></button>
+            <div class="exercise">
+                <p>Kivi heitetään \(h\) korkuisen talon katolta vaakasuoraan nopeudella \(v\). Ulkona tuulee niin paljon, että kivi päätyy suoraan talon seinän viereen mistä se heitettiin sen saaman kiihtyvyyden \(a\) takia. Jos tuulen suunta on yhdensuuntainen maanpinnan kanssa, kuinka suuri on korkeus \(h\)?<br>
+            <br>
+            <a onclick="document.getElementById('s4').style.display='block'" class="s-button">Ratkaisu 1.4</a><br></p>
+            <div id="s4" class="modal">
+              <div class="s-modal-content">
+                <div class="s-container">
+                  <span onclick="document.getElementById('s4').style.display='none'" class="s-button2 s-display-topright">&times;</span>
+                  <p>Tarkastellaan ensin kiven liikettä \(x\)-suunnassa. Kivellä on vaakasuunnassa kiihtyvyys \(a\), joka on sen alkunopeutta \(v\) vastaan, koska kivi hidastuu. Tarkoittaen, että kiihtyvyyden etumerkki on vastakkainen kuin alkunopeudella:
+
+                    \begin{equation*}
+                        \begin{split}
+                            \underbrace{x}_0 &= vt - \frac{1}{2}at^2 \\
+                            0 &= vt - \frac{1}{2}at^2 \\
+                            t\left(v - \frac{1}{2}at\right) &= 0   \\
+                        \end{split}
+                    \end{equation*}
+
+                    Tulon nollasäännön mukaan:
+
+                    \begin{equation*}
+                        \begin{split}
+                            t = 0 &\text{ tai } v-\frac{1}{2}at = 0 \\
+                            t = 0 &\text{ tai } t = \frac{2v}{a} \\
+                        \end{split}
+                    \end{equation*}
+
+                    Tarkastellaan nyt kiven liikettä \(y\)-suunnassa. Kivi pudotetaan levosta korkeudelta \(h\) ja se on lopussa maanpinnalla:
+
+                    \begin{equation*}
+                       \begin{split}
+                            h &= \underbrace{h_0}_{0}+\underbrace{v_0y}_{0}t+\frac{1}{2}gt^2 \\
+                            h &= \frac{1}{2}gt^2 \\
+                            t^2 &= \frac{2h}{g} \\
+                            \left(\frac{2v}{a}\right)^2 &=\frac{2h}{g} \\
+                            \frac{4v^2}{a^2} &= \frac{2h}{g} \\
+                            h &= \frac{2gv^2}{a^2}
+                       \end{split}
+                    \end{equation*}</p>
+                </div>
+              </div>
+            </div>
+        </div>
+        <script>
+        var modal1 = document.getElementById('s1');
+        var modal2 = document.getElementById('s2');
+        var modal3 = document.getElementById('s3');
+        var modal4 = document.getElementById('s4');
+
+        window.onclick = function(event) {
+            if (event.target == modal1) {
+                modal1.style.display = "none";
+            }
+            if (event.target == modal2) {
+                modal2.style.display = "none";
+            }
+            if (event.target == modal3) {
+                modal3.style.display = "none";
+            }
+            if (event.target == modal4) {
+                modal4.style.display = "none";
+            }
+        }
+        </script>
+    </div>
+    <script type="text/javascript" src="js.js"></script>
+</div>
+
+    <div class="background-sq3">
+        <ul class="square3">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+<footer>
+<p>Copyright&copy; 2021 Exaphys All Rights Reserved.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="ääni, FY5, fysiikka, physics, exam, pääsykoe, materiaali, materials, valintakoe">
+    <meta name="description" content="Tärkeimpiä asioita ovat äänen intensiteetti, intensiteettitasoja äänen kulku- ja interferenssi.">
+    <meta name="author" content="Exaphys">
+    <title>5. Ääni | Exaphys -fysiikan opiskelumateriaalit</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="newcss.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/javascript" src="js.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({
+    tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+    }
+    });</script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML-full"></script>
+</head>
+<body>
+    <div class="home">
+        <nav class="navbar">
+            <div class="container">
+                <h1 class="logo">Exaphys</h1> 
+                <ul class="menu-text">
+                    <li><a href="index.html">Koti</a></li>
+                    <li><a href="materials_fi.html">Materiaali</a></li>
+                    <li><a href="about.html">Meistä</a></li>
+                    <li><a href="index.html"></a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="chapter-text">
+            <h2>5. Ääni</h2>
+            <h3>Tärkeimpiä asioita ovat äänen intensiteetti, intensiteettitasoja äänen kulku- ja interferenssi. Tehtävissä saa käyttää valitsemaasi kaavakokoelmaa (esim. MAOL) ja trigonometrista taulukkoa.</h3>
+        </div>
+        <div class="exercises">
+            <button class="collapsible"><h2>Tehtävä 5.1</h2></button>
+            <div class="exercise">
+                <p>a) Kaiutin lähettää \(100\,\mathrm{dB}\) lujuudella ääntä ympärilleen. Kuinka suuri on äänen intensiteetti pisteessä, joka sijaitsee neljän metrin etäisyydellä kaiuttimesta?
+                <br>
+                b) Tilanteeseen lisätään nyt kuvan mukaisesti seinä, joka sijaitsee \(1{,}5\,\mathrm{m}\) etäisyydellä kaiuttimesta sekä pisteestä:</p>
+                <br>
+                <br><img src="images_exercises/teht5.1.jpg" alt=""/>
+                <br>
+                <br>
+                <p>
+                Kuinka suuri on seinästä heijastuneen äänen intensiteetti pisteessä, kun seinä absorboi \(70\%\) siihen tulleesta äänestä?
+                <br>
+                Oheisen taulukon arvoista saattaa olla hyötyä:
+
+                \begin{equation*}
+                \begin{array}{|r|r|}
+                \hline
+                     \sqrt{2} & 1{,}41 \\ \hline
+                \sqrt{2{,}25} & 1{,}50 \\ \hline
+                \sqrt{4{,}30} & 2{,}07 \\ \hline
+                \sqrt{5{,}75} & 2{,}39 \\ \hline
+                \sqrt{6{,}25} & 2{,}50 \\ \hline
+                \sqrt{7{,}55} & 2{,}74 \\ \hline
+                \end{array}
+                \end{equation*}<br>
+                <br>
+                <a onclick="document.getElementById('s1').style.display='block'" class="s-button">Ratkaisu 5.1</a><br></p>
+                <div id="s1" class="modal">
+                    <div class="s-modal-content">
+                        <div class="s-container">
+                            <span onclick="document.getElementById('s1').style.display='none'" class="s-button2">&times;</span><p>a) Selvitetään ensin kaiuttimen lähettämä äänen intensiteetti annetusta äänenvoimakkuus tasosta:
+                            \begin{equation*}
+                                \begin{split}
+                                    L &= 10\lg{\left(\frac{I_{kaiutin}}{I_0}\right)} \\
+                                    \frac{L}{10} &= \lg{\left(\frac{I_{kaiutin}}{I_0}\right)} \\
+                                   10^{\frac{L}{10}} &= \frac{I_{kaiutin}}{I_0} \\
+                                   \Rightarrow I_{kaiutin} &= 10^{\frac{L}{10}}\cdot I_0 \\
+                                   I_{kaiutin} &= 10^{\frac{100}{10}}\cdot 10^{-12} \,\mathrm{\frac{W}{m^2}} \\
+                                   I_{kaiutin} &= 10^{10}\cdot 10^{-12} \,\mathrm{\frac{W}{m^2}} \\
+                                   I_{kaiutin} &= 0,01 \,\mathrm{\frac{W}{m^2}} \\
+                                \end{split}
+                            \end{equation*}
+
+                            Ratkaistaan seuraavaksi kuinka suuri äänen intensiteetti on \(r_1 = 4{,}0\) metrin päässä kaiuttimesta. Tiedetään, että äänen intensiteetti on suoraan verrannollista etäisyyden neliöön:
+
+                            \begin{equation*}
+                                I \propto \frac{1}{r^2}
+                            \end{equation*}
+
+                            Eli kaiuttimen lähettämä intensiteetti on tulee olla 4 metrin etäisyydellä pienentynyt \(4^2\) verran. Toisin sanoen intensiteettien suhteelle siis:
+
+                            \begin{equation*}
+                                \begin{split}
+                                    \frac{I_{havaittu}}{I_{kaiutin}} &= \frac{1\mathrm{m^2}}{(4\,\mathrm{m})^2} \\
+                                    I_{havaittu} &= \frac{1\,\mathrm{m^2}}{(4\,\mathrm{m})^2}\cdot I_{kaiutin} \\
+                                     I_{havaittu} &= \frac{1\,\mathrm{m^2}}{(4\,\mathrm{m})^2}\cdot \left( 0{,}01 \,\mathrm{\frac{W}{m^2}}\right) \\
+                                     I_{havaittu} &= 6{,}25\,\mathrm{\frac{W}{m^2}} \\
+                                     I_{havaittu} &\approx 6{,}3\,\mathrm{\frac{W}{m^2}} \\
+                                \end{split}
+                            \end{equation*}
+
+                            b) Tilanteeseen tuodaan nyt seinä, ratkaistaan etäisyydet muodostuvasta suorakulmaisista kolmiosta: (tilanne on symmetrinen, eli seinän etäisyys on sama kaiuttimeen sekä pisteeseen)
+
+                            </p><br>
+                            <br><img src="images_exercises/5.1_ratk.jpg" alt=""/><br><p><br>
+
+                            Pythagoraan lauseesta saadaan tehtävänannon taulukkoa hyödyntämällä:
+
+                            \begin{equation*}
+                                \begin{split}
+                                    x^2 &= (2{,}0 \,\mathrm{m})^2+(1{,}5 \,\mathrm{m})^2 \\
+                                    x^2 &= 6{,}25 \,\mathrm{m^2} \\
+                                \end{split}
+                            \end{equation*}
+
+                            Lasketaan kuinka suuri intensiteetti saapuu seinälle \(I_{s}\) samalla tyylillä kuin a) kohdassa:
+
+                            \begin{equation*}
+                                \begin{split}
+                                    \frac{I_{s}}{I_{kaiutin}} &= \frac{1\,\mathrm{m^2}}{x^2} \\
+                                   I_s &= \frac{1\,\mathrm{m^2}}{x^2}\cdot I_{kaiutin} \\
+                                    I_s &= \frac{1\,\mathrm{m^2}}{6{,}25\,\mathrm{m^2}}\cdot 0{,}01 \mathrm{\frac{W}{m^2}} \\
+                                    I_s &= 0{,}0016 \,\mathrm{\frac{W}{m^2}} \\
+                                    I_s &= 1{,}6\cdot10^{-3} \,\mathrm{\frac{W}{m^2}}
+                                \end{split}
+                            \end{equation*}
+
+                            Tämä kimpoaa seinästä, mutta seinä imee siitä 70\%. Eli heijastuneen intensiteetin suuruus:
+
+                            \begin{equation*}
+                                I_s' = (1-0,7)\cdot1,6\cdot10^{-3} \,\mathrm{\frac{W}{m^2}} = 4,8\cdot10^{-4}\,\mathrm{\frac{W}{m^2}}
+                            \end{equation*}
+
+                            Intensiteetti kulkee nyt matkan seinältä pisteeseen, jolloin heijastunut intensiteetti pisteessä:
+
+                            \begin{equation*}
+                                \begin{split}
+                                    \frac{I_{heijastunut}'}{I_{s}'} &= \frac{1\,\mathrm{m^2}}{x^2} \\
+                                   I_{heijastunut}' &= \frac{1\,\mathrm{m^2}}{6{,}25\,\mathrm{m^2}} \cdot 4{,}8\cdot10^{-4}\,\mathrm{\frac{W}{m^2}} \\
+                                   I_{heijastunut}' &= 7{,}68 \,\mathrm{\frac{W}{m^2}} \\
+                                   I_{heijastunut}' &\approx 7{,}7 \,\mathrm{\frac{W}{m^2}} \\
+                                \end{split}
+                            \end{equation*}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="collapsible"><h2>Tehtävä 5.2</h2></button>
+            <div class="exercise">
+                <p>Fyysikko tiputtaa \(515 \,\mathrm{Hz}\) taajuudella värähtelevän ääniraudan kerrostalon katolta.  Kuinka pitkän matkan äänirauta on pudonnut, kun fyysikon havaitsema taajuus on \(485\,\mathrm{Hz}\)?<br>
+                <br>
+                <a onclick="document.getElementById('s2').style.display='block'" class="s-button">Ratkaisu 5.2</a><br></p>
+                <div id="s2" class="modal">
+                  <div class="s-modal-content">
+                    <div class="s-container">
+                      <span onclick="document.getElementById('s2').style.display='none'" class="s-button2 s-display-topright">&times;</span>
+                      <p>Jätetään tehtävässä ilmanvastus huomiotta.<br>
+
+                        Äänirauta tiputetaan katolta, jolloin sen etäisyys tarkkailijaan (fyysikko) kasvaa. Putoamiskiihtyvyys myös kiihdyttää äänirautaa alaspäin, jolloin sen nopeus kasvaa ajan kuluessa, joka johtaa havaitun taajuuden pienenemiseen. Dopplerin ilmiötä soveltamalla saadaan ratkaistua ääniraudan nopeus:
+
+                        \begin{equation*}
+                            \begin{split}
+                                f_{hav} &= \frac{v_{ilma}}{v_{ilma}+v_{rauta}}f_0 \\
+                                 f_{hav}v_{ilma}+f_{hav}v_{rauta} &= f_0v_{ilma} \\
+                                 v_{rauta} &= \frac{f_0v_{ilma}-f_{hav}v_{ilma}}{f_{hav}} \\
+                                 v_{rauta} &= \frac{v_{ilma}(f_0-f_{hav})}{f_{hav}} \\
+                                 v_{rauta} &= \frac{343\,\mathrm{\frac{m}{s}}\cdot(515\,\mathrm{Hz}-485\,\mathrm{Hz})}{485\,\mathrm{Hz}} \\
+                                 v_{rauta} &= 21,2164\,\mathrm{\frac{m}{s}} \\
+                            \end{split}
+                        \end{equation*}
+
+                        Ratkaistaan seuraavaksi kauanko kestää, että putoamiskiihtyvyys kiihdyttää ääniraudan tähän nopeuden arvoon. Äänirauta lähtee levosta jolloin:
+
+                        \begin{equation*}
+                            v_{rauta} = gt \Rightarrow t = \frac{v_{rauta}}{g}
+                        \end{equation*}
+
+                        Jolloin äänirauta on pudonnut matkan \(h\) ajassa \(t\):
+
+                        \begin{equation*}
+                            \begin{split}
+                                h &= \frac{1}{2}gt^2 \\
+                                h &= \frac{1}{2}g\left(\frac{v_{rauta}}{g} \right)^2 \\
+                                h &= \frac{2v_{rauta}}{2g} \\
+                                h &= \frac{ \left(21{,}2164\,\mathrm{\frac{m}{s}}\right)^2}{2\cdot9{,}81\,\mathrm{\frac{m}{s^2}}} \\
+                                h &= 22{,}9426 \,\mathrm{m} \\
+                            \end{split}
+                        \end{equation*}
+
+                        Havaitsija katolla kuulee äänen ajan \(t'\) kuluttua, kun ääni on kulkenut matkan \(h\):
+
+                        \begin{equation*}
+                            h = v_{ilma}t' \Rightarrow t' = \frac{h}{v_{ilma}} = \frac{22{,}9426 \,\mathrm{m}}{343\,\mathrm{\frac{m}{s}}} = 0{,}06688\,\mathrm{s} \\
+                        \end{equation*}
+
+                        Tässä ajassa äänirauta putoaa vielä lisäksi matkan:
+
+                        \begin{equation*}
+                            \begin{split}
+                                h' &= v_{rauta}t'+\frac{1}{2}gt'^2 \\
+                                h' &= 21,2164\,\mathrm{\frac{m}{s}}\cdot 0,06688\,\mathrm{s}+\frac{1}{2}\cdot 9{,}81\,\mathrm{\frac{m}{s^2}}\cdot (0{,}06688\,\mathrm{s})^2 \\
+                                h' &= 1{,}4191 \mathrm{m} \\
+                            \end{split}
+                        \end{equation*}
+
+                        Jolloin rauta on pudonnut kokonaisuudessaan matkan:
+
+                        \begin{equation*}
+                            \begin{split}
+                                h_{kok} &= h+h' \\
+                                 h_{kok}&= 22{,}9426 \,\mathrm{m}+ 1{,}4191 \mathrm{m} \\
+                                h_{kok} &= 24{,}3617\,\mathrm{m} \\
+                                h_{kok} &\approx 24{,}3\,\mathrm{m} \\
+                            \end{split}
+                        \end{equation*}</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <button class="collapsible"><h2>Tehtävä 5.3</h2></button>
+            <div class="exercise">
+                <p>Potilaan sisällä olevaa kasvainta tutkitaan ultraäänen avulla. Ultraäänianturi asetetaan potilaan iholle siten, että ilmaa\(^1\) ei jää anturin ja ihon väliin. Ultraäänianturi laitetaan päälle, jolloin se alkaa tuottamaan ääniaaltoja potilaaseen, joilla on \(5{,}0\,\mathrm{MHz}\) suuruinen taajuus. Ääniaaltojen aallonpituus on noin \(308 \,\mathrm{\mu m}\). 
+                <br>
+                <br>
+                a) Anturi lähettää pulssin, jonka ensimmäinen kaiku havaitaan \(9,5\cdot10^{-6}\) sekunnin kuluttua. Kuinka syvällä kasvain on?
+                <br>
+                b) Toinen kaiku havaitaan \(4{,}84\cdot10^{-5}\) sekunnin kuluttua. Kuinka paksu kasvain on?
+                <br>
+                <br>
+                <small><em>Huom\(^1\) -oikeassa tilanteessa ilman ja anturin väliin levitetään ultraäänigeeliä. Tällä estetään se, että ultraäänipulssit eivät vaimenisi ilmassa liikaa.</em></small><br><br>
+            <a onclick="document.getElementById('s3').style.display='block'" class="s-button">Ratkaisu 5.3</a><br></p>
+            <div id="s3" class="modal">
+              <div class="s-modal-content">
+                <div class="s-container">
+                  <span onclick="document.getElementById('s3').style.display='none'" class="s-button2 s-display-topright">&times;</span>
+                      <p>a) Ratkaistaan ultraäänen nopeus potilaan kudoksissa. Aaltoliikkeen perusyhtälön mukaan:
+
+                        \begin{equation*}
+                            v = \lambda f = 308\cdot10^{-6}\,\mathrm{m}\cdot5{,}0\cdot10^{6}\,\mathrm{\frac{1}{s}} = 1540\,\mathrm{\frac{m}{s}}
+                        \end{equation*}
+
+                        Kun ultraääni pulssi lähtee anturilta se kulkee potilaan kudoksessa. Kasvaimeen törmätessä siitä heijastuu ensimmäinen havaittava kaiku kasvaimen etuseinästä. Ultraääni jatkaa kulkuaan kasvaimen sisällä kunnes se törmää sen takaseinään, josta heijastuu toinen havaittava kaiku. 
+
+                        Ensimmäinen pulssi kulkee anturin ja kasvaimen etuseinän välisen matkan (= syvyys) siis kahdesti! Toisaalta koska pulssi kulkee vakionopeudella saadaan ratkaistua anturin ja etuseinän välinen matka:
+
+                        \begin{equation*}
+                            \begin{split}
+                                2s_{etu} &= vt_{etu} \\
+                                s_{etu} &= \frac{vt_{etu}}{2} \\
+                                s_{etu} &= \frac{1540\,\mathrm{\frac{m}{s}}\cdot  9{,}5\cdot 10^{-6}\,\mathrm{s}}{2} \\
+                                s_{etu} &= 0{,}007315\,\mathrm{m} \\
+                                s_{etu} &\approx 7{,}31\,\mathrm{mm} \\
+                            \end{split}
+                        \end{equation*}
+
+                        b) Ratkaistaan seuraavaksi mikä on anturin ja kasvaimen takaseinän välinen etäisyys vastaavalla tavalla:
+
+                        \begin{equation*}
+                            \begin{split}
+                                2s_{taka} &= vt_{taka} \\
+                                s_{taka} &= \frac{1540\,\mathrm{s} \cdot 4{,}84\cdot10^{-5}\,\mathrm{s}}{2} \\
+                                s_{taka} &= 0{,}037268\,\mathrm{m}\\
+                            \end{split}
+                        \end{equation*}
+
+                        Toisaalta kasvaimen paksuus on etu- ja takaseinän välinen etäisyys: <em>kuvan piirtäminen saattaa auttaa tilanteen hahmottamisessa</em>
+
+                        \begin{equation*}
+                            \begin{split}
+                                d &= s_{taka}- s_{etu} \\
+                                d &= 0{,}037268\,\mathrm{m}-0{,}007315\,\mathrm{m}  \\
+                                d &= 0{,}02968\,\mathrm{m} \\
+                                d &\approx 29{,}7\,\mathrm{mm}
+                            \end{split}
+                        \end{equation*}</p>
+                </div>
+            </div>
+            </div>
+            </div>
+            
+        <script>
+        var modal1 = document.getElementById('s1');
+        var modal2 = document.getElementById('s2');
+        var modal3 = document.getElementById('s3');
+        var modal4 = document.getElementById('s4');
+
+        window.onclick = function(event) {
+            if (event.target == modal1) {
+                modal1.style.display = "none";
+            }
+            if (event.target == modal2) {
+                modal2.style.display = "none";
+            }
+            if (event.target == modal3) {
+                modal3.style.display = "none";
+            }
+            if (event.target == modal4) {
+                modal4.style.display = "none";
+            }
+        }
+        </script>
+    </div>
+    <script type="text/javascript" src="js.js"></script>
+</div>
+
+    <div class="background-sq3">
+        <ul class="square3">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+<footer>
+<p>Copyright&copy; 2021 Exaphys All Rights Reserved.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="kinematiikka, FY1, FY4, fysiikka, physics, exam, pääsykoe, materiaali, materials, valintakoe">
+    <meta name="description" content="Tärkeimpiä asioita ovat magneettinen voima, magneettikentät, induktio ja Lenzin laki.">
+    <meta name="author" content="Exaphys">
+    <title>8. Sähkömagnetismi | Exaphys -fysiikan opiskelumateriaalit</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="newcss.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/javascript" src="js.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({
+    tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+    }
+    });</script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML-full"></script>
+</head>
+<body>
+    <div class="home">
+        <nav class="navbar">
+            <div class="container">
+                <h1 class="logo">Exaphys</h1> 
+                <ul class="menu-text">
+                    <li><a href="index.html">Koti</a></li>
+                    <li><a href="materials_fi.html">Materiaali</a></li>
+                    <li><a href="about.html">Meistä</a></li>
+                    <li><a href="index.html"></a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="chapter-text">
+            <h2>8. Sähkömagnetismi</h2>
+            <h3>Tärkeimpiä asioita ovat magneettinen voima, magneettikentät, induktio ja Lenzin laki. Tehtävissä saa käyttää valitsemaasi kaavakokoelmaa (esim. MAOL) ja trigonometrista taulukkoa. </h3>
+        </div>
+        <div class="exercises">
+            <button class="collapsible"><h2>Tehtävä 8.1</h2></button>
+            <div class="exercise">
+                <p>Tarkastellaan kahta sähköisesti varattua pistevarausta \(A\) ja \(B\), joiden varaukset ovat \(Q_A=Q_B\). Varaukset kiihdytetään ensin sähkökentässä, jonka levyjen välinen jännite on \(U\). Varaukset saapuvat kiihdytyksen jälkeen kohtisuoraan magneettikenttään siten, että niiden nopeus on kohtisuorassa magneettivuon tiheyden kanssa. Jos varausten massasuhde \(\frac{m_B}{m_A} = 9\), kuinka suuri on niiden ratojen suhde magneettikentässä?<br>
+                <br>
+                <a onclick="document.getElementById('s1').style.display='block'" class="s-button">Ratkaisu 8.1</a><br></p>
+                <div id="s1" class="modal">
+                    <div class="s-modal-content">
+                        <div class="s-container">
+                            <span onclick="document.getElementById('s1').style.display='none'" class="s-button2">&times;</span><p>Johdetaan yleinen lauseke kappaleen säteelle magneettikentässä. Magneettikentässä varaukset ohjautuu ympyräliikkeeseen. Newtonin II lain mukaan tällöin:
+
+\begin{equation*}
+    \begin{split}
+        \sum \overline{F} &= m\overline{a}_n \\
+        \overline{F}_B &= m\overline{a}_n \\
+        qvB &= m\frac{v^2}{r} \\
+        qB &= m\frac{v}{r}\\
+        r &= \frac{m}{qB}\cdot v
+    \end{split}
+\end{equation*}
+
+Ratkaistaan hiukkasten nopeus \(v\). Sähkökentän tekemä työ muuttuu hiukkasten kineettiseksi energiaksi:
+
+\begin{equation*}
+    \begin{split}
+        W_{kentta} &= E_{kin} \\
+        qU &= \frac{1}{2}mv^2 \\
+        v &= \sqrt{\frac{2qU}{m}}
+    \end{split}
+\end{equation*}
+
+jolloin säteelle saadaan:
+
+\begin{equation*}
+    r =  \frac{m}{qB}\cdot \sqrt{\frac{2qU}{m}} = \sqrt{\frac{2mU}{qB^2}}
+\end{equation*}
+
+Pistevarauksilla on sama varaus, merkitään \(Q=Q_A=Q_B\). Eli varauksille \(A\) ja \(B\) säde:
+
+\begin{equation*}
+    \begin{split}
+        r_A &= \sqrt{\frac{2U}{Qm_AB^2}} \\
+        r_B &= \sqrt{\frac{2U}{Qm_BB^2}} \\
+    \end{split}
+\end{equation*}
+
+Eli suhde:
+
+\begin{equation*}
+    \begin{split}
+        \frac{r_B}{r_A} &= \frac{\sqrt{\frac{2U}{Qm_BB^2}}}{ \sqrt{\frac{2U}{Qm_AB^2}}} \\
+        \frac{r_B}{r_A} &= \sqrt{\frac{\frac{2U}{Qm_BB^2}}{\frac{2U}{Qm_AB^2}}} \\
+        \frac{r_B}{r_A} &= \sqrt{\frac{\frac{1}{m_B}}{\frac{1}{m_A}}} \\
+        \frac{r_B}{r_A} &= \sqrt{\frac{m_A}{m_B}} \\
+        \frac{r_B}{r_A} &= 3 \\
+        \end{split}
+\end{equation*}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="collapsible"><h2>Tehtävä 8.2</h2></button>
+            <div class="exercise">
+                <p>Kuvassa on kaksi suoraa virtajohdinta. Pitkässä johtimessa kulkee virta \(I_1\) ja suorakulmion muotoisessa johtimessa kulkee virta \(I_2\). Suorakulmion sivujen pituudet ovat \(a\) ja \(b\). Kuinka suuri on magneettinenvoima joka kohdistuu silmukkaan, kun silmukka on etäisyydellä \(d\) johtimesta?
+
+                </p>
+                <br><img src="images_exercises/teht8.2.jpg" alt=""/><br><p>
+                <br>
+                <a onclick="document.getElementById('s2').style.display='block'" class="s-button">Ratkaisu 1.2</a><br></p>
+                <div id="s2" class="modal">
+                  <div class="s-modal-content">
+                    <div class="s-container">
+                      <span onclick="document.getElementById('s2').style.display='none'" class="s-button2 s-display-topright">&times;</span>
+                      <p>Oikean käden säännön mukaan magneettikenttä on tasosta sisäänpäin. Piirretään kuva, jossa näkyy magneettiset voimat:
+
+                </p><br>
+                <br><img src="images_exercises/teht8.2_ratk.jpg" alt=""/><br><p>
+                    <br>
+
+Voimat \(F_1\) ja \(F_3\) ovat yhtä suuret, mutta vastakkaiset suuntaiset symmetrian takia. Toisaalta voima \(F_4>F_2\), koska se on virtajohtimen vieressä. 
+
+Magnettivuon tiheys voimalle \(F_4\) saadaan: (\(r\) on etäisyys virtajohtimesta)
+
+\begin{equation*}
+    B_4 = \frac{\mu_0 I_2}{2\pi r} = \frac{\mu_0 I_2}{2\pi d}
+\end{equation*}
+
+toisaalta magneettivuontiheys voimalle \(F_2\):
+
+\begin{equation*}
+     B_2 = \frac{\mu_0 I_2}{2\pi (d+b)}
+\end{equation*}
+
+Jolloin voimien suuruudet: (huom virrat)
+
+\begin{equation*}
+    \begin{split}
+        F_4 &= B_4I_1a = \frac{\mu_0 I_2}{2\pi d}I_1a \\
+        F_2 &= B_2I_1a = \frac{\mu_0 I_2}{2\pi (d+b)}I_1a
+    \end{split}
+\end{equation*}
+
+Koska voimat \(F_1\) ja \(F_3\) kumoavat toisensa, jätetään ne huomiotta. Kokonaisvoima koostuu siis voimista \(F_4\) ja \(F_2\). Valitaan positiivinen suunta vasemmalle:
+
+\begin{equation*}
+    \begin{split}
+        F_{kok} &=F_4-F_2 \\
+        F_{kok} &=  \frac{\mu_0 I_2}{2\pi d}I_1a -\frac{\mu_0 I_2}{2\pi (d+b)}I_1a\\
+        F_{kok} &= \frac{\mu_0I_2I_1ab}{2\pi d\left(d+b\right)} \\
+    \end{split}
+\end{equation*}</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <button class="collapsible"><h2>Tehtävä 8.3</h2></button>
+            <div class="exercise">
+                <p>Kuvan mukainen sylinterni muotoinen virtajohdin on asetettu homogeeniseen magneettikenttään, jossa se on levossa. Virtajohtimen materiaalilla on tiheys \(3{,}25\,\mathrm{\frac{g}{cm^3}}\) ja johtimen säde on \(2{,}2\,\mathrm{mm}\). Magneettikentän tiheys on \(0{,}65\,\mathrm{T}\) ja sen suunta on tasosta sisäänpäin.
+                    <br><br>
+a) Mihin suuntaan virta kulkee johtimessa?
+<br>
+b) Kuinka suuri on johtimessa kulkeva virta?
+                </p>
+                <br><br><img src="images_exercises/teht8.3.jpg" alt=""/><p>
+                    <br><br>
+            <br>
+            <a onclick="document.getElementById('s3').style.display='block'" class="s-button">Ratkaisu 8.3</a><br></p>
+            <div id="s3" class="modal">
+              <div class="s-modal-content">
+                <div class="s-container">
+                  <span onclick="document.getElementById('s3').style.display='none'" class="s-button2 s-display-topright">&times;</span>
+                      <p>a) Oikean käden säännön mukaan virran tulee kulkea johtimessa vasemmalta oikealle.
+<br>
+b) Kappaleeseen vaikuttaa magneettinenvoima sekä painovoima. Jotta kappale olisi tasapainossa niin Newtonin II lain mukaan:
+
+\begin{equation*}
+    \begin{split}
+        \sum \overline{F} &= \overline{0} \\
+        F_B-G &= 0 \\
+        I\ell B &= mg \\
+        I\ell B &= \rho V g \\
+        I\ell B &= g\rho \cdot \pi r^2 \ell  \\
+        I B &= g\rho \pi R^2   \\
+        I &= \frac{g\rho\pi R^2}{B} \\
+        I &= \frac{9{,}81\,\mathrm{\frac{m}{s^2}}\cdot 3{,}25\cdot 10^3\,\mathrm{\frac{kg}{m^3}}\cdot3{,}14159\cdot (2{,}2\cdot10^{-3}\,\mathrm{m})^2}{0{,}65\,\mathrm{T}}\\
+        I &= 0{,}74581\,\mathrm{A} \\
+        I &\approx 746\,\mathrm{mA} \\
+    \end{split}
+\end{equation*}</p>
+                </div>
+            </div>
+            </div>
+            </div>
+            <button class="collapsible"><h2>Tehtävä 8.4</h2></button>
+            <div class="exercise">
+                <p>Neliön muotoisen johdinsilmukan sivunpituus on \(1{,}4\,\mathrm{m}\). Silmukkaan on kytketty vastus, jonka resistanssi on \(55\,\mathrm{\Omega}\). Johdinsilmukka painaa \(0{,}75\,\mathrm{kg}\) ja se pudotetaan homogeeniseen magnettikenttään, jossa se putoaa alaspäin kiihtyvällä nopeudella. Magnettikentän suunta on tasosta sisäänpäin. Jätetään ilmanvastus huomiotta.
+<br><br>
+a) Mikä on johdinsilmukan rajanopeus?
+<br>
+b) Kuinka suuri jännite indusoituu virtasilmukkaan?
+<br>
+c) Mihin suuntaan virta kulkee silmukassa?<br>
+            <br>
+            <a onclick="document.getElementById('s4').style.display='block'" class="s-button">Ratkaisu 8.4</a><br></p>
+            <div id="s4" class="modal">
+              <div class="s-modal-content">
+                <div class="s-container">
+                  <span onclick="document.getElementById('s4').style.display='none'" class="s-button2 s-display-topright">&times;</span>
+                  <p>a) Indusoituneen jänniteen suuruus:
+
+\begin{equation*}
+    \begin{split}
+        e &= \frac{\Delta \Phi}{\Delta t} \\
+        e &= \frac{\Delta (AB)}{\Delta t} \\
+        e &= B\frac{\Delta A}{\Delta t} \\
+        e &= B\frac{\Delta s\cdot a}{\Delta t} \\
+        e &= Bav
+    \end{split}
+\end{equation*}
+
+jossa \(a\) on johtimen sivun pituus. Kirjoitetaan jännite virran avulla:
+
+\begin{equation*}
+    \begin{split}
+        RI &= Bav \\
+        I &= \frac{Bav}{R}
+    \end{split}
+\end{equation*}
+
+Kappaleen putoessa alaspäin magneettinen voima pyrkii hidastamaan silmukkaa. Newtonin II lain mukainen tilanne kun rajanopeus saavutettu:
+
+\begin{equation*}
+    \begin{split}
+        \sum \overline{F} &= \overline{0} \\
+        \overline{G}+\overline{F}_B &= \overline{0} \\
+        IaB &= mg \\
+        \frac{Bav}{R}\cdot aB &= mg \\
+        \frac{B^2a^2v}{R} &= mg \\
+        v &= \frac{mgR}{B^2a^2} \\
+        v &= \frac{0{,}75\,\mathrm{kg}\cdot9{,}81\,\mathrm{\frac{m}{s^2}}\cdot 55\,\mathrm{\Omega}}{(4{,}5\,\mathrm{T})^2\cdot(1{,}4\,\mathrm{m})^2} \\
+        v &= 10{,}1955\,\mathrm{\frac{m}{s}} \\
+        v &\approx 10\,\mathrm{\frac{m}{s}} \\
+    \end{split}
+\end{equation*}
+
+b) Lenzin lain mukaan virta kulkee silmukassa vastapäivään.</p>
+                </div>
+              </div>
+            </div>
+        </div>
+        <script>
+        var modal1 = document.getElementById('s1');
+        var modal2 = document.getElementById('s2');
+        var modal3 = document.getElementById('s3');
+        var modal4 = document.getElementById('s4');
+
+        window.onclick = function(event) {
+            if (event.target == modal1) {
+                modal1.style.display = "none";
+            }
+            if (event.target == modal2) {
+                modal2.style.display = "none";
+            }
+            if (event.target == modal3) {
+                modal3.style.display = "none";
+            }
+            if (event.target == modal4) {
+                modal4.style.display = "none";
+            }
+        }
+        </script>
+    </div>
+    <script type="text/javascript" src="js.js"></script>
+</div>
+
+    <div class="background-sq3">
+        <ul class="square3">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+<footer>
+<p>Copyright&copy; 2021 Exaphys All Rights Reserved.</p>
+</footer>
+</body>
+</html>
