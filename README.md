@@ -1,6 +1,6 @@
 # Exaphys
 
-Exaphys is one of my first projects made fully in HTML, CSS and JavaScript. Content on the website is fully in Finnish language, I prepared versions for other languages, but ultimately full translation was too time consuming.
+Exaphys is one of my first projects made in HTML, CSS and JavaScript. Content on the website is fully in Finnish language, I prepared versions for other languages, but ultimately full translation was too time consuming.
 
 I designed and developed the website and its visual content.
 
